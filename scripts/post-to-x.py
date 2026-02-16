@@ -7,6 +7,7 @@ import tweepy
 from tweepy.errors import Forbidden
 
 TOP_N = 3
+COOLDOWN_MINUTES = 120
 
 
 def truncate(text: str, max_len: int) -> str:
@@ -89,19 +90,34 @@ def main():
     print("Tweet 2 preview:")
     print(tweet2)
 
-    # Prevent duplicate daily brief root tweets.
+    # Prevent duplicate daily brief root tweets + rapid retries.
     try:
         me = client.get_me(user_auth=True)
         uid = me.data.id if getattr(me, "data", None) else None
         if uid:
-            recent = client.get_users_tweets(id=uid, max_results=10, user_auth=True)
+            recent = client.get_users_tweets(id=uid, max_results=10, user_auth=True, tweet_fields=["created_at"])
+            now_utc = datetime.now(ZoneInfo("UTC"))
             for t in (recent.data or []):
                 txt = t.text or ""
+
+                # 1) One root brief per day
                 if txt.startswith(f"AI morning brief ({date_label}"):
                     print("Skip: today's AI morning brief already posted.")
                     return
+
+                # 2) Cooldown: skip if any AI/test post in recent window
+                created_at = getattr(t, "created_at", None)
+                if created_at is not None:
+                    age_min = (now_utc - created_at).total_seconds() / 60.0
+                    if age_min < COOLDOWN_MINUTES and (
+                        txt.startswith("AI morning brief")
+                        or txt.startswith("AI update test")
+                        or txt.startswith("Links:")
+                    ):
+                        print(f"Skip: cooldown active ({age_min:.0f} min < {COOLDOWN_MINUTES} min).")
+                        return
     except Exception as e:
-        print(f"Duplicate-check skipped due to API read issue: {e}")
+        print(f"Duplicate/cooldown check skipped due to API read issue: {e}")
 
     try:
         root = client.create_tweet(text=tweet1)
