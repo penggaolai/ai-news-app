@@ -1,16 +1,115 @@
-# React + Vite
+# AI News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight AI-news pipeline + web app that:
 
-Currently, two official plugins are available:
+1. Pulls AI headlines from RSS feeds
+2. Ranks + deduplicates them
+3. Writes curated results to `public/news.json`
+4. Can post a short daily summary to X via GitHub Actions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **News ingestion:** fetches from multiple AI-related RSS sources
+- **Curation:** scores by recency/source weight, removes duplicates
+- **Output:** saves top stories to `public/news.json`
+- **Automation:** GitHub Actions runs on schedule and on manual trigger
+- **Social posting:** optional X posting using Tweepy user-context auth
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Core scripts
+
+### `scripts/update-news.mjs`
+- Fetches RSS feeds
+- Normalizes, scores, deduplicates
+- Writes top items to `public/news.json`
+
+Run locally:
+
+```bash
+npm ci
+node scripts/update-news.mjs
+```
+
+### `scripts/post-to-x.py`
+- Reads top stories from `public/news.json`
+- Builds a compact “AI morning brief” tweet
+- Posts to X via Tweepy (`Client.create_tweet`)
+- Supports optional test override via `X_TEST_TEXT`
+
+Run locally:
+
+```bash
+pip install tweepy
+export X_API_KEY=...
+export X_API_SECRET=...
+export X_ACCESS_TOKEN=...
+export X_ACCESS_TOKEN_SECRET=...
+python scripts/post-to-x.py
+```
+
+---
+
+## GitHub Actions workflow
+
+### `.github/workflows/daily-ai-news-x.yml`
+This workflow can:
+
+1. Gate execution to 07:05 America/New_York (or bypass via `force_run=true`)
+2. Refresh `public/news.json`
+3. Commit/push updated `news.json` when changed
+4. Post to X using `scripts/post-to-x.py`
+
+Manual test trigger (`workflow_dispatch`) supports:
+- `force_run`: set `true` to bypass time gate
+- `test_text`: optional exact text for posting diagnostics
+
+---
+
+## Required GitHub Secrets
+
+Set these in repo settings:
+
+- `X_API_KEY`
+- `X_API_SECRET`
+- `X_ACCESS_TOKEN`
+- `X_ACCESS_TOKEN_SECRET`
+
+> Security note: if credentials are ever exposed, rotate all 4 immediately.
+
+---
+
+## Data format
+
+`public/news.json` entries look like:
+
+```json
+{
+  "id": "2026-02-16-1",
+  "title": "...",
+  "summary": "...",
+  "url": "https://...",
+  "date": "2026-02-16",
+  "source": "Google News (AI)"
+}
+```
+
+---
+
+## Troubleshooting
+
+- **X post 403 Forbidden:** often account/app/content restrictions.
+- Verify auth with a minimal post first.
+- Try manual `test_text` run to isolate formatting/content issues.
+- Ensure account has required write access and tokens are current.
+
+---
+
+## Stack
+
+- React + Vite (frontend)
+- Node.js script for RSS ingestion
+- Python + Tweepy for X posting
+- GitHub Actions for scheduling/automation
