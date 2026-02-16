@@ -72,6 +72,15 @@ jobs:
           git commit -m "chore: daily AI news refresh"
           git push
 
+      - name: Diagnose X auth
+        if: steps.gate.outputs.run_now == 'true'
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: node scripts/diagnose-x-auth.mjs
+
       - name: Post top 3 to X
         if: steps.gate.outputs.run_now == 'true'
         env:
