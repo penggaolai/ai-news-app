@@ -1,7 +1,7 @@
 import json
 import os
 from datetime import datetime
-from urllib.request import Request, urlopen
+# url resolving removed for cleaner tweet links
 from zoneinfo import ZoneInfo
 
 import tweepy
@@ -14,9 +14,9 @@ def truncate(text: str, max_len: int) -> str:
     text = " ".join((text or "").split())
     if len(text) <= max_len:
         return text
-    if max_len <= 1:
-        return "…"
-    return text[: max_len - 1].rstrip() + "…"
+    if max_len <= 0:
+        return ""
+    return text[:max_len].rstrip()
 
 
 def read_top_news(path: str):
@@ -47,24 +47,21 @@ def build_tweet_from_news(news):
     now_ny = datetime.now(ZoneInfo("America/New_York"))
     date_label = now_ny.strftime("%b %d")
 
-    # Keep it natural and compact to reduce content-level rejections.
-    a = truncate(news[0].get("title", ""), 52)
-    b = truncate(news[1].get("title", ""), 52)
-    c = truncate(news[2].get("title", ""), 52)
+    # Numbered list, tighter lines, no ellipsis character.
+    a = truncate(news[0].get("title", ""), 42)
+    b = truncate(news[1].get("title", ""), 42)
+    c = truncate(news[2].get("title", ""), 42)
 
     lines = [
         f"AI morning brief ({date_label})",
-        f"- {a}",
-        f"- {b}",
-        f"- {c}",
+        f"1) {a}",
+        f"2) {b}",
+        f"3) {c}",
+        "Full links:",
+        "https://ai-news-app-iota.vercel.app/",
+        "#AI",
     ]
 
-    # Add one resolved link from headline #1.
-    first_link = resolve_final_url(news[0].get("url", ""))
-    if first_link:
-        lines.append(first_link)
-
-    lines.append("#AI")
     text = "\n".join(lines)
     return truncate(text, 280)
 
