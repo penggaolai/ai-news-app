@@ -69,5 +69,6 @@ jobs:
         run: node scripts/post-to-x.mjs
 
       - name: Skip note
-        if: steps.gate.outputs.run_now != 'true'
-        run: echo "Skipped: not 07:05 in America/New_York."
+        if: ${{ steps.gate.outputs.run_now != 'true' }}
+        run: |
+          echo "Skipped - not 07:05 in America/New_York."
