@@ -26,8 +26,10 @@ def read_top_news(path: str):
 def build_tweet_from_news(news):
     now_ny = datetime.now(ZoneInfo("America/New_York"))
     date_label = now_ny.strftime("%b %d")
+    force_unique = os.environ.get("X_FORCE_UNIQUE", "false").lower() == "true"
+    suffix = f" {now_ny.strftime('%H:%M')} ET" if force_unique else ""
 
-    lines = [f"🧠 Top 3 AI headlines ({date_label})"]
+    lines = [f"🧠 Top 3 AI headlines ({date_label}{suffix})"]
     max_total = 280
     static_overhead = len(lines[0]) + 1 + 10  # + hashtags
     per_line_overhead = 3 + 4  # "1) " + " (S)"
