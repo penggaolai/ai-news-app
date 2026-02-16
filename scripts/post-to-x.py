@@ -4,6 +4,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import tweepy
+from tweepy.errors import Forbidden
 
 TOP_N = 3
 
@@ -62,6 +63,9 @@ def main():
             raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
         tweet_text = build_tweet_from_news(news)
 
+    print("Tweet preview:")
+    print(tweet_text)
+
     client = tweepy.Client(
         consumer_key=api_key,
         consumer_secret=api_secret,
@@ -69,7 +73,18 @@ def main():
         access_token_secret=access_token_secret,
     )
 
-    resp = client.create_tweet(text=tweet_text)
+    try:
+        resp = client.create_tweet(text=tweet_text)
+    except Forbidden as e:
+        # Retry once with a minimal unique fallback to separate permission issues from content issues.
+        fallback = f"AI update test {datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d %H:%M:%S ET')}"
+        print("Primary post forbidden; retrying with minimal fallback text...")
+        print(f"Fallback preview: {fallback}")
+        try:
+            resp = client.create_tweet(text=fallback)
+        except Forbidden:
+            raise e
+
     tweet_id = None
     if getattr(resp, "data", None):
         tweet_id = resp.data.get("id")
