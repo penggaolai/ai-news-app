@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime
+from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 import tweepy
@@ -25,31 +26,45 @@ def read_top_news(path: str):
     return [x for x in data if x.get("title") and x.get("url")][:TOP_N]
 
 
-def build_thread_from_news(news):
+def resolve_final_url(url: str) -> str:
+    if not url:
+        return ""
+    try:
+        req = Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (compatible; ai-news-bot/1.0)",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            },
+        )
+        with urlopen(req, timeout=12) as resp:
+            final = getattr(resp, "geturl", lambda: url)()
+            return final or url
+    except Exception:
+        return url
+
+
+def build_tweet_from_news(news):
     now_ny = datetime.now(ZoneInfo("America/New_York"))
     date_label = now_ny.strftime("%b %d")
 
-    # Tweet 1: readable top 3 list
-    t1_lines = [
-        f"AI morning brief ({date_label})",
-        f"1) {truncate(news[0].get('title', ''), 70)}",
-        f"2) {truncate(news[1].get('title', ''), 70)}",
-        f"3) {truncate(news[2].get('title', ''), 70)}",
-        "#AI",
-    ]
-    tweet1 = truncate("\n".join(t1_lines), 280)
+    title = news[0].get("title", "")
+    link = resolve_final_url(news[0].get("url", ""))
 
-    # Tweet 2: links only (clean and clickable)
-    link_lines = [
-        "Links:",
-        f"1) {news[0].get('url', '')}",
-        f"2) {news[1].get('url', '')}",
-        f"3) {news[2].get('url', '')}",
-        "More: https://ai-news-app-iota.vercel.app/",
-    ]
-    tweet2 = truncate("\n".join(link_lines), 280)
+    # Ensure link is never truncated. If resolved link is too long, fallback to site link.
+    if len(link) > 230:
+        link = "https://ai-news-app-iota.vercel.app/"
 
-    return tweet1, tweet2, date_label
+    header = f"AI morning brief ({date_label})"
+    suffix = " #AI"
+
+    # Reserve space for full link line + fixed text.
+    reserved = len(header) + len(suffix) + len(link) + 4  # two newlines + bullet
+    max_title = max(40, 280 - reserved)
+    clean_title = truncate(title, max_title)
+
+    tweet = f"{header}\n1) {clean_title}\n{link}{suffix}"
+    return truncate(tweet, 280), date_label
 
 
 def main():
@@ -83,14 +98,12 @@ def main():
     if len(news) < TOP_N:
         raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
 
-    tweet1, tweet2, date_label = build_thread_from_news(news)
+    tweet_text, date_label = build_tweet_from_news(news)
 
-    print("Tweet 1 preview:")
-    print(tweet1)
-    print("Tweet 2 preview:")
-    print(tweet2)
+    print("Tweet preview:")
+    print(tweet_text)
 
-    # Prevent duplicate daily brief root tweets + rapid retries.
+    # Prevent duplicate daily brief posts + rapid retries.
     try:
         me = client.get_me(user_auth=True)
         uid = me.data.id if getattr(me, "data", None) else None
@@ -100,12 +113,10 @@ def main():
             for t in (recent.data or []):
                 txt = t.text or ""
 
-                # 1) One root brief per day
                 if txt.startswith(f"AI morning brief ({date_label}"):
                     print("Skip: today's AI morning brief already posted.")
                     return
 
-                # 2) Cooldown: skip if any AI/test post in recent window
                 created_at = getattr(t, "created_at", None)
                 if created_at is not None:
                     age_min = (now_utc - created_at).total_seconds() / 60.0
@@ -120,16 +131,14 @@ def main():
         print(f"Duplicate/cooldown check skipped due to API read issue: {e}")
 
     try:
-        root = client.create_tweet(text=tweet1)
-        root_id = root.data.get("id") if getattr(root, "data", None) else None
-        if root_id:
-            client.create_tweet(text=tweet2, in_reply_to_tweet_id=root_id)
-        print("Posted thread to X successfully.")
-        if root_id:
-            print(f"Root Tweet ID: {root_id}")
+        resp = client.create_tweet(text=tweet_text)
+        tweet_id = resp.data.get("id") if getattr(resp, "data", None) else None
+        print("Posted to X successfully.")
+        if tweet_id:
+            print(f"Tweet ID: {tweet_id}")
     except Forbidden as e:
         fallback = f"AI update test {datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d %H:%M:%S ET')}"
-        print("Thread post forbidden; retrying fallback text...")
+        print("Primary post forbidden; retrying fallback text...")
         print(f"Fallback preview: {fallback}")
         try:
             resp = client.create_tweet(text=fallback)
