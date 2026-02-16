@@ -63,7 +63,7 @@ def build_tweet_from_news(news):
     max_title = max(40, 280 - reserved)
     clean_title = truncate(title, max_title)
 
-    tweet = f"{header}\n1) {clean_title}\n{link}{suffix}"
+    tweet = f"{header}\n{clean_title}\n{link}{suffix}"
     return truncate(tweet, 280), date_label
 
 
