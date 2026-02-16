@@ -85,7 +85,17 @@ jobs:
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         run: node scripts/diagnose-x-auth.mjs
 
-      - name: Post top 3 to X
+      - name: Setup Python
+        if: steps.gate.outputs.run_now == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install tweepy
+        if: steps.gate.outputs.run_now == 'true'
+        run: pip install tweepy
+
+      - name: Post top 3 to X (tweepy)
         if: steps.gate.outputs.run_now == 'true'
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
@@ -93,7 +103,7 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_TEST_TEXT: ${{ github.event.inputs.test_text }}
-        run: node scripts/post-to-x.mjs
+        run: python scripts/post-to-x.py
 
       - name: Skip note
         if: ${{ steps.gate.outputs.run_now != 'true' }}
