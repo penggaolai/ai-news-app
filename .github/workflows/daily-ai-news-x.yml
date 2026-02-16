@@ -6,6 +6,11 @@ on:
     - cron: '5 11 * * *'
     - cron: '5 12 * * *'
   workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Set true to bypass time gate for manual approval posting'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -18,9 +23,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Time gate (only proceed at 07:05 America/New_York)
+      - name: Time gate (07:05 America/New_York, unless force_run=true)
         id: gate
         run: |
+          FORCE_RUN="${{ github.event.inputs.force_run }}"
+          if [ -z "$FORCE_RUN" ]; then FORCE_RUN="false"; fi
+          if [ "$FORCE_RUN" = "true" ]; then
+            echo "Manual force_run=true; bypassing time gate"
+            echo "run_now=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           NY_HOUR=$(TZ=America/New_York date +%H)
           NY_MIN=$(TZ=America/New_York date +%M)
           echo "NY time is ${NY_HOUR}:${NY_MIN}"
