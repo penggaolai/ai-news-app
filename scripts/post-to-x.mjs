@@ -152,12 +152,19 @@ async function postTweet(text) {
 }
 
 async function main() {
-  const items = await loadTopNews()
-  if (items.length < TOP_N) {
-    throw new Error(`Need at least ${TOP_N} items in public/news.json, got ${items.length}`)
-  }
+  const manualText = (process.env.X_TEST_TEXT || '').trim()
+  let text
 
-  const text = buildTweet(items)
+  if (manualText) {
+    text = truncate(manualText, 280)
+    console.log('Using X_TEST_TEXT override.')
+  } else {
+    const items = await loadTopNews()
+    if (items.length < TOP_N) {
+      throw new Error(`Need at least ${TOP_N} items in public/news.json, got ${items.length}`)
+    }
+    text = buildTweet(items)
+  }
 
   if (process.env.DRY_RUN === '1') {
     console.log('DRY_RUN=1 (no post sent)')

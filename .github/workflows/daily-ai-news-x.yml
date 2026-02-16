@@ -11,6 +11,10 @@ on:
         description: 'Set true to bypass time gate for manual approval posting'
         required: false
         default: 'false'
+      test_text:
+        description: 'Optional: post this exact text (for diagnostics)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -88,6 +92,7 @@ jobs:
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          X_TEST_TEXT: ${{ github.event.inputs.test_text }}
         run: node scripts/post-to-x.mjs
 
       - name: Skip note
