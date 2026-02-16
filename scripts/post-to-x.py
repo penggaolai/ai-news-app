@@ -55,7 +55,7 @@ def build_tweet_from_news(news):
     if len(link) > 230:
         link = "https://ai-news-app-iota.vercel.app/"
 
-    header = f"AI morning brief ({date_label})"
+    header = f"AI morning brief ({date_label}):"
     suffix = " #AI"
 
     # Reserve space for full link line + fixed text.
