@@ -1,0 +1,73 @@
+name: Daily AI news + X autopost
+
+on:
+  schedule:
+    # Run at both 11:05 and 12:05 UTC, then gate for 07:05 America/New_York (handles DST)
+    - cron: '5 11 * * *'
+    - cron: '5 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Time gate (only proceed at 07:05 America/New_York)
+        id: gate
+        run: |
+          NY_HOUR=$(TZ=America/New_York date +%H)
+          NY_MIN=$(TZ=America/New_York date +%M)
+          echo "NY time is ${NY_HOUR}:${NY_MIN}"
+          if [ "$NY_HOUR" = "07" ] && [ "$NY_MIN" = "05" ]; then
+            echo "run_now=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_now=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node
+        if: steps.gate.outputs.run_now == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run_now == 'true'
+        run: npm ci
+
+      - name: Refresh news.json from RSS
+        if: steps.gate.outputs.run_now == 'true'
+        run: node scripts/update-news.mjs
+
+      - name: Commit news.json if changed
+        if: steps.gate.outputs.run_now == 'true'
+        run: |
+          if git diff --quiet public/news.json; then
+            echo "No changes in public/news.json"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/news.json
+          git commit -m "chore: daily AI news refresh"
+          git push
+
+      - name: Post top 3 to X
+        if: steps.gate.outputs.run_now == 'true'
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: node scripts/post-to-x.mjs
+
+      - name: Skip note
+        if: steps.gate.outputs.run_now != 'true'
+        run: echo "Skipped: not 07:05 in America/New_York."
