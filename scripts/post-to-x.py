@@ -63,7 +63,11 @@ def build_tweet_from_news(news):
     max_title = max(40, 280 - reserved)
     clean_title = truncate(title, max_title)
 
-    tweet = f"{header}\n{clean_title}\n{link}{suffix}"
+    source = news[0].get("source", "")
+    source_part = f" ({source})" if source else ""
+    tweet = f"{header} {clean_title}{source_part}. Read more: {link}"
+    if suffix:
+        tweet = f"{tweet}{suffix}"
     return truncate(tweet, 280), date_label
 
 
