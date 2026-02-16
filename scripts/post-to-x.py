@@ -28,21 +28,26 @@ def build_tweet_from_news(news):
     now_ny = datetime.now(ZoneInfo("America/New_York"))
     date_label = now_ny.strftime("%b %d")
     force_unique = os.environ.get("X_FORCE_UNIQUE", "false").lower() == "true"
-    suffix = f" {now_ny.strftime('%H:%M')} ET" if force_unique else ""
+    suffix = f" · {now_ny.strftime('%H:%M')} ET" if force_unique else ""
 
-    lines = [f"🧠 Top 3 AI headlines ({date_label}{suffix})"]
-    max_total = 280
-    static_overhead = len(lines[0]) + 1 + 10  # + hashtags
-    per_line_overhead = 3 + 4  # "1) " + " (S)"
-    remaining_for_titles = max(45, max_total - static_overhead - TOP_N * per_line_overhead)
-    per_title = max(36, remaining_for_titles // TOP_N)
+    # Keep it natural and compact to reduce content-level rejections.
+    a = truncate(news[0].get("title", ""), 52)
+    b = truncate(news[1].get("title", ""), 52)
+    c = truncate(news[2].get("title", ""), 52)
 
-    for idx, item in enumerate(news[:TOP_N], 1):
-        title = truncate(item.get("title", ""), per_title)
-        source = truncate(item.get("source", "AI"), 10)
-        lines.append(f"{idx}) {title} ({source})")
+    lines = [
+        f"AI morning brief ({date_label}{suffix})",
+        f"- {a}",
+        f"- {b}",
+        f"- {c}",
+    ]
 
-    lines.append("#AI #TechNews")
+    # Add only one short link (first item) to avoid overloading the post.
+    first_link = news[0].get("url", "")
+    if first_link:
+        lines.append(first_link)
+
+    lines.append("#AI")
     text = "\n".join(lines)
     return truncate(text, 280)
 
