@@ -70,20 +70,9 @@ function readDateNY() {
   return fmt.format(new Date())
 }
 
-function readTimeNY() {
-  const fmt = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/New_York',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  })
-  return fmt.format(new Date())
-}
-
 function buildTweet(items) {
   const dateLabel = readDateNY()
-  const timeLabel = readTimeNY()
-  const lines = [`🧠 Top 3 AI headlines (${dateLabel} ${timeLabel} ET)`]
+  const lines = [`🧠 Top 3 AI headlines (${dateLabel})`]
 
   const maxTotal = 280
   const staticOverhead = lines[0].length + 1 + 10 // + hashtags
