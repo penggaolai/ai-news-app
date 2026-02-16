@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime
+from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 import tweepy
@@ -24,11 +25,27 @@ def read_top_news(path: str):
     return [x for x in data if x.get("title") and x.get("url")][:TOP_N]
 
 
+def resolve_final_url(url: str) -> str:
+    if not url:
+        return ""
+    try:
+        req = Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (compatible; ai-news-bot/1.0)",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            },
+        )
+        with urlopen(req, timeout=12) as resp:
+            final = getattr(resp, "geturl", lambda: url)()
+            return final or url
+    except Exception:
+        return url
+
+
 def build_tweet_from_news(news):
     now_ny = datetime.now(ZoneInfo("America/New_York"))
     date_label = now_ny.strftime("%b %d")
-    force_unique = os.environ.get("X_FORCE_UNIQUE", "false").lower() == "true"
-    suffix = f" · {now_ny.strftime('%H:%M')} ET" if force_unique else ""
 
     # Keep it natural and compact to reduce content-level rejections.
     a = truncate(news[0].get("title", ""), 52)
@@ -36,14 +53,14 @@ def build_tweet_from_news(news):
     c = truncate(news[2].get("title", ""), 52)
 
     lines = [
-        f"AI morning brief ({date_label}{suffix})",
+        f"AI morning brief ({date_label})",
         f"- {a}",
         f"- {b}",
         f"- {c}",
     ]
 
-    # Add only one short link (first item) to avoid overloading the post.
-    first_link = news[0].get("url", "")
+    # Add one resolved link from headline #1.
+    first_link = resolve_final_url(news[0].get("url", ""))
     if first_link:
         lines.append(first_link)
 
@@ -59,6 +76,9 @@ def main():
     access_token_secret = os.environ["X_ACCESS_TOKEN_SECRET"]
 
     test_text = os.environ.get("X_TEST_TEXT", "").strip()
+    now_ny = datetime.now(ZoneInfo("America/New_York"))
+    date_label = now_ny.strftime("%b %d")
+
     if test_text:
         tweet_text = truncate(test_text, 280)
         print("Using X_TEST_TEXT override.")
@@ -78,11 +98,26 @@ def main():
         access_token_secret=access_token_secret,
     )
 
+    # Prevent duplicate daily brief posts (unless manual test text is provided).
+    if not test_text:
+        try:
+            me = client.get_me(user_auth=True)
+            uid = me.data.id if getattr(me, "data", None) else None
+            if uid:
+                recent = client.get_users_tweets(id=uid, max_results=5, user_auth=True)
+                for t in (recent.data or []):
+                    txt = t.text or ""
+                    if txt.startswith(f"AI morning brief ({date_label}"):
+                        print("Skip: today\'s AI morning brief already posted.")
+                        return
+        except Exception as e:
+            print(f"Duplicate-check skipped due to API read issue: {e}")
+
     try:
         resp = client.create_tweet(text=tweet_text)
     except Forbidden as e:
         # Retry once with a minimal unique fallback to separate permission issues from content issues.
-        fallback = f"AI update test {datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d %H:%M:%S ET')}"
+        fallback = f"AI update test {now_ny.strftime('%Y-%m-%d %H:%M:%S ET')}"
         print("Primary post forbidden; retrying with minimal fallback text...")
         print(f"Fallback preview: {fallback}")
         try:
