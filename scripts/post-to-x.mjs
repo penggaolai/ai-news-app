@@ -3,7 +3,8 @@ import path from 'node:path'
 import crypto from 'node:crypto'
 import process from 'node:process'
 
-const X_POST_URL = 'https://api.x.com/2/tweets'
+const X_POST_URL_V2 = 'https://api.x.com/2/tweets'
+const X_POST_URL_V11 = 'https://api.x.com/1.1/statuses/update.json'
 const TOP_N = 3
 
 function mustEnv(name) {
@@ -25,7 +26,7 @@ function hmacSha1Base64(key, data) {
   return crypto.createHmac('sha1', key).update(data).digest('base64')
 }
 
-function buildOAuthHeader({ method, url, consumerKey, consumerSecret, token, tokenSecret }) {
+function buildOAuthHeader({ method, url, consumerKey, consumerSecret, token, tokenSecret, extraParams = {} }) {
   const oauth = {
     oauth_consumer_key: consumerKey,
     oauth_nonce: nonce(),
@@ -35,9 +36,10 @@ function buildOAuthHeader({ method, url, consumerKey, consumerSecret, token, tok
     oauth_version: '1.0',
   }
 
-  const sortedPairs = Object.entries(oauth)
+  const signingParams = { ...oauth, ...extraParams }
+  const sortedPairs = Object.entries(signingParams)
     .sort(([a], [b]) => a.localeCompare(b))
-    .map(([k, v]) => `${pctEncode(k)}=${pctEncode(v)}`)
+    .map(([k, v]) => `${pctEncode(k)}=${pctEncode(String(v))}`)
     .join('&')
 
   const baseString = [method.toUpperCase(), pctEncode(url), pctEncode(sortedPairs)].join('&')
@@ -46,7 +48,7 @@ function buildOAuthHeader({ method, url, consumerKey, consumerSecret, token, tok
 
   const header = 'OAuth ' + Object.entries(oauth)
     .sort(([a], [b]) => a.localeCompare(b))
-    .map(([k, v]) => `${pctEncode(k)}="${pctEncode(v)}"`)
+    .map(([k, v]) => `${pctEncode(k)}="${pctEncode(String(v))}"`)
     .join(', ')
 
   return header
@@ -125,30 +127,57 @@ async function postTweet(text) {
   const accessToken = mustEnv('X_ACCESS_TOKEN')
   const accessTokenSecret = mustEnv('X_ACCESS_TOKEN_SECRET')
 
-  const authHeader = buildOAuthHeader({
+  // Try v2 first
+  const authHeaderV2 = buildOAuthHeader({
     method: 'POST',
-    url: X_POST_URL,
+    url: X_POST_URL_V2,
     consumerKey,
     consumerSecret,
     token: accessToken,
     tokenSecret: accessTokenSecret,
   })
 
-  const resp = await fetch(X_POST_URL, {
+  const respV2 = await fetch(X_POST_URL_V2, {
     method: 'POST',
     headers: {
-      Authorization: authHeader,
+      Authorization: authHeaderV2,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ text }),
   })
 
-  const bodyText = await resp.text()
-  if (!resp.ok) {
-    throw new Error(`X API error (${resp.status}): ${bodyText}`)
+  const bodyV2 = await respV2.text()
+  if (respV2.ok) {
+    return `v2 ok: ${bodyV2}`
   }
 
-  return bodyText
+  // Fallback to v1.1 statuses/update for accounts/apps where v2 write is restricted
+  const form = new URLSearchParams({ status: text })
+  const authHeaderV11 = buildOAuthHeader({
+    method: 'POST',
+    url: X_POST_URL_V11,
+    consumerKey,
+    consumerSecret,
+    token: accessToken,
+    tokenSecret: accessTokenSecret,
+    extraParams: { status: text },
+  })
+
+  const respV11 = await fetch(X_POST_URL_V11, {
+    method: 'POST',
+    headers: {
+      Authorization: authHeaderV11,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: form.toString(),
+  })
+
+  const bodyV11 = await respV11.text()
+  if (respV11.ok) {
+    return `v1.1 ok: ${bodyV11}`
+  }
+
+  throw new Error(`X API v2 error (${respV2.status}): ${bodyV2}\nX API v1.1 error (${respV11.status}): ${bodyV11}`)
 }
 
 async function main() {
