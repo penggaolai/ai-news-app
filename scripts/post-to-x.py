@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from datetime import datetime
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -9,6 +10,7 @@ from tweepy.errors import Forbidden
 
 TOP_N = 3
 COOLDOWN_MINUTES = 120
+HEADLINE_REPOST_WINDOW_HOURS = 48
 
 
 def truncate(text: str, max_len: int) -> str:
@@ -24,6 +26,10 @@ def read_top_news(path: str):
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return [x for x in data if x.get("title") and x.get("url")][:TOP_N]
+
+
+def normalize_text(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9\s]", " ", (text or "").lower())).strip()
 
 
 def resolve_final_url(url: str) -> str:
@@ -103,6 +109,7 @@ def main():
         raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
 
     tweet_text, date_label = build_tweet_from_news(news)
+    top_headline_norm = normalize_text(news[0].get("title", ""))
 
     print("Tweet preview:")
     print(tweet_text)
@@ -124,6 +131,8 @@ def main():
                 created_at = getattr(t, "created_at", None)
                 if created_at is not None:
                     age_min = (now_utc - created_at).total_seconds() / 60.0
+                    age_hours = age_min / 60.0
+
                     if age_min < COOLDOWN_MINUTES and (
                         txt.startswith("AI morning brief")
                         or txt.startswith("AI update test")
@@ -131,6 +140,14 @@ def main():
                     ):
                         print(f"Skip: cooldown active ({age_min:.0f} min < {COOLDOWN_MINUTES} min).")
                         return
+
+                    # Skip reposting same headline within 48h.
+                    if age_hours < HEADLINE_REPOST_WINDOW_HOURS and top_headline_norm:
+                        recent_norm = normalize_text(txt)
+                        probe = top_headline_norm[:55]
+                        if probe and probe in recent_norm:
+                            print(f"Skip: same headline already posted within {HEADLINE_REPOST_WINDOW_HOURS}h.")
+                            return
     except Exception as e:
         print(f"Duplicate/cooldown check skipped due to API read issue: {e}")
 
