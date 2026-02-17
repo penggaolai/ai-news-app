@@ -7,9 +7,13 @@ function App() {
   useEffect(() => {
     let isMounted = true
 
-    const loadNews = async () => {
+    const loadNews = async ({ silent = false } = {}) => {
+      if (!silent && isMounted) {
+        setIsLoading(true)
+      }
+
       try {
-        const response = await fetch('./news.json')
+        const response = await fetch(`./news.json?t=${Date.now()}`, { cache: 'no-store' })
         if (!response.ok) {
           throw new Error('Failed to load news')
         }
@@ -28,10 +32,20 @@ function App() {
       }
     }
 
+    const refreshOnFocus = () => {
+      if (document.visibilityState === 'visible') {
+        loadNews({ silent: true })
+      }
+    }
+
     loadNews()
+    window.addEventListener('focus', refreshOnFocus)
+    document.addEventListener('visibilitychange', refreshOnFocus)
 
     return () => {
       isMounted = false
+      window.removeEventListener('focus', refreshOnFocus)
+      document.removeEventListener('visibilitychange', refreshOnFocus)
     }
   }, [])
 
