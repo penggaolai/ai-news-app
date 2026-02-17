@@ -1,53 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useQuery } from '@tanstack/react-query'
+
+async function fetchNews() {
+  const response = await fetch(`./news.json?t=${Date.now()}`, { cache: 'no-store' })
+  if (!response.ok) {
+    throw new Error('Failed to load news')
+  }
+  const data = await response.json()
+  return Array.isArray(data) ? data : []
+}
 
 function App() {
-  const [news, setNews] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    let isMounted = true
-
-    const loadNews = async ({ silent = false } = {}) => {
-      if (!silent && isMounted) {
-        setIsLoading(true)
-      }
-
-      try {
-        const response = await fetch(`./news.json?t=${Date.now()}`, { cache: 'no-store' })
-        if (!response.ok) {
-          throw new Error('Failed to load news')
-        }
-        const data = await response.json()
-        if (isMounted) {
-          setNews(Array.isArray(data) ? data : [])
-        }
-      } catch (error) {
-        if (isMounted) {
-          setNews([])
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoading(false)
-        }
-      }
-    }
-
-    const refreshOnFocus = () => {
-      if (document.visibilityState === 'visible') {
-        loadNews({ silent: true })
-      }
-    }
-
-    loadNews()
-    window.addEventListener('focus', refreshOnFocus)
-    document.addEventListener('visibilitychange', refreshOnFocus)
-
-    return () => {
-      isMounted = false
-      window.removeEventListener('focus', refreshOnFocus)
-      document.removeEventListener('visibilitychange', refreshOnFocus)
-    }
-  }, [])
+  const {
+    data: news = [],
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ['news'],
+    queryFn: fetchNews,
+  })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#0a1230] to-[#03040f] text-white">
@@ -69,6 +39,10 @@ function App() {
         {isLoading ? (
           <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center text-gray-300 backdrop-blur-md">
             Loading the latest headlines...
+          </div>
+        ) : isError ? (
+          <div className="rounded-2xl border border-red-300/20 bg-red-500/10 p-8 text-center text-red-100 backdrop-blur-md">
+            Failed to load headlines. Please refresh and try again.
           </div>
         ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
