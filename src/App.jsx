@@ -122,7 +122,7 @@ function App() {
           {active.key === 'youtube-openclaw' ? (
             <div className="w-full max-w-2xl">
               <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-indigo-200/80">
-                Interests (comma-separated)
+                Filter current results (comma-separated)
               </label>
               <input
                 value={interestInput}
@@ -131,7 +131,7 @@ function App() {
                 className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
               />
               <p className="mt-2 text-xs text-gray-400">
-                Feed-based filtering over the latest fetched videos. Like counts require YouTube Data API.
+                This only filters the current fetched list. For live search, we need a backend search API.
               </p>
             </div>
           ) : null}
@@ -161,15 +161,7 @@ function App() {
                   <h2 className="text-lg font-bold text-white">{item.title}</h2>
                   <p className="text-sm text-gray-300">{item.summary}</p>
 
-                  <div className="flex flex-wrap gap-2 pt-1 text-[11px] uppercase tracking-wide text-gray-300">
-                    {item.channel ? (
-                      <span className="rounded-full border border-white/20 bg-white/5 px-2 py-1">Channel: {item.channel}</span>
-                    ) : null}
-                    <span className="rounded-full border border-white/20 bg-white/5 px-2 py-1">Source: {item.source || 'Unknown'}</span>
-                    <span className="rounded-full border border-white/20 bg-white/5 px-2 py-1">
-                      Likes: {typeof item.likes === 'number' ? item.likes : 'N/A'}
-                    </span>
-                  </div>
+                  {null}
                 </div>
                 <div className="mt-6 flex items-center justify-between text-xs uppercase tracking-wide text-gray-400">
                   <span>{item.date}</span>
