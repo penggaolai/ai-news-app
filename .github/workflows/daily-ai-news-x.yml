@@ -58,22 +58,24 @@ jobs:
         if: steps.gate.outputs.run_now == 'true'
         run: npm ci
 
-      - name: Refresh news.json from RSS
-        if: steps.gate.outputs.run_now == 'true'
-        run: node scripts/update-news.mjs
-
-      - name: Commit news.json if changed
+      - name: Refresh news feeds from RSS
         if: steps.gate.outputs.run_now == 'true'
         run: |
-          if git diff --quiet public/news.json; then
-            echo "No changes in public/news.json"
+          node scripts/update-news.mjs
+          node scripts/update-antiques-cn.mjs
+
+      - name: Commit news files if changed
+        if: steps.gate.outputs.run_now == 'true'
+        run: |
+          if git diff --quiet public/news.json public/news-antiques-cn.json; then
+            echo "No changes in news files"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/news.json
-          git commit -m "chore: daily AI news refresh"
+          git add public/news.json public/news-antiques-cn.json
+          git commit -m "chore: daily news refresh (ai + antiques-cn)"
           git push
 
       - name: Diagnose X auth

@@ -1,7 +1,23 @@
+import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 
-async function fetchNews() {
-  const response = await fetch(`./news.json?t=${Date.now()}`, { cache: 'no-store' })
+const TABS = [
+  {
+    key: 'ai',
+    label: 'AI News',
+    file: 'news.json',
+    description: 'Curated headlines and insights from the fast-moving world of artificial intelligence.',
+  },
+  {
+    key: 'antiques-cn',
+    label: 'Chinese Antiques',
+    file: 'news-antiques-cn.json',
+    description: '中国古董、文物、考古与拍卖相关新闻精选。',
+  },
+]
+
+async function fetchNews(file) {
+  const response = await fetch(`./${file}?t=${Date.now()}`, { cache: 'no-store' })
   if (!response.ok) {
     throw new Error('Failed to load news')
   }
@@ -10,13 +26,16 @@ async function fetchNews() {
 }
 
 function App() {
+  const [activeTab, setActiveTab] = useState('ai')
+  const active = TABS.find((t) => t.key === activeTab) || TABS[0]
+
   const {
     data: news = [],
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ['news'],
-    queryFn: fetchNews,
+    queryKey: ['news', active.file],
+    queryFn: () => fetchNews(active.file),
   })
 
   return (
@@ -24,16 +43,35 @@ function App() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <header className="mb-10 flex flex-col items-start gap-4">
           <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-4xl font-extrabold tracking-[0.35em] text-white drop-shadow-[0_0_18px_rgba(99,102,241,0.8)] sm:text-5xl">
-              AI NEWS
+            <h1 className="text-4xl font-extrabold tracking-[0.2em] text-white drop-shadow-[0_0_18px_rgba(99,102,241,0.8)] sm:text-5xl">
+              {active.label.toUpperCase()}
             </h1>
             <span className="text-xs uppercase tracking-[0.3em] text-indigo-200/80">
               {new Date().toLocaleString()}
             </span>
           </div>
-          <p className="max-w-2xl text-sm text-gray-300 sm:text-base">
-            Curated headlines and insights from the fast-moving world of artificial intelligence.
-          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {TABS.map((tab) => {
+              const selected = tab.key === activeTab
+              return (
+                <button
+                  key={tab.key}
+                  type="button"
+                  onClick={() => setActiveTab(tab.key)}
+                  className={`rounded-full border px-4 py-2 text-sm transition ${
+                    selected
+                      ? 'border-indigo-300 bg-indigo-500/25 text-indigo-100'
+                      : 'border-white/20 bg-white/5 text-gray-300 hover:border-white/40 hover:text-white'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              )
+            })}
+          </div>
+
+          <p className="max-w-2xl text-sm text-gray-300 sm:text-base">{active.description}</p>
         </header>
 
         {isLoading ? (
