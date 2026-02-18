@@ -16,9 +16,9 @@ const TABS = [
   },
   {
     key: 'youtube-openclaw',
-    label: 'OpenClaw YouTube',
+    label: 'OpenClaw Video Explorer',
     file: 'news-youtube-openclaw.json',
-    description: 'Top 10 latest YouTube videos focused on OpenClaw use cases, tutorials, and automation.',
+    description: 'Top YouTube videos about OpenClaw use cases, tutorials, and automation (feed-based).',
   },
 ]
 
@@ -129,6 +129,9 @@ function App() {
               placeholder="e.g. OpenClaw use cases, workflow, automation"
               className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
             />
+            <p className="mt-2 text-xs text-gray-400">
+              Feed-based filtering over the latest fetched videos. Like counts require YouTube Data API.
+            </p>
           </div>
         </header>
 
@@ -155,6 +158,16 @@ function App() {
                 <div className="space-y-3">
                   <h2 className="text-lg font-bold text-white">{item.title}</h2>
                   <p className="text-sm text-gray-300">{item.summary}</p>
+
+                  <div className="flex flex-wrap gap-2 pt-1 text-[11px] uppercase tracking-wide text-gray-300">
+                    {item.channel ? (
+                      <span className="rounded-full border border-white/20 bg-white/5 px-2 py-1">Channel: {item.channel}</span>
+                    ) : null}
+                    <span className="rounded-full border border-white/20 bg-white/5 px-2 py-1">Source: {item.source || 'Unknown'}</span>
+                    <span className="rounded-full border border-white/20 bg-white/5 px-2 py-1">
+                      Likes: {typeof item.likes === 'number' ? item.likes : 'N/A'}
+                    </span>
+                  </div>
                 </div>
                 <div className="mt-6 flex items-center justify-between text-xs uppercase tracking-wide text-gray-400">
                   <span>{item.date}</span>

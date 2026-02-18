@@ -107,10 +107,12 @@ async function main() {
   const output = ranked.map((item, idx) => ({
     id: `${formatDate(item.publishedAt)}-${idx + 1}`,
     title: item.title,
-    summary: item.author ? `${item.author} · ${item.summary}` : item.summary,
+    summary: item.summary,
     url: item.url,
     date: formatDate(item.publishedAt),
     source: 'YouTube',
+    channel: item.author || '',
+    likes: null,
   }))
 
   const target = path.resolve(process.cwd(), 'public/news-youtube-openclaw.json')
