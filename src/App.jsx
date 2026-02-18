@@ -32,7 +32,7 @@ async function fetchNews(file) {
 }
 
 function App() {
-  const [activeTab, setActiveTab] = useState('ai')
+  const [activeTab, setActiveTab] = useState('youtube-openclaw')
   const active = TABS.find((t) => t.key === activeTab) || TABS[0]
 
   const {
