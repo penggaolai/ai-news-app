@@ -119,20 +119,22 @@ function App() {
 
           <p className="max-w-2xl text-sm text-gray-300 sm:text-base">{active.description}</p>
 
-          <div className="w-full max-w-2xl">
-            <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-indigo-200/80">
-              Interests (comma-separated)
-            </label>
-            <input
-              value={interestInput}
-              onChange={(e) => setInterestInput(e.target.value)}
-              placeholder="e.g. OpenClaw use cases, workflow, automation"
-              className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
-            />
-            <p className="mt-2 text-xs text-gray-400">
-              Feed-based filtering over the latest fetched videos. Like counts require YouTube Data API.
-            </p>
-          </div>
+          {active.key === 'youtube-openclaw' ? (
+            <div className="w-full max-w-2xl">
+              <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-indigo-200/80">
+                Interests (comma-separated)
+              </label>
+              <input
+                value={interestInput}
+                onChange={(e) => setInterestInput(e.target.value)}
+                placeholder="e.g. OpenClaw use cases, workflow, automation"
+                className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
+              />
+              <p className="mt-2 text-xs text-gray-400">
+                Feed-based filtering over the latest fetched videos. Like counts require YouTube Data API.
+              </p>
+            </div>
+          ) : null}
         </header>
 
         {isLoading ? (
