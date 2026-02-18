@@ -49,17 +49,39 @@ function App() {
     const q = interestInput.trim().toLowerCase()
     if (!q) return news
 
-    const terms = q
+    const rawTerms = q
       .split(',')
       .map((t) => t.trim())
       .filter(Boolean)
 
-    if (terms.length === 0) return news
+    if (rawTerms.length === 0) return news
 
-    return news.filter((item) => {
-      const hay = `${item.title || ''} ${item.summary || ''}`.toLowerCase()
-      return terms.some((term) => hay.includes(term))
+    const synonymMap = {
+      workflow: ['workflows', 'automation', 'pipeline', 'process', 'agent workflow'],
+      workflows: ['workflow', 'automation', 'pipeline', 'process'],
+      usecase: ['use case', 'use-case', 'case study', 'example'],
+      'use case': ['usecase', 'use-case', 'case study', 'example'],
+      tutorial: ['guide', 'walkthrough', 'how to'],
+      openclaw: ['open claw', 'openclaw ai', 'agent'],
+      automation: ['workflow', 'automate', 'pipeline'],
+    }
+
+    const normalize = (s) => s.replace(/\s+/g, ' ').trim()
+
+    const expandedTerms = rawTerms.flatMap((term) => {
+      const key = normalize(term)
+      const aliases = synonymMap[key] || []
+      const stem = key.endsWith('s') ? key.slice(0, -1) : key
+      return [...new Set([key, ...aliases, stem])]
     })
+
+    const matched = news.filter((item) => {
+      const hay = `${item.title || ''} ${item.summary || ''}`.toLowerCase()
+      return expandedTerms.some((term) => term && hay.includes(term))
+    })
+
+    // If strict filtering returns nothing, fall back to full list so UX is never blank.
+    return matched.length > 0 ? matched : news
   }, [news, interestInput])
 
   return (
