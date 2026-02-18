@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "update:news": "node scripts/update-news.mjs",
-    "update:antiques": "node scripts/update-antiques-cn.mjs"
+    "update:antiques": "node scripts/update-antiques-cn.mjs",
+    "update:youtube": "node scripts/update-youtube-openclaw.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

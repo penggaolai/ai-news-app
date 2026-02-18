@@ -63,19 +63,20 @@ jobs:
         run: |
           node scripts/update-news.mjs
           node scripts/update-antiques-cn.mjs
+          node scripts/update-youtube-openclaw.mjs
 
       - name: Commit news files if changed
         if: steps.gate.outputs.run_now == 'true'
         run: |
-          if git diff --quiet public/news.json public/news-antiques-cn.json; then
+          if git diff --quiet public/news.json public/news-antiques-cn.json public/news-youtube-openclaw.json; then
             echo "No changes in news files"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/news.json public/news-antiques-cn.json
-          git commit -m "chore: daily news refresh (ai + antiques-cn)"
+          git add public/news.json public/news-antiques-cn.json public/news-youtube-openclaw.json
+          git commit -m "chore: daily news refresh (ai + antiques-cn + youtube)"
           git push
 
       - name: Diagnose X auth

@@ -14,6 +14,12 @@ const TABS = [
     file: 'news-antiques-cn.json',
     description: '中国古董、文物、考古与拍卖相关新闻精选。',
   },
+  {
+    key: 'youtube-openclaw',
+    label: 'OpenClaw YouTube',
+    file: 'news-youtube-openclaw.json',
+    description: 'Top 10 latest YouTube videos focused on OpenClaw use cases, tutorials, and automation.',
+  },
 ]
 
 async function fetchNews(file) {
