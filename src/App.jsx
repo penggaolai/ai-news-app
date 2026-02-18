@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 
 const TABS = [
@@ -33,6 +33,7 @@ async function fetchNews(file) {
 
 function App() {
   const [activeTab, setActiveTab] = useState('youtube-openclaw')
+  const [interestInput, setInterestInput] = useState('OpenClaw use cases')
   const active = TABS.find((t) => t.key === activeTab) || TABS[0]
 
   const {
@@ -43,6 +44,23 @@ function App() {
     queryKey: ['news', active.file],
     queryFn: () => fetchNews(active.file),
   })
+
+  const filteredNews = useMemo(() => {
+    const q = interestInput.trim().toLowerCase()
+    if (!q) return news
+
+    const terms = q
+      .split(',')
+      .map((t) => t.trim())
+      .filter(Boolean)
+
+    if (terms.length === 0) return news
+
+    return news.filter((item) => {
+      const hay = `${item.title || ''} ${item.summary || ''}`.toLowerCase()
+      return terms.some((term) => hay.includes(term))
+    })
+  }, [news, interestInput])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#0a1230] to-[#03040f] text-white">
@@ -78,6 +96,18 @@ function App() {
           </div>
 
           <p className="max-w-2xl text-sm text-gray-300 sm:text-base">{active.description}</p>
+
+          <div className="w-full max-w-2xl">
+            <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-indigo-200/80">
+              Interests (comma-separated)
+            </label>
+            <input
+              value={interestInput}
+              onChange={(e) => setInterestInput(e.target.value)}
+              placeholder="e.g. OpenClaw use cases, workflow, automation"
+              className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
+            />
+          </div>
         </header>
 
         {isLoading ? (
@@ -89,8 +119,13 @@ function App() {
             Failed to load headlines. Please refresh and try again.
           </div>
         ) : (
+          filteredNews.length === 0 ? (
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center text-gray-300 backdrop-blur-md">
+            No matches for your interests yet. Try broader keywords.
+          </div>
+        ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {news.map((item) => (
+            {filteredNews.map((item) => (
               <article
                 key={item.id ?? `${item.title}-${item.date}`}
                 className="flex h-full flex-col justify-between rounded-2xl border border-white/15 bg-white/10 p-6 shadow-[0_10px_40px_rgba(15,23,42,0.45)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-white/30"
@@ -113,6 +148,7 @@ function App() {
               </article>
             ))}
           </div>
+        )
         )}
       </div>
     </div>
