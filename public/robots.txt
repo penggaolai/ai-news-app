@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-news-app-iota.vercel.app/sitemap.xml
