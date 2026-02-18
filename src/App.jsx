@@ -16,7 +16,7 @@ const TABS = [
   },
   {
     key: 'youtube-openclaw',
-    label: 'OpenClaw Video Explorer',
+    label: 'OpenClaw Video Search',
     file: 'news-youtube-openclaw.json',
     description: 'Top YouTube videos about OpenClaw use cases, tutorials, and automation (RSS live search).',
   },
