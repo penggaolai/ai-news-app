@@ -45,7 +45,7 @@ async function searchYoutubeViaRss(query) {
 
   // Public RSS-to-JSON bridge (no key required). If this service rate-limits,
   // we can replace with your own backend endpoint later.
-  const url = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}&count=20`
+  const url = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`
   const response = await fetch(url, { cache: 'no-store' })
 
   if (!response.ok) {
@@ -53,6 +53,10 @@ async function searchYoutubeViaRss(query) {
   }
 
   const data = await response.json()
+  if (data?.status && data.status !== 'ok') {
+    throw new Error(data?.message || 'Search provider error')
+  }
+
   const items = Array.isArray(data?.items) ? data.items : []
 
   const seen = new Set()
