@@ -67,8 +67,9 @@ async function searchYoutubeViaRss(query) {
     const title = item.title || ''
     if (!link || !title) continue
 
-    // Keep youtube-oriented results only.
-    if (!/youtube\.com|youtu\.be/i.test(link)) continue
+    // Google News RSS wraps links; rely on title/topic signal instead of raw URL host.
+    const looksYoutube = / - YouTube$/i.test(title) || /youtube/i.test(item.description || '')
+    if (!looksYoutube) continue
 
     const key = link.replace(/\?.*$/, '')
     if (seen.has(key)) continue
