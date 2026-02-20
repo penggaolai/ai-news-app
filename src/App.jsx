@@ -110,7 +110,12 @@ function App() {
 
   const isLoading = active.key === 'youtube-openclaw' ? youtubeQuery.isLoading : staticQuery.isLoading
   const isError = active.key === 'youtube-openclaw' ? youtubeQuery.isError : staticQuery.isError
-  const news = active.key === 'youtube-openclaw' ? youtubeQuery.data || [] : staticQuery.data || []
+  const rawNews = active.key === 'youtube-openclaw' ? youtubeQuery.data || [] : staticQuery.data || []
+
+  // Sort by date descending (newest first) for all tabs
+  const news = useMemo(() => {
+    return rawNews.slice().sort((a, b) => new Date(b.date) - new Date(a.date))
+  }, [rawNews])
 
   const onSearch = () => {
     const q = interestInput.trim()
