@@ -50,20 +50,46 @@ function short(text = '', max = 220) {
 }
 
 function scoreItem(item, feedWeight) {
-  const published = new Date(item.isoDate || item.pubDate || Date.now())
-  const ageHours = Math.max(0, (Date.now() - published.getTime()) / (1000 * 60 * 60))
-  const recency = Math.max(0, 72 - ageHours) / 72
+  // Use item.publishedAt which is already standardized by fetchFeed
+  let published = new Date(item.publishedAt || Date.now())
+  
+  if (isNaN(published.getTime())) {
+      published = new Date(Date.now())
+  }
+  
+  const now = Date.now();
+  const diff = now - published.getTime();
+  const ageHours = Math.max(0, diff / (1000 * 60 * 60));
+
+  // Hard filter: anything older than 72 hours (3 days) gets a massive penalty
+  if (ageHours > 72) {
+      return -9999;
+  }
+
+  // Recency is KING. 
+  // Decay score rapidly as age increases.
+  const recencyScore = 10 * Math.exp(-0.05 * ageHours);
+
+  // Feed weight is secondary (0-4 points max)
+  const weightScore = feedWeight * 0.5;
+
   const titleQuality = Math.min((item.title || '').length / 70, 1)
 
   const title = item.title || ''
-  const bonus = /古董|文物|考古|博物馆|青铜|瓷器|书画|玉器|拍卖/i.test(title) ? 1.1 : 0
+  const bonus = /古董|文物|考古|博物馆|青铜|瓷器|书画|玉器|拍卖/i.test(title) ? 1.5 : 0
 
-  return feedWeight * 2 + recency * 3 + titleQuality + bonus
+  return recencyScore + weightScore + titleQuality + bonus
 }
 
 async function fetchFeed(feed) {
   try {
     const result = await parser.parseURL(feed.url)
+    
+    // Debug info
+    // if (result.items && result.items.length > 0) {
+    //    console.log(`[DEBUG CN] Feed: ${feed.name} | First item date check: isoDate=${result.items[0].isoDate}, pubDate=${result.items[0].pubDate}`);
+    // }
+
     const items = (result.items || []).slice(0, MAX_ITEMS_PER_FEED).map((item) => ({
       source: feed.name,
       feedWeight: feed.weight,
@@ -127,6 +153,7 @@ async function main() {
   const scored = dedupe(
     all
       .map((item) => ({ ...item, score: scoreItem(item, item.feedWeight) }))
+      .filter((item) => item.score > -100)
       .sort((a, b) => b.score - a.score)
   )
 
