@@ -175,6 +175,7 @@ function App() {
                 <input
                   value={interestInput}
                   onChange={(e) => setInterestInput(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && onSearch()}
                   placeholder="e.g. OpenClaw use cases, workflow, automation"
                   className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
                 />
