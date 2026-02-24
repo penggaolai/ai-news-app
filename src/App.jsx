@@ -96,10 +96,12 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('OpenClaw use cases')
   const active = TABS.find((t) => t.key === activeTab) || TABS[0]
 
-  const staticQuery = useQuery({
+  const { data: rawNews = [], isLoading, isError, refetch } = useQuery({
     queryKey: ['news', active.file],
     queryFn: () => fetchNews(active.file),
     enabled: active.key !== 'youtube-openclaw',
+    staleTime: 0,
+    refetchOnWindowFocus: true,
   })
 
   const youtubeQuery = useQuery({
@@ -108,14 +110,15 @@ function App() {
     enabled: active.key === 'youtube-openclaw',
   })
 
-  const isLoading = active.key === 'youtube-openclaw' ? youtubeQuery.isLoading : staticQuery.isLoading
-  const isError = active.key === 'youtube-openclaw' ? youtubeQuery.isError : staticQuery.isError
-  const rawNews = active.key === 'youtube-openclaw' ? youtubeQuery.data || [] : staticQuery.data || []
+  // Normalize data access
+  const activeNews = active.key === 'youtube-openclaw' ? youtubeQuery.data || [] : rawNews
+  const loading = active.key === 'youtube-openclaw' ? youtubeQuery.isLoading : isLoading
+  const error = active.key === 'youtube-openclaw' ? youtubeQuery.isError : isError
 
   // Sort by date descending (newest first) for all tabs
   const news = useMemo(() => {
-    return rawNews.slice().sort((a, b) => new Date(b.date) - new Date(a.date))
-  }, [rawNews])
+    return (activeNews || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date))
+  }, [activeNews])
 
   const onSearch = () => {
     const q = interestInput.trim()
@@ -188,11 +191,11 @@ function App() {
           ) : null}
         </header>
 
-        {isLoading ? (
+        {loading ? (
           <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center text-gray-300 backdrop-blur-md">
             Loading the latest headlines...
           </div>
-        ) : isError ? (
+        ) : error ? (
           <div className="rounded-2xl border border-red-300/20 bg-red-500/10 p-8 text-center text-red-100 backdrop-blur-md">
             Failed to load headlines. Please refresh and try again.
           </div>

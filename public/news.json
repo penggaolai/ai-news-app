@@ -1,82 +1,58 @@
 [
   {
-    "id": "2025-12-16-1",
-    "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
-    "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
-    "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/",
-    "date": "2025-12-16",
-    "source": "Google DeepMind Blog"
+    "id": "2026-02-24-1",
+    "title": "Exclusive: China's DeepSeek trained AI model on Nvidia's best chip despite US ban, official says - Reuters",
+    "summary": "Exclusive: China's DeepSeek trained AI model on Nvidia's best chip despite US ban, official says Reuters",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNYko5c1BzTGVuUV9VZl9CMGczWm5RdThBeW00Mm5BX3NDb2Z6XzZuNGstMWs1Y2pSZS1wcWdndEZBc3YwSEtNT0ZnXzNjUUFncWN5eHFEbXZ1ZmEyR3M3dFg2TU5tZzQ0QXdhZTJhTXJGSWxyXzRMcDJxZllwRXgxQTFhbkZ2RjFJbDViNmd2enRZWGtZcVV1cE9nUXFUNFQtQzFoZ01lRkc3YTlueXhwZVUxQTVkeDBfTlZmaWxlX1g0X0tCRFE?oc=5",
+    "date": "2026-02-24",
+    "source": "Google News (AI)"
   },
   {
-    "id": "2025-12-09-2",
-    "title": "FACTS Benchmark Suite: Systematically evaluating the factuality of large language models",
-    "summary": "Systematically evaluating the factuality of large language models with the FACTS Benchmark Suite.",
-    "url": "https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/",
-    "date": "2025-12-09",
-    "source": "Google DeepMind Blog"
+    "id": "2026-02-23-2",
+    "title": "OpenAI safety reps called to Ottawa after Tumbler Ridge, B.C., mass shooting: minister - CBC",
+    "summary": "OpenAI safety reps called to Ottawa after Tumbler Ridge, B.C., mass shooting: minister CBC",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaG9xNHllUVd2Rkh4SnRXNW51a3h4aWhtaFpwV3p3RFJ2bGVRbkFiRjc1Q3lNWnRmUkhZYzIwZ3RXejR5R2JwU3RuQTBpNFlpNHJSVmV6cVJPRmRrRzA4NVdpb1pYcGtjQWVTU003NXIySVNhSHh5RW83RFh4OGhvZkNyTEFDM3M?oc=5",
+    "date": "2026-02-23",
+    "source": "Google News (AI)"
   },
   {
-    "id": "2026-02-13-3",
-    "title": "Scaling social science research",
-    "summary": "GABRIEL is a new open-source toolkit from OpenAI that uses GPT to turn qualitative text and images into quantitative data, helping social scientists analyze research at scale.",
-    "url": "https://openai.com/index/scaling-social-science-research",
-    "date": "2026-02-13",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-02-02-4",
-    "title": "How we’re helping preserve the genetic information of endangered species with AI",
-    "summary": "Scientists are working to sequence the genome of every known species on Earth.",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/ai-to-preserve-endangered-species/",
-    "date": "2026-02-02",
-    "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-01-27-5",
-    "title": "Google AI Plus is now available everywhere our AI plans are available, including the U.S.",
-    "summary": "We’re launching Google AI Plus in 35 new countries and territories including the US, making it available everywhere Google AI plans are available.",
-    "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-plus-availability/",
-    "date": "2026-01-27",
-    "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-02-02-6",
-    "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",
-    "summary": "OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.",
-    "url": "https://openai.com/index/snowflake-partnership",
-    "date": "2026-02-02",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2025-08-20-7",
-    "title": "Harvard dropouts to launch ‘always on’ AI smart glasses that listen and record every conversation",
-    "summary": "After developing a facial-recognition app for Meta’s Ray-Ban glasses and doxing random people, two former Harvard students are now launching a startup that makes smart glasses with an always-on microphone.",
-    "url": "https://techcrunch.com/2025/08/20/harvard-dropouts-to-launch-always-on-ai-smart-glasses-that-listen-and-record-every-conversation/",
-    "date": "2025-08-20",
-    "source": "TechCrunch AI"
-  },
-  {
-    "id": "2026-02-17-8",
-    "title": "Apple is reportedly planning to launch AI-powered glasses, a pendant, and AirPods",
-    "summary": "The second-gen Ray-Ban Meta smart glasses. | Photo by Amelia Holowaty Krales / The Verge Apple is pushing ahead with plans to launch its first pair of smart glasses, along with an AI-powered pendant and camera-equipped…",
-    "url": "https://www.theverge.com/tech/880293/apple-ai-hardware-smart-glasses-pin-airpods",
-    "date": "2026-02-17",
+    "id": "2026-02-23-3",
+    "title": "Anthropic accuses DeepSeek and other Chinese firms of using Claude to train their AI",
+    "summary": "Anthropic claims DeepSeek and two other Chinese AI companies misused its Claude AI model in an attempt to improve their own products. In an announcement on Monday, Anthropic says the \"industrial-scale campaigns\" involve…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/883243/anthropic-claude-deepseek-china-ai-distillation",
+    "date": "2026-02-23",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-01-07-9",
-    "title": "Nous Research's NousCoder-14B is an open-source coding model landing right in the Claude Code moment",
-    "summary": "Nous Research, the open-source artificial intelligence startup backed by crypto venture firm Paradigm, released a new competitive programming model on Monday that it says matches or exceeds several larger proprietary sy…",
-    "url": "https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in",
-    "date": "2026-01-07",
-    "source": "VentureBeat AI"
+    "id": "2026-02-23-4",
+    "title": "The human work behind humanoid robots is being hidden",
+    "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. In January, Nvidia’s Jensen Huang, the head of the world’s most valuable company,…",
+    "url": "https://www.technologyreview.com/2026/02/23/1133508/the-human-work-behind-humanoid-robots-is-being-hidden/",
+    "date": "2026-02-23",
+    "source": "MIT Technology Review AI"
   },
   {
-    "id": "2026-02-16-10",
-    "title": "After spooking Hollywood, ByteDance will tweak safeguards on new AI model",
-    "summary": "Hollywood groups have spoken out against Seedance 2.0 since generated videos like fight scenes between Tom Cruise and Brad Pitt went viral. | Image by Dave Benett / WireImage via Getty TikTok creator ByteDance says that…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/879644/bytedance-seedance-safeguards-ai-video-copyright-infringement",
-    "date": "2026-02-16",
+    "id": "2026-02-23-5",
+    "title": "Does Big Tech actually care about fighting AI slop?",
+    "summary": "Progress towards reliable deepfake labelling tech is sluggish, despite all the “help” from AI providers. | Image: Cath Virginia / The Verge, Getty Images As 2025 drew to a close, Instagram head Adam Mosseri ended the ye…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/882956/ai-deepfake-detection-labels-c2pa-instagram-youtube",
+    "date": "2026-02-23",
     "source": "The Verge AI"
+  },
+  {
+    "id": "2026-02-23-6",
+    "title": "Why we no longer evaluate SWE-bench Verified",
+    "summary": "SWE-bench Verified is increasingly contaminated and mismeasures frontier coding progress. Our analysis shows flawed tests and training leakage. We recommend SWE-bench Pro.",
+    "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified",
+    "date": "2026-02-23",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-02-23-7",
+    "title": "OpenAI announces Frontier Alliance Partners",
+    "summary": "OpenAI announces Frontier Alliance Partners to help enterprises move from AI pilots to production with secure, scalable agent deployments.",
+    "url": "https://openai.com/index/frontier-alliance-partners",
+    "date": "2026-02-23",
+    "source": "OpenAI News"
   }
 ]

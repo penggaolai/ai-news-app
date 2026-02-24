@@ -53,23 +53,55 @@ function short(text = '', max = 220) {
 }
 
 function scoreItem(item, feedWeight) {
-  const published = new Date(item.isoDate || item.pubDate || Date.now())
-  const ageHours = Math.max(0, (Date.now() - published.getTime()) / (1000 * 60 * 60))
+  // Use publishedAt from fetchFeed, not item.isoDate/pubDate which might be lost if not passed through
+  // Wait, fetchFeed returns an object with `publishedAt`, but NOT `isoDate` or `pubDate`.
+  // The `item` passed here is the output of `fetchFeed`.
+  
+  let published = new Date(item.publishedAt || Date.now())
+  if (isNaN(published.getTime())) {
+      published = new Date(); // Fallback to now if invalid
+  }
+  
+  const now = Date.now();
+  const diff = now - published.getTime();
+  const ageHours = Math.max(0, diff / (1000 * 60 * 60));
 
-  // Recency bonus (newer is better), source weight and title quality
-  const recency = Math.max(0, 48 - ageHours) / 48
+  // console.log(`[SCORE] ${item.title.substring(0, 30)}... | Date: ${published.toISOString()} | Age: ${ageHours.toFixed(1)}h`);
+
+  // Hard filter: anything older than 72 hours (3 days) gets a massive penalty
+  if (ageHours > 72) {
+      return -9999;
+  }
+
+  // Recency is KING. 
+  // Decay score rapidly as age increases.
+  // 0 hours old = 10 points
+  // 12 hours old = 5 points
+  // 24 hours old = 2.5 points
+  const recencyScore = 10 * Math.exp(-0.05 * ageHours);
+
+  // Feed weight is secondary (0-4 points max)
+  const weightScore = feedWeight * 0.5;
+
   const titleQuality = Math.min((item.title || '').length / 80, 1)
 
   const title = item.title || ''
-  const financePenalty = FINANCE_NOISE_PATTERNS.some((re) => re.test(title)) ? 2.2 : 0
-  const policyResearchBonus = /\b(research|policy|model|release|launch|safety|benchmark|open source)\b/i.test(title) ? 0.8 : 0
+  const financePenalty = FINANCE_NOISE_PATTERNS.some((re) => re.test(title)) ? 5 : 0 // Increased penalty
+  const policyResearchBonus = /\b(research|policy|model|release|launch|safety|benchmark|open source)\b/i.test(title) ? 2 : 0
 
-  return feedWeight * 2 + recency * 3 + titleQuality + policyResearchBonus - financePenalty
+  return recencyScore + weightScore + titleQuality + policyResearchBonus - financePenalty
 }
 
 async function fetchFeed(feed) {
   try {
     const result = await parser.parseURL(feed.url)
+    
+    // Debug first item to see what date fields are available
+    if (result.items && result.items.length > 0) {
+        // console.log(`[DEBUG] Feed: ${feed.name} | First item keys: ${Object.keys(result.items[0]).join(', ')}`);
+        // console.log(`[DEBUG] First item date check: isoDate=${result.items[0].isoDate}, pubDate=${result.items[0].pubDate}`);
+    }
+
     const items = (result.items || []).slice(0, MAX_ITEMS_PER_FEED).map((item) => ({
       source: feed.name,
       feedWeight: feed.weight,
@@ -133,6 +165,7 @@ async function main() {
   const scored = dedupe(
     all
       .map((item) => ({ ...item, score: scoreItem(item, item.feedWeight) }))
+      .filter((item) => item.score > -100) // Filter out the deeply penalized items
       .sort((a, b) => b.score - a.score)
   )
 
