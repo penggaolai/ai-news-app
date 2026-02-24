@@ -23,7 +23,7 @@ const FEEDS = [
   },
 ]
 
-const MAX_ITEMS_PER_FEED = 25
+const MAX_ITEMS_PER_FEED = 50
 const TOP_N = 12
 const MAX_PER_SOURCE = 3
 
@@ -61,8 +61,8 @@ function scoreItem(item, feedWeight) {
   const diff = now - published.getTime();
   const ageHours = Math.max(0, diff / (1000 * 60 * 60));
 
-  // Hard filter: anything older than 72 hours (3 days) gets a massive penalty
-  if (ageHours > 72) {
+  // Hard filter: anything older than 168 hours (7 days) gets a massive penalty
+  if (ageHours > 168) {
       return -9999;
   }
 

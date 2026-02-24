@@ -54,5 +54,29 @@
     "url": "https://openai.com/index/frontier-alliance-partners",
     "date": "2026-02-23",
     "source": "OpenAI News"
+  },
+  {
+    "id": "2026-02-19-8",
+    "title": "Gemini 3.1 Pro: A smarter model for your most complex tasks",
+    "summary": "3.1 Pro is designed for tasks where a simple answer isn’t enough.",
+    "url": "https://deepmind.google/blog/gemini-3-1-pro-a-smarter-model-for-your-most-complex-tasks/",
+    "date": "2026-02-19",
+    "source": "Google DeepMind Blog"
+  },
+  {
+    "id": "2026-02-18-9",
+    "title": "AI Impact Summit 2026: How we’re partnering to make AI work for everyone",
+    "summary": "An overview of Google’s new global partnerships and funding announcements at the AI Impact Summit in India.",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/ai-impact-summit-2026-india/",
+    "date": "2026-02-18",
+    "source": "Google AI Blog"
+  },
+  {
+    "id": "2026-02-17-10",
+    "title": "Accelerating discovery in India through AI-powered science and education",
+    "summary": "Google DeepMind brings National Partnerships for AI initiative to India, scaling AI for science and education",
+    "url": "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education/",
+    "date": "2026-02-17",
+    "source": "Google DeepMind Blog"
   }
 ]

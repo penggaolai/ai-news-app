@@ -17,7 +17,7 @@ const FEEDS = [
   { name: 'Ars Technica AI', url: 'https://feeds.arstechnica.com/arstechnica/technology-lab', weight: 2 },
 ]
 
-const MAX_ITEMS_PER_FEED = 20
+const MAX_ITEMS_PER_FEED = 50
 const TOP_N = 10
 const MAX_PER_SOURCE = 2
 const FINANCE_NOISE_PATTERNS = [
@@ -68,8 +68,8 @@ function scoreItem(item, feedWeight) {
 
   // console.log(`[SCORE] ${item.title.substring(0, 30)}... | Date: ${published.toISOString()} | Age: ${ageHours.toFixed(1)}h`);
 
-  // Hard filter: anything older than 72 hours (3 days) gets a massive penalty
-  if (ageHours > 72) {
+  // Hard filter: anything older than 168 hours (7 days) gets a massive penalty
+  if (ageHours > 168) {
       return -9999;
   }
 
