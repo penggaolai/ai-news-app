@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment & Secrets
+.env
+.env.local
+
+# Local State / Tracking
+.last_tweet_draft
+.last_tweet_url
+.tweet_history.json
+.local_packages/
+.venv/
+__pycache__/
+*.pyc
