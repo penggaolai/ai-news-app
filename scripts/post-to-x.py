@@ -51,30 +51,44 @@ def resolve_final_url(url: str) -> str:
 
 
 def build_tweet_from_news(news):
-    now_ny = datetime.now(ZoneInfo("America/New_York"))
-    date_label = now_ny.strftime("%b %d")
+    item = news[0]
+    title = item.get("title", "")
+    link = resolve_final_url(item.get("url", ""))
+    summary = item.get("summary", "")
 
-    title = news[0].get("title", "")
-    link = resolve_final_url(news[0].get("url", ""))
+    # Clean up title: remove source suffix if present (e.g. " - The Verge")
+    if " - " in title:
+        title = title.rsplit(" - ", 1)[0]
 
-    # Ensure link is never truncated. If resolved link is too long, fallback to site link.
+    # Ensure link is never truncated.
     if len(link) > 230:
         link = "https://ai-news-app-iota.vercel.app/"
 
-    header = f"AI morning brief ({date_label}):"
-    suffix = " #AI"
+    # Format:
+    # 🤖 AI Update: [Title]
+    #
+    # Key takeaway: [Summary]
+    #
+    # 🔗 [Link] #AI #Tech
 
-    # Reserve space for full link line + fixed text.
-    reserved = len(header) + len(suffix) + len(link) + 4  # two newlines + bullet
-    max_title = max(40, 280 - reserved)
-    clean_title = truncate(title, max_title)
-
-    source = news[0].get("source", "")
-    source_part = f" ({source})" if source else ""
-    tweet = f"{header} {clean_title}{source_part}. Read more: {link}"
-    if suffix:
-        tweet = f"{tweet}{suffix}"
-    return truncate(tweet, 280), date_label
+    header = f"🤖 AI Update: {title}"
+    
+    # Try to fit summary
+    # Max tweet length 280.
+    # Reserved: Link (23) + Tags (10) + Newlines/Spacers (10) = ~45 chars
+    # We need to truncate summary to fit.
+    
+    base_len = len(header) + len(link) + 20 # buffer
+    remaining = 280 - base_len
+    
+    if remaining < 50: # If title is huge, skip summary or truncate title
+        header = truncate(header, 100) # Force title shorter
+        remaining = 280 - len(header) - len(link) - 20
+        
+    clean_summary = truncate(summary, remaining)
+    
+    tweet = f"{header}\n\nKey takeaway: {clean_summary}\n\n🔗 {link} #AI #Tech"
+    return tweet, item.get("date", "")
 
 
 def main():
