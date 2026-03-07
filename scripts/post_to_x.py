@@ -32,6 +32,25 @@ def normalize_text(text: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9\s]", " ", (text or "").lower())).strip()
 
 
+def get_distinct_summary(title: str, summary: str, max_len: int, source: str) -> str:
+    norm_title = normalize_text(title)
+    norm_summary = normalize_text(summary)
+
+    # If summary is essentially the same as title, try to find a more distinct part
+    if norm_summary in norm_title or norm_title in norm_summary or norm_summary == norm_title:
+        # Try to get the first sentence of the original summary
+        first_sentence_match = re.match(r'^([^.!?]*[.!?])', summary)
+        if first_sentence_match:
+            distinct_summary = first_sentence_match.group(1).strip()
+            if len(distinct_summary) > 10 and normalize_text(distinct_summary) not in norm_title:
+                return truncate(distinct_summary, max_len)
+        
+        # Fallback if no distinct sentence or too short
+        return truncate(f"Quick take: {source} update", max_len)
+    
+    return truncate(summary, max_len)
+
+
 def resolve_final_url(url: str) -> str:
     if not url:
         return ""
@@ -50,7 +69,7 @@ def resolve_final_url(url: str) -> str:
         return url
 
 
-def build_tweet_from_news(news):
+def build_tweet_from_news(news, source: str):
     item = news[0]
     title = item.get("title", "")
     link = resolve_final_url(item.get("url", ""))
@@ -85,11 +104,18 @@ def build_tweet_from_news(news):
         header = truncate(header, 100) # Force title shorter
         remaining = 280 - len(header) - len(link) - 20
         
-    clean_summary = truncate(summary, remaining)
+    clean_summary = get_distinct_summary(title, summary, remaining, source)
     
     tweet = f"{header}\n\nKey takeaway: {clean_summary}\n\n🔗 {link} #AI #Tech"
     return tweet, item.get("date", "")
 
+
+def get_tweet_content():
+    news = read_top_news("/data/.openclaw/workspace/ai-news-app/public/news.json")
+    if len(news) < TOP_N:
+        raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
+    tweet_text, _ = build_tweet_from_news(news, news[0].get("source", ""))
+    return tweet_text
 
 def main():
     api_key = os.environ["X_API_KEY"]
@@ -118,11 +144,15 @@ def main():
             print(f"Tweet ID: {tweet_id}")
         return
 
-    news = read_top_news("public/news.json")
+    tweet_text = get_tweet_content() # Use the new function to get content
+
+    # The rest of the original main() function for posting to X
+    # ... (duplicate checking and actual tweet posting logic) ...
+    news = read_top_news("/data/.openclaw/workspace/ai-news-app/public/news.json") # Re-read news to get date_label for duplicate check
     if len(news) < TOP_N:
         raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
-
-    tweet_text, date_label = build_tweet_from_news(news)
+    
+    _, date_label = build_tweet_from_news(news, news[0].get("source", "")) # Get date_label for duplicate check
     top_headline_norm = normalize_text(news[0].get("title", ""))
 
     print("Tweet preview:")
@@ -138,7 +168,7 @@ def main():
             for t in (recent.data or []):
                 txt = t.text or ""
 
-                if txt.startswith(f"AI morning brief ({date_label}"):
+                if txt.startswith(f"🤖 AI Update: {date_label}"): # Corrected prefix for duplicate check
                     print("Skip: today's AI morning brief already posted.")
                     return
 
@@ -148,7 +178,7 @@ def main():
                     age_hours = age_min / 60.0
 
                     if age_min < COOLDOWN_MINUTES and (
-                        txt.startswith("AI morning brief")
+                        txt.startswith("🤖 AI Update:") # Corrected prefix
                         or txt.startswith("AI update test")
                         or txt.startswith("Links:")
                     ):

@@ -180,7 +180,7 @@ async function main() {
     source: item.source,
   }))
 
-  const target = path.resolve(process.cwd(), 'public/news.json')
+  const target = '/data/.openclaw/workspace/ai-news-app/public/news.json'
   await fs.writeFile(target, `${JSON.stringify(output, null, 2)}\n`, 'utf8')
 
   console.log(`Updated ${target} with ${output.length} items.`)
