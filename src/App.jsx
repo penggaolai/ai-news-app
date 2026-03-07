@@ -8,12 +8,7 @@ const TABS = [
     file: 'news.json',
     description: 'Curated headlines and insights from the fast-moving world of artificial intelligence.',
   },
-  {
-    key: 'antiques-cn',
-    label: 'Chinese Antiques',
-    file: 'news-antiques-cn.json',
-    description: '中国古董、文物、考古与拍卖相关新闻精选。',
-  },
+
   {
     key: 'youtube-openclaw',
     label: 'OpenClaw Video Search',
