@@ -49,7 +49,7 @@ async function fetchYoutubeFeed(query) {
   const parser = new DOMParser();
   const xmlDoc = parser.parseFromString(text, "application/xml");
 
-  const items = Array.from(xmlDoc.querySelectorAll('item')).map(item => {
+  const parsedItems = Array.from(xmlDoc.querySelectorAll('item')).map(item => {
     const title = item.querySelector('title')?.textContent || '';
     const link = item.querySelector('link')?.textContent || '';
     const description = item.querySelector('description')?.textContent || '';
@@ -63,13 +63,18 @@ async function fetchYoutubeFeed(query) {
     };
   });
 
-  const items = Array.isArray(data?.items) ? data.items : [];
-  const out = [];
 
-  for (const item of items) {
+  const out = [];
+  const seenUrls = new Set();
+
+  for (const item of parsedItems) {
     const link = item.link || '';
     const title = item.title || '';
     if (!link || !title) continue;
+
+    const urlKey = link.replace(/\?.*$/, '');
+    if (seenUrls.has(urlKey)) continue;
+    seenUrls.add(urlKey);
 
     // Google News RSS wraps links; try to extract the actual YouTube URL
     const trueLinkMatch = item.link.match(/url=(https?%3A%2F%2F[^&]+)/);
