@@ -1,30 +1,22 @@
 [
   {
-    "id": "2026-03-07-1",
-    "title": "Top researcher leaves OpenAI due to Pentagon deal - Politico",
-    "summary": "Top researcher leaves OpenAI due to Pentagon deal Politico",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWml5NEpZWG92VlJRUmZ3NGkwdFljTGc5aTk1Z0NTeGlsSmc0STc5a1JTd2VNckNTdkd4cUFocFlnaDNwTUJ0YmdDRExaR0duYzVYT184ZVdEck9ZYWZxS1pjbWZTc0V1MDZTLXNHU1FBaE9TLWdVUEdxeklqM2kydnN2eGdKNXFWQXZ4VThKbzlNbmNGOWNsdQ?oc=5",
-    "date": "2026-03-07",
+    "id": "2026-03-08-1",
+    "title": "Guest column | I’m a computer scientist. Here’s how we should help aging parents with technology. - The Washington Post",
+    "summary": "Guest column | I’m a computer scientist. Here’s how we should help aging parents with technology. The Washington Post",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0zZUdtZlNxQUp5dmEwcmV6aFlxcUJ1UkhfNXFiRkhKSE1JMmlPbFloZkV4S0djeGd2NnNWb1RSUnIwcXFXODRXWFFKYmRDX19jYldOSEE3SFZfSnlDTlYweFJNNDFTOGthWDJEaVVUclBBOUowVkRkejQ4ZGpDdlU?oc=5",
+    "date": "2026-03-08",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-03-07-2",
-    "title": "As Hollywood's concern around artificial intelligence grows, Seth MacFarlane is justifying the technology in 'Ted' after transforming into Bill Clinton. Read more below. - facebook.com",
-    "summary": "As Hollywood's concern around artificial intelligence grows, Seth MacFarlane is justifying the technology in 'Ted' after transforming into Bill Clinton. Read more below. facebook.com",
-    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOLUpDWlg5SjcyOV83aFVfa3NMRWxKbmh5a29CRnlqbG5TbGRvNFRfcnBhRjBPeGFydVY5Vzg1aVJtc1NiR0hBTTNYSHMzRGJNVlJ3VDNmclY1cHF5MnFyUGdtdmZYRzZGRmJob2k1RDFRUjZjUGdjTVdTT1VYSlc1dm40TGZMQUtzeDhMbUNMZ3JCakpyZlBFQkliYkVVcV9TZ29KY0psRndWNVhPNGVKZHVWSWNNdE5Sa2l5ckhYdkpXME9LM2ItY3hISUl0Sjd1QkE1dA?oc=5",
-    "date": "2026-03-07",
+    "id": "2026-03-08-2",
+    "title": "Jeff Dunham’s ‘Artificial Intelligence’ tour lands in Colorado Springs - Colorado Springs Gazette",
+    "summary": "Jeff Dunham’s ‘Artificial Intelligence’ tour lands in Colorado Springs Colorado Springs Gazette",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPT3hWSFo2eUVVUjZfeXlwR1U5YkdsMXFaTzZyN2UydjJBb05VQ3gtdGtoTG9tRWtOVW9JTFdXYW9UaXpEYUNnYWZnbUpiZkxyUzllMTVManEzWTRQMS1QT3RhbEwyTzJHcnFtenpQQ29iYUFXZjlzQ1RCNm9nYTZBQmNIR2k5TDlEbkgyY0F4a3JoZlBrRkg0c0xseUFEZ2t3?oc=5",
+    "date": "2026-03-08",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-03-07-3",
-    "title": "The OpenClaw superfan meetup serves optimism and lobster",
-    "summary": "The woman at the door wore a plush lobster headdress. She sat in the front hallway of a multistory event venue in Manhattan, beside a bundle of wristbands. If she granted you one, the world of ClawCon beckoned behind he…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/890517/openclaw-clawcon-meetup-nyc-open-source-ai",
-    "date": "2026-03-07",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-03-06-4",
+    "id": "2026-03-06-3",
     "title": "How our open-source AI model SpeciesNet is helping to promote wildlife conservation",
     "summary": "An overview of SpeciesNet, our open-source AI model that is helping people around the world protect and conserve wildlife.",
     "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/speciesnet-open-source-ai-wildlife/",
@@ -32,7 +24,7 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-03-06-5",
+    "id": "2026-03-06-4",
     "title": "How Balyasny Asset Management built an AI research engine for investing",
     "summary": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
     "url": "https://openai.com/index/balyasny-asset-management",
@@ -40,12 +32,20 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-03-06-6",
+    "id": "2026-03-06-5",
     "title": "Codex Security: now in research preview",
     "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
     "url": "https://openai.com/index/codex-security-now-in-research-preview",
     "date": "2026-03-06",
     "source": "OpenAI News"
+  },
+  {
+    "id": "2026-03-07-6",
+    "title": "The OpenClaw superfan meetup serves optimism and lobster",
+    "summary": "The woman at the door wore a plush lobster headdress. She sat in the front hallway of a multistory event venue in Manhattan, beside a bundle of wristbands. If she granted you one, the world of ClawCon beckoned behind he…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/890517/openclaw-clawcon-meetup-nyc-open-source-ai",
+    "date": "2026-03-07",
+    "source": "The Verge AI"
   },
   {
     "id": "2026-03-05-7",
@@ -64,19 +64,19 @@
     "source": "MIT Technology Review AI"
   },
   {
-    "id": "2026-03-06-9",
+    "id": "2026-03-04-9",
+    "title": "Use Canvas in AI Mode to get things done and bring your ideas to life, right in Search.",
+    "summary": "Canvas in AI Mode is now available for everyone in the U.S. Plus, it can now help you draft documents or build interactive tools.",
+    "url": "https://blog.google/products-and-platforms/products/search/ai-mode-canvas-writing-coding/",
+    "date": "2026-03-04",
+    "source": "Google AI Blog"
+  },
+  {
+    "id": "2026-03-06-10",
     "title": "Feds take notice of iOS vulnerabilities exploited under mysterious circumstances",
     "summary": "The long, strange trip of a large assembly of advanced iOS exploits.",
     "url": "https://arstechnica.com/security/2026/03/cisa-adds-3-ios-flaws-to-its-catalog-of-known-exploited-vulnerabilities/",
     "date": "2026-03-06",
     "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-03-05-10",
-    "title": "Ask a Techspert: How does AI understand my visual searches?",
-    "summary": "Learn more about AI Mode in Search’s query fan-out method for visual search.",
-    "url": "https://blog.google/company-news/inside-google/googlers/how-google-ai-visual-search-works/",
-    "date": "2026-03-05",
-    "source": "Google AI Blog"
   }
 ]
