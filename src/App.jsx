@@ -13,7 +13,7 @@ const TABS = [
     key: 'youtube-openclaw',
     label: 'OpenClaw Video Search',
     file: 'news-youtube-openclaw.json',
-    description: 'Top YouTube videos about OpenClaw use cases, tutorials, and automation (RSS live search).',
+    description: 'Dynamic search for top YouTube videos about OpenClaw use cases, tutorials, and automation.',
   },
 ]
 
@@ -32,57 +32,17 @@ function toDateString(value) {
   return d.toISOString().slice(0, 10)
 }
 
-async function searchYoutubeViaRss(query) {
-  const q = encodeURIComponent(`${query} site:youtube.com`)
-  const rssUrl = encodeURIComponent(
-    `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`
-  )
-
-  // Public RSS-to-JSON bridge (no key required). If this service rate-limits,
-  // we can replace with your own backend endpoint later.
-  const url = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`
-  const response = await fetch(url, { cache: 'no-store' })
-
+// New function to search YouTube via the backend endpoint
+async function searchYoutubeBackend(query) {
+  const response = await fetch(`/api/youtube-search?query=${encodeURIComponent(query)}`, { cache: 'no-store' });
   if (!response.ok) {
-    throw new Error('Failed to fetch search results')
+    throw new Error('Failed to fetch YouTube search results from backend');
   }
-
-  const data = await response.json()
-  if (data?.status && data.status !== 'ok') {
-    throw new Error(data?.message || 'Search provider error')
+  const data = await response.json();
+  if (data?.error) {
+    throw new Error(data.error);
   }
-
-  const items = Array.isArray(data?.items) ? data.items : []
-
-  const seen = new Set()
-  const out = []
-
-  for (const item of items) {
-    const link = item.link || ''
-    const title = item.title || ''
-    if (!link || !title) continue
-
-    // Google News RSS wraps links; rely on title/topic signal instead of raw URL host.
-    const looksYoutube = / - YouTube$/i.test(title) || /youtube/i.test(item.description || '')
-    if (!looksYoutube) continue
-
-    const key = link.replace(/\?.*$/, '')
-    if (seen.has(key)) continue
-    seen.add(key)
-
-    out.push({
-      id: item.guid || key,
-      title,
-      summary: (item.description || item.author || 'YouTube video').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
-      url: link,
-      date: toDateString(item.pubDate),
-      source: 'YouTube',
-    })
-
-    if (out.length >= 10) break
-  }
-
-  return out
+  return Array.isArray(data) ? data : [];
 }
 
 function App() {
@@ -101,7 +61,7 @@ function App() {
 
   const youtubeQuery = useQuery({
     queryKey: ['youtube-search', searchQuery],
-    queryFn: () => searchYoutubeViaRss(searchQuery),
+    queryFn: () => searchYoutubeBackend(searchQuery),
     enabled: active.key === 'youtube-openclaw',
   })
 
@@ -119,11 +79,12 @@ function App() {
     const q = interestInput.trim()
     if (!q) return
     setSearchQuery(q)
+    youtubeQuery.refetch(); // Manually trigger refetch for dynamic search
   }
 
   const searchHint = useMemo(() => {
     if (active.key !== 'youtube-openclaw') return null
-    return `Showing top 10 for: ${searchQuery}`
+    return `Showing top 3 results for: ${searchQuery}` // Adjusted to top 3
   }, [active.key, searchQuery])
 
   return (
@@ -164,7 +125,7 @@ function App() {
           {active.key === 'youtube-openclaw' ? (
             <div className="w-full max-w-2xl">
               <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-indigo-200/80">
-                Search interests (RSS)
+                Search YouTube
               </label>
               <div className="flex gap-2">
                 <input
