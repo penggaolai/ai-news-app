@@ -16,13 +16,21 @@ export default async function handler(request, response) {
     });
 
     if (execResult.status === 'error') {
-      console.error('Exec error:', execResult.error);
-      return response.status(500).json({ error: execResult.error });
+      console.error('Exec error from OpenClaw:', execResult.error);
+      console.error('Exec output (if any):', execResult.output);
+      return response.status(500).json({ error: execResult.error || 'Unknown exec error' });
     }
 
     const output = execResult.output;
-    const parsedOutput = JSON.parse(output);
-    return response.status(200).json(parsedOutput);
+    console.log('Raw exec output:', output);
+    try {
+      const parsedOutput = JSON.parse(output);
+      return response.status(200).json(parsedOutput);
+    } catch (parseError) {
+      console.error('Failed to parse JSON output from script:', parseError);
+      console.error('Offending output:', output);
+      return response.status(500).json({ error: 'Failed to parse script output', details: parseError.message });
+    }
 
   } catch (error) {
     console.error('Handler error:', error);
