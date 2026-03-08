@@ -32,57 +32,52 @@ function toDateString(value) {
   return d.toISOString().slice(0, 10)
 }
 
-async function searchYoutubeViaRss(query) {
-  const q = encodeURIComponent(`${query} site:youtube.com`)
+async function fetchYoutubeFeed(query) {
+  const q = encodeURIComponent(`${query} site:youtube.com`);
   const rssUrl = encodeURIComponent(
     `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`
-  )
+  );
 
-  // Public RSS-to-JSON bridge (no key required). If this service rate-limits,
-  // we can replace with your own backend endpoint later.
-  const url = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`
-  const response = await fetch(url, { cache: 'no-store' })
+  const url = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+  const response = await fetch(url, { cache: 'no-store' });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch search results')
+    throw new Error('Failed to fetch search results');
   }
 
-  const data = await response.json()
+  const data = await response.json();
   if (data?.status && data.status !== 'ok') {
-    throw new Error(data?.message || 'Search provider error')
+    throw new Error(data?.message || 'Search provider error');
   }
 
-  const items = Array.isArray(data?.items) ? data.items : []
-
-  const seen = new Set()
-  const out = []
+  const items = Array.isArray(data?.items) ? data.items : [];
+  const out = [];
+  const seenUrls = new Set();
 
   for (const item of items) {
-    const link = item.link || ''
-    const title = item.title || ''
-    if (!link || !title) continue
+    const link = item.link || '';
+    const title = item.title || '';
+    if (!link || !title) continue;
 
-    // Google News RSS wraps links; rely on title/topic signal instead of raw URL host.
-    const looksYoutube = / - YouTube$/i.test(title) || /youtube/i.test(item.description || '')
-    if (!looksYoutube) continue
+    const urlKey = link.replace(/\?.*$/, '');
+    if (seenUrls.has(urlKey)) continue;
+    seenUrls.add(urlKey);
 
-    const key = link.replace(/\?.*$/, '')
-    if (seen.has(key)) continue
-    seen.add(key)
-
+    const publishedAt = item.isoDate || item.pubDate || new Date().toISOString();
     out.push({
-      id: item.guid || key,
-      title,
-      summary: (item.description || item.author || 'YouTube video').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
-      url: link,
-      date: toDateString(item.pubDate),
+      id: item.guid || urlKey, // Using guid or urlKey for a unique ID
+      title: title.trim(),
+      summary: (item.contentSnippet || item.content || item.description || 'YouTube video').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
+      url: link.trim(),
+      date: toDateString(publishedAt),
       source: 'YouTube',
-    })
+      channel: item.creator || item.author || '',
+      likes: null, // Not available from RSS-to-JSON
+    });
 
-    if (out.length >= 10) break
+    if (out.length >= 10) break; // Limit to TOP_N as per the server-side script
   }
-
-  return out
+  return out;
 }
 
 function App() {
@@ -101,7 +96,7 @@ function App() {
 
   const youtubeQuery = useQuery({
     queryKey: ['youtube-search', searchQuery],
-    queryFn: () => searchYoutubeViaRss(searchQuery),
+    queryFn: () => fetchYoutubeFeed(searchQuery),
     enabled: active.key === 'youtube-openclaw',
   })
 
