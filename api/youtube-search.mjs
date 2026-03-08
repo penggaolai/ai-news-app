@@ -1,4 +1,4 @@
-import { exec } from 'openclaw';
+import { web_search } from 'openclaw';
 
 export default async function handler(request, response) {
   const { query } = request.query;
@@ -8,29 +8,26 @@ export default async function handler(request, response) {
   }
 
   try {
-    const command = `node scripts/youtube-search.mjs "${query}"`;
-    const execResult = await exec({
-      command: command,
-      workdir: '/data/.openclaw/workspace/ai-news-app', // Ensure it runs in the correct directory
-      timeout: 30000, // 30 seconds timeout
+    const searchResults = await web_search({
+      query: `${query} site:youtube.com`,
+      count: 10, // Fetch more to filter for YouTube links
     });
 
-    if (execResult.status === 'error') {
-      console.error('Exec error from OpenClaw:', execResult.error);
-      console.error('Exec output (if any):', execResult.output);
-      return response.status(500).json({ error: execResult.error || 'Unknown exec error' });
+    const videos = [];
+    for (const result of searchResults.results) {
+      if (videos.length >= 3) break; // Limit to top 3
+      if (result.url && result.title && /youtube.com\/watch/i.test(result.url)) {
+        videos.push({
+          title: result.title,
+          url: result.url,
+          summary: result.description || "YouTube video",
+          source: "YouTube Search",
+          date: new Date().toISOString().slice(0, 10), // Current date for dynamic search
+        });
+      }
     }
 
-    const output = execResult.output;
-    console.log('Raw exec output:', output);
-    try {
-      const parsedOutput = JSON.parse(output);
-      return response.status(200).json(parsedOutput);
-    } catch (parseError) {
-      console.error('Failed to parse JSON output from script:', parseError);
-      console.error('Offending output:', output);
-      return response.status(500).json({ error: 'Failed to parse script output', details: parseError.message });
-    }
+    return response.status(200).json(videos);
 
   } catch (error) {
     console.error('Handler error:', error);
