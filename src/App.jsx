@@ -32,76 +32,11 @@ function toDateString(value) {
   return d.toISOString().slice(0, 10)
 }
 
-async function fetchYoutubeFeed(query) {
-  const q = encodeURIComponent(`${query} site:youtube.com`);
-  const rssUrl = encodeURIComponent(
-    `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`
-  );
-
-  const url = `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`;
-  const response = await fetch(url, { cache: 'no-store' });
-
-  if (!response.ok) {
-    throw new Error('Failed to fetch RSS feed');
-  }
-
-  const text = await response.text();
-  const parser = new DOMParser();
-  const xmlDoc = parser.parseFromString(text, "application/xml");
-
-  const parsedItems = Array.from(xmlDoc.querySelectorAll('item')).map(item => {
-    const title = item.querySelector('title')?.textContent || '';
-    const link = item.querySelector('link')?.textContent || '';
-    const description = item.querySelector('description')?.textContent || '';
-    const pubDate = item.querySelector('pubDate')?.textContent || '';
-
-    return {
-      title,
-      link,
-      description,
-      pubDate,
-    };
-  });
-
-
-  const out = [];
-  const seenUrls = new Set();
-
-  for (const item of parsedItems) {
-    const link = item.link || '';
-    const title = item.title || '';
-    if (!link || !title) continue;
-
-    const urlKey = link.replace(/\?.*$/, '');
-    if (seenUrls.has(urlKey)) continue;
-    seenUrls.add(urlKey);
-
-    // Google News RSS wraps links; try to extract the actual YouTube URL
-    const trueLinkMatch = item.link.match(/url=(https?%3A%2F%2F[^&]+)/);
-    const trueLink = trueLinkMatch ? decodeURIComponent(trueLinkMatch[1]) : link;
-
-    const publishedAt = item.pubDate || new Date().toISOString();
-
-    out.push({
-      id: link, // Using link as ID for now, can be refined
-      title: title.trim(),
-      summary: (item.description || 'YouTube video').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
-      url: trueLink.trim(),
-      date: toDateString(publishedAt),
-      source: 'YouTube',
-      channel: '', // Not directly available in Google News RSS
-      likes: null, // Not available from RSS
-    });
-
-    if (out.length >= 10) break; // Limit to TOP_N as per the server-side script
-  }
-  return out;
-}
 
 function App() {
   const [activeTab, setActiveTab] = useState('ai')
-  const [interestInput, setInterestInput] = useState('OpenClaw use cases')
-  const [searchQuery, setSearchQuery] = useState('OpenClaw use cases')
+  // Removed: const [interestInput, setInterestInput] = useState('OpenClaw use cases')
+  // Removed: const [searchQuery, setSearchQuery] = useState('OpenClaw use cases')
   const active = TABS.find((t) => t.key === activeTab) || TABS[0]
 
   const { data: rawNews = [], isLoading, isError, refetch } = useQuery({
@@ -113,8 +48,8 @@ function App() {
   })
 
   const youtubeQuery = useQuery({
-    queryKey: ['youtube-search', searchQuery],
-    queryFn: () => fetchYoutubeFeed(searchQuery),
+    queryKey: ['youtube-search', active.file],
+    queryFn: () => fetchNews(active.file),
     enabled: active.key === 'youtube-openclaw',
   })
 
@@ -128,16 +63,9 @@ function App() {
     return (activeNews || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date))
   }, [activeNews])
 
-  const onSearch = () => {
-    const q = interestInput.trim()
-    if (!q) return
-    setSearchQuery(q)
-  }
+  // Removed: const onSearch = () => { ... }
 
-  const searchHint = useMemo(() => {
-    if (active.key !== 'youtube-openclaw') return null
-    return `Showing top 10 for: ${searchQuery}`
-  }, [active.key, searchQuery])
+  // Removed: const searchHint = useMemo(() => { ... })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#0a1230] to-[#03040f] text-white">
@@ -174,30 +102,7 @@ function App() {
 
           <p className="max-w-2xl text-sm text-gray-300 sm:text-base">{active.description}</p>
 
-          {active.key === 'youtube-openclaw' ? (
-            <div className="w-full max-w-2xl">
-              <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-indigo-200/80">
-                Search interests (RSS)
-              </label>
-              <div className="flex gap-2">
-                <input
-                  value={interestInput}
-                  onChange={(e) => setInterestInput(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && onSearch()}
-                  placeholder="e.g. OpenClaw use cases, workflow, automation"
-                  className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white outline-none placeholder:text-gray-400 focus:border-indigo-300"
-                />
-                <button
-                  type="button"
-                  onClick={onSearch}
-                  className="rounded-xl border border-indigo-300/40 bg-indigo-500/25 px-4 py-3 text-sm text-indigo-100 hover:bg-indigo-500/35"
-                >
-                  Search
-                </button>
-              </div>
-              <p className="mt-2 text-xs text-gray-400">{searchHint}</p>
-            </div>
-          ) : null}
+          {/* Removed search input for youtube-openclaw tab */}
         </header>
 
         {loading ? (
