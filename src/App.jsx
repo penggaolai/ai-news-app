@@ -38,41 +38,54 @@ async function fetchYoutubeFeed(query) {
     `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`
   );
 
-  const url = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+  const url = `https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`;
   const response = await fetch(url, { cache: 'no-store' });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch search results');
+    throw new Error('Failed to fetch RSS feed');
   }
 
-  const data = await response.json();
-  if (data?.status && data.status !== 'ok') {
-    throw new Error(data?.message || 'Search provider error');
-  }
+  const text = await response.text();
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(text, "application/xml");
+
+  const items = Array.from(xmlDoc.querySelectorAll('item')).map(item => {
+    const title = item.querySelector('title')?.textContent || '';
+    const link = item.querySelector('link')?.textContent || '';
+    const description = item.querySelector('description')?.textContent || '';
+    const pubDate = item.querySelector('pubDate')?.textContent || '';
+
+    return {
+      title,
+      link,
+      description,
+      pubDate,
+    };
+  });
 
   const items = Array.isArray(data?.items) ? data.items : [];
   const out = [];
-  const seenUrls = new Set();
 
   for (const item of items) {
     const link = item.link || '';
     const title = item.title || '';
     if (!link || !title) continue;
 
-    const urlKey = link.replace(/\?.*$/, '');
-    if (seenUrls.has(urlKey)) continue;
-    seenUrls.add(urlKey);
+    // Google News RSS wraps links; try to extract the actual YouTube URL
+    const trueLinkMatch = item.link.match(/url=(https?%3A%2F%2F[^&]+)/);
+    const trueLink = trueLinkMatch ? decodeURIComponent(trueLinkMatch[1]) : link;
 
-    const publishedAt = item.isoDate || item.pubDate || new Date().toISOString();
+    const publishedAt = item.pubDate || new Date().toISOString();
+
     out.push({
-      id: item.guid || urlKey, // Using guid or urlKey for a unique ID
+      id: link, // Using link as ID for now, can be refined
       title: title.trim(),
-      summary: (item.contentSnippet || item.content || item.description || 'YouTube video').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
-      url: link.trim(),
+      summary: (item.description || 'YouTube video').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
+      url: trueLink.trim(),
       date: toDateString(publishedAt),
       source: 'YouTube',
-      channel: item.creator || item.author || '',
-      likes: null, // Not available from RSS-to-JSON
+      channel: '', // Not directly available in Google News RSS
+      likes: null, // Not available from RSS
     });
 
     if (out.length >= 10) break; // Limit to TOP_N as per the server-side script
