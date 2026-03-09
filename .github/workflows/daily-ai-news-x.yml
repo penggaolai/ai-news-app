@@ -41,7 +41,7 @@ jobs:
           NY_HOUR=$(TZ=America/New_York date +%H)
           NY_MIN=$(TZ=America/New_York date +%M)
           echo "NY time is ${NY_HOUR}:${NY_MIN}"
-          if [ "$NY_HOUR" = "07" ] && [ "$NY_MIN" = "05" ]; then
+          if [ "$NY_HOUR" = "07" ] && [ "$NY_MIN" -le "15" ]; then # Allow a 10-minute window for job start
             echo "run_now=true" >> "$GITHUB_OUTPUT"
           else
             echo "run_now=false" >> "$GITHUB_OUTPUT"
