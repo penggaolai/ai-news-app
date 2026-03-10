@@ -62,7 +62,6 @@ jobs:
         if: steps.gate.outputs.run_now == 'true'
         run: |
           node scripts/update-news.mjs
-
           node scripts/update-youtube-openclaw.mjs
 
       - name: Commit news files if changed
