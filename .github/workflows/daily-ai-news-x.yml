@@ -41,6 +41,9 @@ jobs:
           node scripts/update-news.mjs
           node scripts/update-youtube-openclaw.mjs
 
+      - name: List public directory
+        run: ls -l public/
+
       - name: Commit news files if changed
         run: |
           if git diff --quiet public/news.json public/news-youtube-openclaw.json; then
