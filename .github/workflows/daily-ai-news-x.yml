@@ -54,6 +54,9 @@ jobs:
           git commit -m "chore: daily news refresh (ai + youtube)"
           git push
 
+      - name: List scripts directory
+        run: ls -l scripts/
+
       - name: Diagnose X auth
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
