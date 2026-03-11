@@ -1,10 +1,6 @@
 name: Daily AI news + X autopost
 
 on:
-  schedule:
-    # Run at both 11:05 and 12:05 UTC, then gate for 07:05 America/New_York (handles DST)
-    - cron: '5 11 * * *'
-    - cron: '5 12 * * *'
   workflow_dispatch:
     inputs:
       force_run:
