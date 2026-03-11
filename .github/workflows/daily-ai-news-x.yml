@@ -36,9 +36,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create public directory if it doesn't exist
-        run: mkdir -p public
-
       - name: Refresh news feeds from RSS
         run: |
           node scripts/update-news.mjs
