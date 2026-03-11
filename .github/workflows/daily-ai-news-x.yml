@@ -42,7 +42,7 @@ jobs:
           NY_MIN=$(TZ=America/New_York date +%M)
           echo "NY time is ${NY_HOUR}:${NY_MIN}"
           # Allow a wider window for both 07:xx and 08:xx runs
-          if [ "$NY_HOUR" = "12" ] && [ "$NY_MIN" -ge "17" ] && [ "$NY_MIN" -le "22" ]; then # Temp time gate for next 5 mins
+          if ( [ "$NY_HOUR" = "07" ] || [ "$NY_HOUR" = "08" ] ) && [ "$NY_MIN" -le "25" ]; then
             echo "run_now=true" >> "$GITHUB_OUTPUT"
           else
             echo "run_now=false" >> "$GITHUB_OUTPUT"
