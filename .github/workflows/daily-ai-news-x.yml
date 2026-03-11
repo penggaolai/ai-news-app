@@ -27,46 +27,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Time gate (07:05 America/New_York, unless force_run=true)
-        id: gate
-        run: |
-          FORCE_RUN="${{ github.event.inputs.force_run }}"
-          if [ -z "$FORCE_RUN" ]; then FORCE_RUN="false"; fi
-          if [ "$FORCE_RUN" = "true" ]; then
-            echo "Manual force_run=true; bypassing time gate"
-            echo "run_now=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          NY_HOUR=$(TZ=America/New_York date +%H)
-          NY_MIN=$(TZ=America/New_York date +%M)
-          echo "NY time is ${NY_HOUR}:${NY_MIN}"
-          # Allow a wider window for both 07:xx and 08:xx runs
-          if ( [ "$NY_HOUR" = "07" ] || [ "$NY_HOUR" = "08" ] ) && [ "$NY_MIN" -le "25" ]; then
-            echo "run_now=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run_now=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Setup Node
-        if: steps.gate.outputs.run_now == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
       - name: Install dependencies
-        if: steps.gate.outputs.run_now == 'true'
         run: npm ci
 
       - name: Refresh news feeds from RSS
-        if: steps.gate.outputs.run_now == 'true'
         run: |
           node scripts/update-news.mjs
           node scripts/update-youtube-openclaw.mjs
 
       - name: Commit news files if changed
-        if: steps.gate.outputs.run_now == 'true'
         run: |
           if git diff --quiet public/news.json public/news-youtube-openclaw.json; then
             echo "No changes in news files"
@@ -80,7 +55,6 @@ jobs:
           git push
 
       - name: Diagnose X auth
-        if: steps.gate.outputs.run_now == 'true'
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
@@ -89,17 +63,14 @@ jobs:
         run: node scripts/diagnose-x-auth.mjs
 
       - name: Setup Python
-        if: steps.gate.outputs.run_now == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install tweepy
-        if: steps.gate.outputs.run_now == 'true'
         run: pip install tweepy
 
       - name: Post top 3 to X (tweepy)
-        if: steps.gate.outputs.run_now == 'true'
         env:
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
@@ -107,8 +78,3 @@ jobs:
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_TEST_TEXT: ${{ github.event.inputs.test_text }}
         run: python scripts/post-to-x.py
-
-      - name: Skip note
-        if: ${{ steps.gate.outputs.run_now != 'true' }}
-        run: |
-          echo "Skipped - not 07:05 in America/New_York."
