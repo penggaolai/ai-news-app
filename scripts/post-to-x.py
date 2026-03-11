@@ -111,7 +111,7 @@ def build_tweet_from_news(news, source: str):
 
 
 def get_tweet_content():
-    news = read_top_news("/data/.openclaw/workspace/ai-news-app/public/news.json")
+    news = read_top_news("../public/news.json")
     if len(news) < TOP_N:
         raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
     tweet_text, _ = build_tweet_from_news(news, news[0].get("source", ""))
@@ -148,7 +148,7 @@ def main():
 
     # The rest of the original main() function for posting to X
     # ... (duplicate checking and actual tweet posting logic) ...
-    news = read_top_news("/data/.openclaw/workspace/ai-news-app/public/news.json") # Re-read news to get date_label for duplicate check
+    news = read_top_news("../public/news.json") # Re-read news to get date_label for duplicate check
     if len(news) < TOP_N:
         raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
     
