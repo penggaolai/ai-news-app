@@ -115,7 +115,7 @@ async function main() {
     likes: null,
   }))
 
-  const target = path.resolve(process.cwd(), 'public/news-youtube-openclaw.json')
+  const target = './public/news-youtube-openclaw.json'
   await fs.writeFile(target, `${JSON.stringify(output, null, 2)}\n`, 'utf8')
 
   console.log(`Updated ${target} with ${output.length} items.`)
