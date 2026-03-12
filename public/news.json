@@ -1,75 +1,75 @@
 [
   {
-    "id": "2026-03-11-1",
-    "title": "New research examines trust in AI as first responders train with robotic teammates - Kennesaw State University",
-    "summary": "New research examines trust in AI as first responders train with robotic teammates Kennesaw State University",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPR0FOOFl4QmNPdjFVdGlpUkgzeGhvSXFEc0xCMkJGVkhxY2dIb1NTQ2JkOFFRMmt2M2RtZDRoNHpVaDZnc3k0bjBSWE5JdkE4SmFfUWxFbFhKUVZJWDdHNzR2bHZkbnVTNEhMU3EtaDRUZmVLcWpxT193WDk3Ry1QUXpfSWpEeVZXbzFJVXhHb1RoVHNVRzdMMWk1ZHQwN3ljRUJNbzVUalQ0TUE?oc=5",
-    "date": "2026-03-11",
+    "id": "2026-03-12-1",
+    "title": "How AI is helping improve heart health in rural Australia",
+    "summary": "A new Google AI initiative aims to improve heart health outcomes for people living in remote Australian communities.",
+    "url": "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/",
+    "date": "2026-03-12",
+    "source": "Google AI Blog"
+  },
+  {
+    "id": "2026-03-12-2",
+    "title": "Florida man has AI idea for writers. To bot or not? How? | Opinion - Treasure Coast News",
+    "summary": "Florida man has AI idea for writers. To bot or not? How? | Opinion Treasure Coast News",
+    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNaTBlbGZxbU8xY2hudm5ZR1ZWYkZETFdkNVgxTWpFQ2tucW1yM3pkU1ZZUWRVUFhLbl8wSm1DTjFEbXRzV2F3aVNnRUlUdjRsckMzVXBUXzRMMlhKRTNUWk5NcFlaR0wwUnlqYjBBZEZadHFLR184ZVF2MUxsVVJGalpOdnU4Sl9PbXN0Z1FPdlF6YTVDZ1A0dlN3RGhuNDIzWndJRDRmcEJuNUdvcG5ESnJUaEFXb2VOT1dQdUlHWXh5X3UxVFhzQVN6R24yM0hIVl9ZWm1pak85QXdhRE5vdV81QWNBYXpRVmk0?oc=5",
+    "date": "2026-03-12",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-03-11-2",
-    "title": "ChatGPT, Gemini, and other chatbots helped teens plan shootings, bombings, and political violence, study shows",
-    "summary": "AI companies have repeatedly promised safeguards to protect younger users, but a new investigation suggests those guardrails remain woefully deficient. Popular chatbots missed warning signs in scenarios involving teenag…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/892978/ai-chatbots-investigation-help-teens-plan-violence",
-    "date": "2026-03-11",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-03-11-3",
-    "title": "Architecting the AI‑Native Enterprise for Workforce Agility - Emerj Artificial Intelligence Research",
-    "summary": "Architecting the AI‑Native Enterprise for Workforce Agility Emerj Artificial Intelligence Research",
-    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObXZWZGVaTFJjOXJSa2pNdU9mMmNHZFlaRm1tNG14OTJyZ2RmSDNQYTk0M004eUpkREtHZ0t1aEtFbVl5NzJkVDdHZGQyTmxGOVh3cnJ3VUVhVUhQV200WVJ6dHNicmpkVmFRTXAyOFhuRjI1UFNaOTJiVHZzSkxzbFVPdXc?oc=5",
-    "date": "2026-03-11",
+    "id": "2026-03-12-3",
+    "title": "A.I. Writes Buggy Code. A Silicon Valley Start-Up Wants to Fix It. - The New York Times",
+    "summary": "A.I. Writes Buggy Code. A Silicon Valley Start-Up Wants to Fix It. The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1wS2pURHdkZW1xTGFKb2VuSE9OcHdnOFVzaEVZdm1UM0dtMUxlVHBzS0JVc3ZXcXZzdndsU3JwNnd6Yml4UDlMX3FDVE90bk9XTUJVMlg4Q1ctQlYxTjBLZm5DVFZkTVY0ejdaQm5JWHBuaTBQOEhPdFFxN2E?oc=5",
+    "date": "2026-03-12",
     "source": "Google News (AI)"
   },
   {
     "id": "2026-03-11-4",
+    "title": "One of Grammarly’s ‘experts’ is suing the company over its identity-stealing AI feature",
+    "summary": "Journalist Julia Angwin is one of the writers whose likeness was used in Grammarly’s “expert review” feature. | Photo: Eóin Noonan / Sportsfile via Getty Images For months, Grammarly has been using the identities of rea…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/893451/grammarly-ai-lawsuit-julia-angwin",
+    "date": "2026-03-11",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-03-11-5",
+    "title": "From model to agent: Equipping the Responses API with a computer environment",
+    "summary": "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state.",
+    "url": "https://openai.com/index/equip-responses-api-computer-environment",
+    "date": "2026-03-11",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-03-11-6",
+    "title": "14,000 routers are infected by malware that's highly resistant to takedowns",
+    "summary": "Most of the devices are made by Asus and are located in the US.",
+    "url": "https://arstechnica.com/security/2026/03/14000-routers-are-infected-by-malware-thats-highly-resistant-to-takedowns/",
+    "date": "2026-03-11",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-03-11-7",
+    "title": "Grammarly says it will stop using AI to clone experts without permission",
+    "summary": "Superhuman says it has disabled Grammarly's \"expert review\" AI feature that said its edit suggestions were \"inspired by\" real writers, including our editor-in-chief and other Verge staff members. \"After careful consider…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/893270/grammarly-ai-expert-review-disabled",
+    "date": "2026-03-11",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-03-11-8",
+    "title": "Rakuten fixes issues twice as fast with Codex",
+    "summary": "Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews, and delivering full-stack builds in weeks.",
+    "url": "https://openai.com/index/rakuten",
+    "date": "2026-03-11",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-03-11-9",
     "title": "Hustlers are cashing in on China’s OpenClaw AI craze",
     "summary": "Feng Qingyang had always hoped to launch his own company, but he never thought this would be how—or that the day would come this fast. Feng, a 27-year-old software engineer based in Beijing, started tinkering with OpenC…",
     "url": "https://www.technologyreview.com/2026/03/11/1134179/china-openclaw-gold-rush/",
     "date": "2026-03-11",
     "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-03-11-5",
-    "title": "Anthropic is launching a new think tank amid Pentagon blacklist fight",
-    "summary": "Amid a weekslong conflict with the Pentagon, resulting in a blacklist and a lawsuit, Anthropic is shaking up its C-suite and research initiatives. The company announced Wednesday that it's launching a new internal think…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/892478/anthropic-institute-think-tank-claude-pentagon-jack-clark",
-    "date": "2026-03-11",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-03-10-6",
-    "title": "Gemini in Google Sheets just achieved state-of-the-art performance.",
-    "summary": "Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe …",
-    "url": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
-    "date": "2026-03-10",
-    "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-03-10-7",
-    "title": "How Pokémon Go is giving delivery robots an inch-perfect view of the world",
-    "summary": "Pokémon Go was the world’s first augmented-reality megahit. Released in 2016 by the Google spinout Niantic, the AR twist on the juggernaut Pokémon franchise fast became a global phenomenon. From Chicago to Oslo to Enosh…",
-    "url": "https://www.technologyreview.com/2026/03/10/1134099/how-pokemon-go-is-helping-robots-deliver-pizza-on-time/",
-    "date": "2026-03-10",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-03-10-8",
-    "title": "Improving instruction hierarchy in frontier LLMs",
-    "summary": "IH-Challenge trains models to prioritize trusted instructions, improving instruction hierarchy, safety steerability, and resistance to prompt injection attacks.",
-    "url": "https://openai.com/index/instruction-hierarchy-challenge",
-    "date": "2026-03-10",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-03-10-9",
-    "title": "New ways to learn math and science in ChatGPT",
-    "summary": "ChatGPT introduces interactive visual explanations for math and science, helping students explore formulas, variables, and concepts in real time.",
-    "url": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
-    "date": "2026-03-10",
-    "source": "OpenAI News"
   },
   {
     "id": "2026-03-06-10",
