@@ -1,6 +1,46 @@
 [
   {
-    "id": "2026-03-12-1",
+    "id": "2026-03-13-1",
+    "title": "Europe’s second chance on AI: building an opportunity in factories, labs, and the real economy - Fortune",
+    "summary": "Europe’s second chance on AI: building an opportunity in factories, labs, and the real economy Fortune",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWk96UjEzUHMtYVh2a3hPeXNaZW9uNUxBWEhBS0NLbFIyS3VkQjhCSHVlOVVZTGZ0dl9LZHdrN1h5dnktbHZOTkRhVDRiTXN6QnJ6ZmJ2MVVfeDRzZHJTTjBKREZmRHZQUGU0X0dSVFZZbW91azNiSnlFR3hxUDdWdUxlUGk2ZC1kdU9YOFU3SFRXZw?oc=5",
+    "date": "2026-03-13",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-03-13-2",
+    "title": "How to Start a Career in Artificial Intelligence (2026 Guide) - iSchool | Syracuse University",
+    "summary": "How to Start a Career in Artificial Intelligence (2026 Guide) iSchool | Syracuse University",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUGpGb2pKZ0xvcUJlM3RveklQSU1HSExvRU5uM2M3a2RpNkVqZ1hOWlF2eDROR3IxcUpRelpxSExRRWZkNlZ3N2xzb1JUYkpMaGlSUFlPZXJic3JqWVEtV0FQTTl5c3VjSHdFQkx1eEFHTFgwUjFKaXJxMWpIYXlsLS1fNU8?oc=5",
+    "date": "2026-03-13",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-03-12-3",
+    "title": "A defense official reveals how AI chatbots could be used for targeting decisions",
+    "summary": "The US military might use generative AI systems to rank lists of targets and make recommendations—which would be vetted by humans—about which to strike first, according to a Defense Department official with knowledge of…",
+    "url": "https://www.technologyreview.com/2026/03/12/1134243/defense-official-military-use-ai-chatbots-targeting-decisions/",
+    "date": "2026-03-12",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-03-12-4",
+    "title": "The who, what, and why of the attack that has shut down Stryker's Windows network",
+    "summary": "Company says it doesn't know how long it will take to restore its Microsoft environment.",
+    "url": "https://arstechnica.com/security/2026/03/whats-known-about-wiper-attack-on-stryker-a-major-supplier-of-lifesaving-devices/",
+    "date": "2026-03-12",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-03-12-5",
+    "title": "Facebook Marketplace adds AI auto-replies for annoying ‘Is this still available?’ messages",
+    "summary": "Facebook Marketplace is adding a bunch of new AI-powered tools that are supposed to make selling items on the platform a little more efficient. One feature will use Meta AI to automatically respond to those annoying \"Is…",
+    "url": "https://www.theverge.com/tech/893907/facebook-marketplace-ai-auto-reply-listings",
+    "date": "2026-03-12",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-03-12-6",
     "title": "How AI is helping improve heart health in rural Australia",
     "summary": "A new Google AI initiative aims to improve heart health outcomes for people living in remote Australian communities.",
     "url": "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/",
@@ -8,31 +48,15 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-03-12-2",
-    "title": "Florida man has AI idea for writers. To bot or not? How? | Opinion - Treasure Coast News",
-    "summary": "Florida man has AI idea for writers. To bot or not? How? | Opinion Treasure Coast News",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNaTBlbGZxbU8xY2hudm5ZR1ZWYkZETFdkNVgxTWpFQ2tucW1yM3pkU1ZZUWRVUFhLbl8wSm1DTjFEbXRzV2F3aVNnRUlUdjRsckMzVXBUXzRMMlhKRTNUWk5NcFlaR0wwUnlqYjBBZEZadHFLR184ZVF2MUxsVVJGalpOdnU4Sl9PbXN0Z1FPdlF6YTVDZ1A0dlN3RGhuNDIzWndJRDRmcEJuNUdvcG5ESnJUaEFXb2VOT1dQdUlHWXh5X3UxVFhzQVN6R24yM0hIVl9ZWm1pak85QXdhRE5vdV81QWNBYXpRVmk0?oc=5",
+    "id": "2026-03-12-7",
+    "title": "Anthropic&#8217;s Claude AI can respond with charts, diagrams, and other visuals now",
+    "summary": "Anthropic's latest update to Claude will allow the AI chatbot to generate custom charts, diagrams, and other visualizations during your conversation. If Claude determines a visual is useful based on the context of your…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/893625/anthropic-claude-ai-charts-diagrams",
     "date": "2026-03-12",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-03-12-3",
-    "title": "A.I. Writes Buggy Code. A Silicon Valley Start-Up Wants to Fix It. - The New York Times",
-    "summary": "A.I. Writes Buggy Code. A Silicon Valley Start-Up Wants to Fix It. The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1wS2pURHdkZW1xTGFKb2VuSE9OcHdnOFVzaEVZdm1UM0dtMUxlVHBzS0JVc3ZXcXZzdndsU3JwNnd6Yml4UDlMX3FDVE90bk9XTUJVMlg4Q1ctQlYxTjBLZm5DVFZkTVY0ejdaQm5JWHBuaTBQOEhPdFFxN2E?oc=5",
-    "date": "2026-03-12",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-03-11-4",
-    "title": "One of Grammarly’s ‘experts’ is suing the company over its identity-stealing AI feature",
-    "summary": "Journalist Julia Angwin is one of the writers whose likeness was used in Grammarly’s “expert review” feature. | Photo: Eóin Noonan / Sportsfile via Getty Images For months, Grammarly has been using the identities of rea…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/893451/grammarly-ai-lawsuit-julia-angwin",
-    "date": "2026-03-11",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-03-11-5",
+    "id": "2026-03-11-8",
     "title": "From model to agent: Equipping the Responses API with a computer environment",
     "summary": "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state.",
     "url": "https://openai.com/index/equip-responses-api-computer-environment",
@@ -40,35 +64,11 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-03-11-6",
-    "title": "14,000 routers are infected by malware that's highly resistant to takedowns",
-    "summary": "Most of the devices are made by Asus and are located in the US.",
-    "url": "https://arstechnica.com/security/2026/03/14000-routers-are-infected-by-malware-thats-highly-resistant-to-takedowns/",
-    "date": "2026-03-11",
-    "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-03-11-7",
-    "title": "Grammarly says it will stop using AI to clone experts without permission",
-    "summary": "Superhuman says it has disabled Grammarly's \"expert review\" AI feature that said its edit suggestions were \"inspired by\" real writers, including our editor-in-chief and other Verge staff members. \"After careful consider…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/893270/grammarly-ai-expert-review-disabled",
-    "date": "2026-03-11",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-03-11-8",
-    "title": "Rakuten fixes issues twice as fast with Codex",
-    "summary": "Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews, and delivering full-stack builds in weeks.",
-    "url": "https://openai.com/index/rakuten",
-    "date": "2026-03-11",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-03-11-9",
-    "title": "Hustlers are cashing in on China’s OpenClaw AI craze",
-    "summary": "Feng Qingyang had always hoped to launch his own company, but he never thought this would be how—or that the day would come this fast. Feng, a 27-year-old software engineer based in Beijing, started tinkering with OpenC…",
-    "url": "https://www.technologyreview.com/2026/03/11/1134179/china-openclaw-gold-rush/",
-    "date": "2026-03-11",
+    "id": "2026-03-12-9",
+    "title": "Pragmatic by design: Engineering AI for the real world",
+    "summary": "The impact of artificial intelligence extends far beyond the digital world and into our everyday lives, across the cars we drive, the appliances in our homes, and medical devices that keep people alive. More and more, p…",
+    "url": "https://www.technologyreview.com/2026/03/12/1133675/pragmatic-by-design-engineering-ai-for-the-real-world/",
+    "date": "2026-03-12",
     "source": "MIT Technology Review AI"
   },
   {
