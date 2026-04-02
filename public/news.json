@@ -1,27 +1,27 @@
 [
   {
-    "id": "2026-04-01-1",
-    "title": "Evotec hires exec with AI experience to lead rebooted commercial team - Fierce Pharma",
-    "summary": "Evotec hires exec with AI experience to lead rebooted commercial team Fierce Pharma",
-    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTl9wdlF6ZTRaaHF2SFNwWDM3TUlVQ1VFYzJ3MFFWUjEtdWVWQVBZRENBdEI4ZXZ2aHZsdGdEaVFTdDBuNGdqNjRXY1kzTjlsOXByM05WRjFORFpSTDYwQ2ZhTUNpTDNIdXFLUE5yMkFFcmFwcEJnendKMlh3VGxHNXl3QS1qMDlvQVRvdVVJS3Z0bEZpSjdCMEFKcW90bzNsSXc?oc=5",
-    "date": "2026-04-01",
+    "id": "2026-04-02-1",
+    "title": "U.S. Postal Inspection Service warns public about new wave of scams powered by artificial intelligence - WMAR 2 News Baltimore",
+    "summary": "U.S. Postal Inspection Service warns public about new wave of scams powered by artificial intelligence WMAR 2 News Baltimore",
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOb1F5TE5TMHF3QVpYVW1OYkdFUHFwNzRKenBwQjlWRGdLNWZMWHlPc192ZUZ3dEQtdVpLUFNOTDFaTlhnY0JaSVhSNzU1bng0cEtqRDVuQVIyTVREZ2F0RWUzZ2RlYlZjSEVNNGdSbFNlMFNabHVSaC1kNXd3T1IwaGJCa3h4UWxGTDNFTW9TaWpGRmdpdzI3ZExiX191ckgzdFRuY21USURzd25OM09IZ0JhODZEdm05aGkzckIzSzA5NWJ5WVZaTU9lSHF1djAtUC1LdmtfbU9heW1L?oc=5",
+    "date": "2026-04-02",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-04-01-2",
-    "title": "Northern California courts grapple with AI-generated errors: 1 prosecutor removed - Sacramento Bee",
-    "summary": "Northern California courts grapple with AI-generated errors: 1 prosecutor removed Sacramento Bee",
-    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1wbjJzb3ZTNjB0cmhmVmNKbTFUdk9LNldWem95MXA2Z2owZmNpUFYzYjZULXdsSTFfZkw5VW80dnhlQnFUR3FzcXJmd2RORTMwcEpCX1JITWxlczUtemxaTl9zTkRFd9IBZkFVX3lxTE1uWUVmRV9ZMm51Q1NsN2xwazJIbXBpZnZ3UFlPS0piNWtiTHpEbWJ5bEVnZDB4VVdtRFI4dmxkNVptWnVyVFFRVEt2N1ZHZkZ2RWtBZmZOTTVvWUluRkg4a1AwWE5zdw?oc=5",
-    "date": "2026-04-01",
+    "id": "2026-04-02-2",
+    "title": "How A.I. Helped One Man (and His Brother) Build a $1.8 Billion Company - The New York Times",
+    "summary": "How A.I. Helped One Man (and His Brother) Build a $1.8 Billion Company The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMFFUeTViS3A2bTZyQVQ1Z01lN2hwbjNzTk5JcFY2UUp1Y1lhVlRheE1ua0ZSMHhwbFVNZnU3WVdRR1hnLWx2ZkJaMTJPc1drNnFCUHp5amVLNVVkY2NPVUJoRThSNTJRdW5JcDJSUmFtRUUyOWduaVpZXzlVN2JIdVZWVXRkYl8xRUE?oc=5",
+    "date": "2026-04-02",
     "source": "Google News (AI)"
   },
   {
     "id": "2026-04-01-3",
-    "title": "Gradient Labs gives every bank customer an AI account manager",
-    "summary": "Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.",
-    "url": "https://openai.com/index/gradient-labs",
+    "title": "We’re creating a new satellite imagery map to help protect Brazil’s forests.",
+    "summary": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+    "url": "https://blog.google/products-and-platforms/products/earth/satellite-imagery-brazilian-deforestation/",
     "date": "2026-04-01",
-    "source": "OpenAI News"
+    "source": "Google AI Blog"
   },
   {
     "id": "2026-03-31-4",
@@ -32,7 +32,15 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-03-31-5",
+    "id": "2026-04-01-5",
+    "title": "AI can push your Stream Deck buttons for you",
+    "summary": "If you're tired of controlling Stream Deck devices by manually pushing buttons, then good news: Elgato will now let you delegate that task to a chatbot instead. The Stream Deck 7.4 software update released today introdu…",
+    "url": "https://www.theverge.com/tech/905021/elgato-stream-deck-mcp-ai-agent-update",
+    "date": "2026-04-01",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-03-31-6",
     "title": "Shifting to AI model customization is an architectural imperative",
     "summary": "In the early days of large language models (LLMs), we grew accustomed to massive 10x jumps in reasoning and coding capability with every new model iteration. Today, those jumps have flattened into incremental gains. The…",
     "url": "https://www.technologyreview.com/2026/03/31/1134762/shifting-to-ai-model-customization-is-an-architectural-imperative/",
@@ -40,43 +48,35 @@
     "source": "MIT Technology Review AI"
   },
   {
-    "id": "2026-03-31-6",
-    "title": "Claude Code leak exposes a Tamagotchi-style ‘pet’ and an always-on agent",
-    "summary": "After Anthropic released Claude Code's 2.1.88 update, users quickly discovered that it contained a package with a source map file containing its TypeScript codebase, with one person on X calling attention to the leak an…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/904776/anthropic-claude-source-code-leak",
-    "date": "2026-03-31",
+    "id": "2026-04-01-7",
+    "title": "The gig workers who are training humanoid robots at home",
+    "summary": "When Zeus, a medical student living in a hilltop city in central Nigeria, returns to his studio apartment from a long day at the hospital, he turns on his ring light, straps his iPhone to his forehead, and starts record…",
+    "url": "https://www.technologyreview.com/2026/04/01/1134863/humanoid-data-training-gig-economy-2026-breakthrough-technology/",
+    "date": "2026-04-01",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-04-01-8",
+    "title": "Baidu’s robotaxis froze in traffic, creating chaos",
+    "summary": "A Baidu Apollo robotaxi in Wuhan, China. | Image: Bloomberg via Getty Images Numerous robotaxis operated by Chinese tech giant Baidu froze in a major city on Tuesday, reportedly trapping passengers inside, stranding the…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/905012/baidu-apollo-robotaxi-freeze-china",
+    "date": "2026-04-01",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-03-31-7",
-    "title": "You can now use ChatGPT with Apple’s CarPlay",
-    "summary": "ChatGPT is now accessible from your CarPlay dashboard if you have iOS 26.4 or newer and the latest version of the ChatGPT app, 9to5Mac reports. Apple's recently launched iOS 26.4 update added support for \"voice-based co…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/904676/apple-carplay-openai-chatgpt",
-    "date": "2026-03-31",
-    "source": "The Verge AI"
+    "id": "2026-04-01-9",
+    "title": "Gradient Labs gives every bank customer an AI account manager",
+    "summary": "Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.",
+    "url": "https://openai.com/index/gradient-labs",
+    "date": "2026-04-01",
+    "source": "OpenAI News"
   },
   {
-    "id": "2026-03-31-8",
-    "title": "Quantum computers need vastly fewer resources than thought to break vital encryption",
-    "summary": "No, the sky isn't falling, but Q Day is coming, and it won't be as expensive as thought.",
-    "url": "https://arstechnica.com/security/2026/03/new-quantum-computing-advances-heighten-threat-to-elliptic-curve-cryptosystems/",
-    "date": "2026-03-31",
-    "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-03-31-9",
+    "id": "2026-03-31-10",
     "title": "Accelerating the next phase of AI",
     "summary": "OpenAI raises $122 billion in new funding to expand frontier AI globally, invest in next-generation compute, and meet growing demand for ChatGPT, Codex, and enterprise AI.",
     "url": "https://openai.com/index/accelerating-the-next-phase-ai",
     "date": "2026-03-31",
     "source": "OpenAI News"
-  },
-  {
-    "id": "2026-03-31-10",
-    "title": "AI benchmarks are broken. Here’s what we need instead.",
-    "summary": "For decades, artificial intelligence has been evaluated through the question of whether machines outperform humans. From chess to advanced math, from coding to essay writing, the performance of AI models and application…",
-    "url": "https://www.technologyreview.com/2026/03/31/1134833/ai-benchmarks-are-broken-heres-what-we-need-instead/",
-    "date": "2026-03-31",
-    "source": "MIT Technology Review AI"
   }
 ]
