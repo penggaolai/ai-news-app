@@ -71,7 +71,8 @@ def resolve_final_url(url: str) -> str:
 
 def build_tweet_from_news(news, source: str):
     item = news[0]
-    title = item.get("title", "")
+    raw_title = item.get("title", "")
+    title = raw_title
     link = resolve_final_url(item.get("url", ""))
     summary = item.get("summary", "")
 
@@ -83,39 +84,23 @@ def build_tweet_from_news(news, source: str):
     if len(link) > 230:
         link = "https://ai-news-app-iota.vercel.app/"
 
-    # Format:
-    # 🤖 AI Update: [Title]
-    #
-    # Key takeaway: [Summary]
-    #
-    # 🔗 [Link] #AI #Tech
-
     header = f"🤖 AI Update: {title}"
-    
-    # Try to fit summary
-    # Max tweet length 280.
-    # Reserved: Link (23) + Tags (10) + Newlines/Spacers (10) = ~45 chars
-    # We need to truncate summary to fit.
-    
-    base_len = len(header) + len(link) + 20 # buffer
+
+    base_len = len(header) + len(link) + 20
     remaining = 280 - base_len
-    
-    if remaining < 50: # If title is huge, skip summary or truncate title
-        header = truncate(header, 100) # Force title shorter
+
+    if remaining < 50:
+        header = truncate(header, 100)
         remaining = 280 - len(header) - len(link) - 20
-        
+
     clean_summary = get_distinct_summary(title, summary, remaining, source)
-    
+
     tweet = f"{header}\n\nKey takeaway: {clean_summary}\n\n🔗 {link} #AI #Tech"
-    return tweet, item.get("date", "")
-
-
-def get_tweet_content():
-    news = read_top_news("./public/news.json")
-    if len(news) < TOP_N:
-        raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
-    tweet_text, _ = build_tweet_from_news(news, news[0].get("source", ""))
-    return tweet_text
+    return tweet, {
+        "title_norm": normalize_text(title),
+        "raw_title_norm": normalize_text(raw_title),
+        "link": link,
+    }
 
 def main():
     api_key = os.environ["X_API_KEY"]
@@ -144,16 +129,14 @@ def main():
             print(f"Tweet ID: {tweet_id}")
         return
 
-    tweet_text = get_tweet_content() # Use the new function to get content
-
-    # The rest of the original main() function for posting to X
-    # ... (duplicate checking and actual tweet posting logic) ...
-    news = read_top_news("./public/news.json") # Re-read news to get date_label for duplicate check
+    news = read_top_news("./public/news.json")
     if len(news) < TOP_N:
         raise RuntimeError(f"Need at least {TOP_N} items in public/news.json, got {len(news)}")
-    
-    _, date_label = build_tweet_from_news(news, news[0].get("source", "")) # Get date_label for duplicate check
-    top_headline_norm = normalize_text(news[0].get("title", ""))
+
+    tweet_text, meta = build_tweet_from_news(news, news[0].get("source", ""))
+    top_headline_norm = meta.get("title_norm", "")
+    top_raw_headline_norm = meta.get("raw_title_norm", "")
+    top_link = meta.get("link", "")
 
     print("Tweet preview:")
     print(tweet_text)
@@ -168,29 +151,26 @@ def main():
             for t in (recent.data or []):
                 txt = t.text or ""
 
-                if txt.startswith(f"🤖 AI Update: {date_label}"): # Corrected prefix for duplicate check
-                    print("Skip: today's AI morning brief already posted.")
-                    return
-
                 created_at = getattr(t, "created_at", None)
                 if created_at is not None:
                     age_min = (now_utc - created_at).total_seconds() / 60.0
                     age_hours = age_min / 60.0
 
                     if age_min < COOLDOWN_MINUTES and (
-                        txt.startswith("🤖 AI Update:") # Corrected prefix
+                        txt.startswith("🤖 AI Update:")
                         or txt.startswith("AI update test")
                         or txt.startswith("Links:")
                     ):
                         print(f"Skip: cooldown active ({age_min:.0f} min < {COOLDOWN_MINUTES} min).")
                         return
 
-                    # Skip reposting same headline within 48h.
-                    if age_hours < HEADLINE_REPOST_WINDOW_HOURS and top_headline_norm:
+                    if age_hours < HEADLINE_REPOST_WINDOW_HOURS:
                         recent_norm = normalize_text(txt)
-                        probe = top_headline_norm[:55]
-                        if probe and probe in recent_norm:
-                            print(f"Skip: same headline already posted within {HEADLINE_REPOST_WINDOW_HOURS}h.")
+                        same_clean_title = bool(top_headline_norm and top_headline_norm in recent_norm)
+                        same_raw_title = bool(top_raw_headline_norm and top_raw_headline_norm in recent_norm)
+                        same_link = bool(top_link and top_link in txt)
+                        if same_clean_title or same_raw_title or same_link:
+                            print(f"Skip: same story already posted within {HEADLINE_REPOST_WINDOW_HOURS}h.")
                             return
     except Exception as e:
         print(f"Duplicate/cooldown check skipped due to API read issue: {e}")
