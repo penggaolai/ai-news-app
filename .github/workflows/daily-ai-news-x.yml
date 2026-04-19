@@ -11,6 +11,10 @@ on:
         description: 'Optional: post this exact text (for diagnostics)'
         required: false
         default: ''
+      preview_only:
+        description: 'Set true to generate previews without posting to X'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -68,4 +72,21 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_TEST_TEXT: ${{ github.event.inputs.test_text }}
+          X_PREVIEW_ONLY: ${{ github.event.inputs.preview_only }}
         run: python scripts/post-to-x.py
+
+      - name: Notify Telegram on failure (optional)
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram notify skipped: missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID secret."
+            exit 0
+          fi
+          MSG="⚠️ daily-ai-news-x failed on ${GITHUB_REF_NAME}. Run: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          curl -sS --fail -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode text="${MSG}" \
+            -d disable_web_page_preview=true
