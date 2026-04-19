@@ -1,17 +1,17 @@
 [
   {
     "id": "2026-04-19-1",
-    "title": "AFL-CIO President Liz Shuler to discuss AI and the future of work at a Coffee & Conversation on April 28 - National Press Club (DC)",
-    "summary": "AFL-CIO President Liz Shuler to discuss AI and the future of work at a Coffee & Conversation on April 28 National Press Club (DC)",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNEtjSWFPX2R0ejkzeEtmSjJtcEtiT3hJSTd3elZXOE14YjNXNHY0V3M3NkJRWXY4Y3FYZlBBdVZmUXpJbDhCSFRwdDF4bVJXVUhPaWd1U3YxR0M1eFpoTXl0UDdSOUVsaXVaVHRvNVN0TUhmX0RFLV8xOHF2bHo5SmFFdnRsVFpQb3pRMDRSeUtMeWdzeG5Xb0tfS1VpenQzeF9ocGFSZWZTdFNBNExzNHV5VFVWQQ?oc=5",
+    "title": "Google in talks with Marvell Technology to build new AI inference chips alongside Broadcom TPU programme - The Next Web",
+    "summary": "Google in talks with Marvell Technology to build new AI inference chips alongside Broadcom TPU programme The Next Web",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5SWl9GcDB2MGdialllYkdESG83OC16SXU2MjdheFZCanBxbm5hZHkwSXRKSmJ4OTdmajlmQUwyRVg5UmlnMXlkOTRhbS02dURTME5QNVg2d19mNTNxY2ZKTUd5aWRvdmxPdGRCR0dPNUZXbTFxY3lwVm5SLURXSWs?oc=5",
     "date": "2026-04-19",
     "source": "Google News (AI)"
   },
   {
     "id": "2026-04-19-2",
-    "title": "My Boss Is Addled by ChatGPT. Do I Have to Play Along? - The New York Times",
-    "summary": "My Boss Is Addled by ChatGPT. Do I Have to Play Along? The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVUxUUUh6THNmRHBsQUNNWmhUY3BSVGtCMU9rNUh1VEExejZFY3FQNE9Dc3RmYmh4allOb3hBSFR4eklVN1d4MVZqYXVFTnV5elJxSWdKMk92bGJ4Q0t2WHpwUldDVVpna09nNnJybkNiTW1OdnlCeW9LQkZ5aWs5ZDZMVQ?oc=5",
+    "title": "An end of the world caused by artificial intelligence… Who are the “doomers”? - MVNU",
+    "summary": "An end of the world caused by artificial intelligence… Who are the “doomers”? MVNU",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNY2o3YllGV28ybFFpMnRiTGM3ZVVnOGxSc2w5eWlnUHBJZTVMVXNPVDFiWUR4M1RSMG42dWxuUG1Ba0ItNFJzRmVXNDVHenBJVW1oZVhpZWdJeHB3VXNfOG5qTjZXSVFOOEpody1EeVA4ZF8yQXZDU09xV3dISGdlNnlHNzZPcm0wenJIOWx4Z0JKV1duRXdrZFNYWFZDVVRueHVUUll3?oc=5",
     "date": "2026-04-19",
     "source": "Google News (AI)"
   },
@@ -56,15 +56,7 @@
     "source": "Ars Technica AI"
   },
   {
-    "id": "2026-04-16-8",
-    "title": "New ways to create personalized images in the Gemini app",
-    "summary": "Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.",
-    "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
-    "date": "2026-04-16",
-    "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-04-13-9",
+    "id": "2026-04-13-8",
     "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
     "summary": "Gemini Robotics ER 1.6: Enhancing spatial reasoning and multi-view understanding for autonomous robotics.",
     "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
@@ -72,11 +64,19 @@
     "source": "Google DeepMind Blog"
   },
   {
-    "id": "2026-04-17-10",
-    "title": "How robots learn: A brief, contemporary history",
-    "summary": "Roboticists used to dream big but build small. They’d hope to match or exceed the extraordinary complexity of the human body, and then they’d spend their career refining robotic arms for auto plants. Aim for C-3P0; end…",
-    "url": "https://www.technologyreview.com/2026/04/17/1135416/how-robots-learn-brief-contemporary-history/",
-    "date": "2026-04-17",
-    "source": "MIT Technology Review AI"
+    "id": "2026-04-16-9",
+    "title": "New ways to create personalized images in the Gemini app",
+    "summary": "Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.",
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
+    "date": "2026-04-16",
+    "source": "Google AI Blog"
+  },
+  {
+    "id": "2026-04-13-10",
+    "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+    "summary": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
+    "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
+    "date": "2026-04-13",
+    "source": "OpenAI News"
   }
 ]
