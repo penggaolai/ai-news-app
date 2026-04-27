@@ -1,30 +1,38 @@
 [
   {
-    "id": "2026-04-26-1",
-    "title": "How Do You Measure A.I. Firms’ Gargantuan Energy Plans? In ‘Bragawatts.’ - The New York Times",
-    "summary": "How Do You Measure A.I. Firms’ Gargantuan Energy Plans? In ‘Bragawatts.’ The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMVdXblpfTUxlLUVhemtHTUcxNTFpZGE3YnN4YkhVSXNMUDRTWjZCbVZQejhKZVpPd2dFQXJhR04zMFhJaFN0eXVTUS0yM0drSUF0MnFINGRXcUtiZDQxTzIycjROT0hNb2dFMjFsMG9OempvZVJjUHhnQTNoMjVuWVNkR2xUSVVSSnB6aHVKUHN4Rm1UWVdr?oc=5",
-    "date": "2026-04-26",
+    "id": "2026-04-27-1",
+    "title": "China Orders the Unwinding of Meta’s Acquisition of an A.I. Start-Up - The New York Times",
+    "summary": "China Orders the Unwinding of Meta’s Acquisition of an A.I. Start-Up The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE54bnJBN0hXSkl2LVdLc2ZkTU41NllEemNfNHdkSzlzaXZWS2ozUmVuaWZVN2dDbVBaTjJIYUpEYWRKNzdyS0NDWUFqckdHQnF0bG5aeUZoUFYzMkEwd2VoOHRkb1pNTzB4Q1RVOVVwTVQ0aERneEVDVThQV1NMQQ?oc=5",
+    "date": "2026-04-27",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-04-26-2",
-    "title": "Cannes AI film festival raises eyebrows – and questions about future - The Guardian",
-    "summary": "Cannes AI film festival raises eyebrows – and questions about future The Guardian",
-    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaDNKQjRtZmdld3NTV3dLQnVSQ3dhUVJFaHRReDAza0FLSFRHXzQ4ZDROa1IwWExrS2N5VkVwREdnMjFDdDBrcDZxMlBKbjJfSi1IU3BrbkZoSVNDNzVOeEJZdFVqVHBiMWRWMHZHSXlTbEY1Z2JPVnBkZ05mTlZfT3ZISFROTGVGbXFBZU55SVU2M2w3SGFiWnk2dDV6Y09HSVpaYk9jaGJGUkU?oc=5",
-    "date": "2026-04-26",
+    "id": "2026-04-27-2",
+    "title": "China says it will reverse major AI acquisition by Meta - The Washington Post",
+    "summary": "China says it will reverse major AI acquisition by Meta The Washington Post",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4wbEw4czdzUDJyMVV4S19rT2JNTG9ySTZub2lsVzUzc0tEbjRIZWVOdnAzWkxONldEMmZBRGR4S2J6RlRSRlRFTEVYYXlEcjN3dzJ6WG1WOThxT0RyVHpacmEtU05OTXZuRkpYNEoxaUN2QkhVc2cw?oc=5",
+    "date": "2026-04-27",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-04-24-3",
-    "title": "Three reasons why DeepSeek’s new model matters",
-    "summary": "On Friday, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. Notably, the model can process much longer prompts than its last generation, thanks to a new design that helps it handle…",
-    "url": "https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/",
-    "date": "2026-04-24",
-    "source": "MIT Technology Review AI"
+    "id": "2026-04-27-3",
+    "title": "Announcing our partnership with the Republic of Korea",
+    "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+    "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+    "date": "2026-04-27",
+    "source": "Google DeepMind Blog"
   },
   {
-    "id": "2026-04-24-4",
+    "id": "2026-04-26-4",
+    "title": "Our principles",
+    "summary": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
+    "url": "https://openai.com/index/our-principles",
+    "date": "2026-04-26",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-04-24-5",
     "title": "China’s DeepSeek previews new AI model a year after jolting US rivals",
     "summary": "Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including An…",
     "url": "https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model",
@@ -32,7 +40,15 @@
     "source": "The Verge AI"
   },
   {
-    "id": "2026-04-23-5",
+    "id": "2026-04-24-6",
+    "title": "Three reasons why DeepSeek’s new model matters",
+    "summary": "On April 24, Chinese AI firm DeepSeek released a preview of V4, its long-awaited new flagship model. The model can process much longer prompts than its last generation, thanks to a new design that helps it handle large…",
+    "url": "https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/",
+    "date": "2026-04-24",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-04-23-7",
     "title": "OpenAI says its new GPT-5.5 model is more efficient and better at coding",
     "summary": "OpenAI just announced its new GPT-5.5 model, which the company calls its \"smartest and most intuitive to use model yet, and the next step toward a new way of getting work done on a computer.\" OpenAI just released GPT-5.…",
     "url": "https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt",
@@ -40,7 +56,7 @@
     "source": "The Verge AI"
   },
   {
-    "id": "2026-04-24-6",
+    "id": "2026-04-24-8",
     "title": "8 Gemini tips for organizing your space (and life)",
     "summary": "Organize your home and digital space with Gemini. Use AI-powered tips for cleaning schedules, inbox decluttering, seasonal chores.",
     "url": "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips/",
@@ -48,15 +64,7 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-04-24-7",
-    "title": "Why are top university websites serving porn? It comes down to shoddy housekeeping.",
-    "summary": "Hundreds of subdomains from dozens of universities have been hijacked by scammers.",
-    "url": "https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/",
-    "date": "2026-04-24",
-    "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-04-23-8",
+    "id": "2026-04-23-9",
     "title": "Elevating Austria: Google invests in its first data center in the Alps.",
     "summary": "Google has been a proud part of Austria’s landscape for years, and today, we’re announcing our first data center in Kronstorf, generating 100 direct jobs. This facility …",
     "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-data-center-austria/",
@@ -64,19 +72,11 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-04-22-9",
+    "id": "2026-04-22-10",
     "title": "Decoupled DiLoCo: A new frontier for resilient, distributed AI training",
     "summary": "Google DeepMind Blog update",
     "url": "https://deepmind.google/blog/decoupled-diloco/",
     "date": "2026-04-22",
     "source": "Google DeepMind Blog"
-  },
-  {
-    "id": "2026-04-22-10",
-    "title": "Speeding up agentic workflows with WebSockets in the Responses API",
-    "summary": "A deep dive into the Codex agent loop, showing how WebSockets and connection-scoped caching reduced API overhead and improved model latency.",
-    "url": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
-    "date": "2026-04-22",
-    "source": "OpenAI News"
   }
 ]
