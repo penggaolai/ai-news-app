@@ -1,16 +1,6 @@
 [
   {
     "id": "2026-04-23-1",
-    "title": "I finally found a use case for OpenClaw… - YouTube",
-    "summary": "I finally found a use case for OpenClaw… YouTube",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBieC1CazZWNHpFWWF1UUR6Vkt4Rnc2aHQtRWVDLVFnS3NxQUtxN2dSUDh6UzNyaXE5UFJjdGhuamx0ZUV3bG15QnhsaDZEYXVGSHJIbmpB?oc=5",
-    "date": "2026-04-23",
-    "source": "YouTube",
-    "channel": "",
-    "likes": null
-  },
-  {
-    "id": "2026-04-23-2",
     "title": "OpenClaw Tutorial: Build Your Own AI Assistant in Minutes (No Code Required) - YouTube",
     "summary": "OpenClaw Tutorial: Build Your Own AI Assistant in Minutes (No Code Required) YouTube",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAzX0QxTjN6MG83RFRQZV8zRUl3cXdLM2hfbld4ekdsM2tFaFNUZjBQc3VJYzl1Ym5tYjlRRExFMjRoc2NfaVVKOGhaNkdQaXhqcEhoTWpn?oc=5",
@@ -20,11 +10,21 @@
     "likes": null
   },
   {
-    "id": "2026-04-20-3",
-    "title": "Hermes Agent: The New OpenClaw? - YouTube",
-    "summary": "Hermes Agent: The New OpenClaw? YouTube",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE02Tm1UQjlBYkd6NG1CWGwxTm9wZjlVeGY4OGYta1ZtNDZyWUFCX2lOa196cl9CRnpfcnN4SnVWTHpQODE0X2ZCRzZlYTdUcm8tSW5naWxB?oc=5",
-    "date": "2026-04-20",
+    "id": "2026-04-23-2",
+    "title": "I finally found a use case for OpenClaw… - YouTube",
+    "summary": "I finally found a use case for OpenClaw… YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBieC1CazZWNHpFWWF1UUR6Vkt4Rnc2aHQtRWVDLVFnS3NxQUtxN2dSUDh6UzNyaXE5UFJjdGhuamx0ZUV3bG15QnhsaDZEYXVGSHJIbmpB?oc=5",
+    "date": "2026-04-23",
+    "source": "YouTube",
+    "channel": "",
+    "likes": null
+  },
+  {
+    "id": "2026-04-22-3",
+    "title": "Top 5 OpenClaw Use Cases (I tried them all!) - YouTube",
+    "summary": "Top 5 OpenClaw Use Cases (I tried them all!) YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83YkpjQ083T1A1OHNsLXZtYkZjWW5FT3VtczE4dTlBV0d0MV91clZXOEVXaFVPaUNPYmdiUTdDOEh0ZzRkcXJVWEVDNHF0RUpidnA3NVRn?oc=5",
+    "date": "2026-04-22",
     "source": "YouTube",
     "channel": "",
     "likes": null
@@ -40,31 +40,31 @@
     "likes": null
   },
   {
-    "id": "2026-02-21-5",
-    "title": "How to Setup OpenClaw on Ubuntu Linux | Step-by-Step Walkthrough (2026) - YouTube",
-    "summary": "How to Setup OpenClaw on Ubuntu Linux | Step-by-Step Walkthrough (2026) YouTube",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PWnJaV1BLZVczNE9YYXYxcjZYTzNYTFZYMHFseXdtXzlWaWR1aGNoVE52Y2twNUNKV0l0bXlIem5YcUVrWkY1dF9WaTk1clgwTE1HQlBR?oc=5",
-    "date": "2026-02-21",
+    "id": "2026-04-28-5",
+    "title": "OpenClaw’s Peter Steinberger envisions a world where anyone — and everyone — can create AI agents - YouTube",
+    "summary": "OpenClaw’s Peter Steinberger envisions a world where anyone — and everyone — can create AI agents YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE43M1lSb2tBNnNkZGV3N2REc0hGOFJGNkgxZEJFX1NVMllLczdpaHk1YlExNG9xVkg1a3laNHhQdVE5VDZzTFRiX1ljTHJoYTdOQnhVWA?oc=5",
+    "date": "2026-04-28",
     "source": "YouTube",
     "channel": "",
     "likes": null
   },
   {
-    "id": "2026-01-09-6",
+    "id": "2026-04-14-6",
+    "title": "Principles for Autonomous System Design: OpenClaw Deep Dive - YouTube",
+    "summary": "Principles for Autonomous System Design: OpenClaw Deep Dive YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xaWtqTmptQzd0WVdRdWhuZ0dCYU1rTDY1S2dDQXhHb0FSUnEwdFhjMjA0UjU5TFNnbDJBbGE3VzBpaFNveHRiQkl4a0lZbjZMd3VEY3Zn?oc=5",
+    "date": "2026-04-14",
+    "source": "YouTube",
+    "channel": "",
+    "likes": null
+  },
+  {
+    "id": "2026-01-09-7",
     "title": "ClawdBot (OpenClaw): The self-hosted AI that Siri should have been (Full setup) - YouTube",
     "summary": "ClawdBot (OpenClaw): The self-hosted AI that Siri should have been (Full setup) YouTube",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ZblY4bzdOX243T0FxckJLUXlwYkJIelhnZG9Ma3p3MFhXMC1VdG16SElEQW5hZVhLcERaVFV0R3RpT2duT1NiU3kxajFYUzJ4LURaMXFn?oc=5",
     "date": "2026-01-09",
-    "source": "YouTube",
-    "channel": "",
-    "likes": null
-  },
-  {
-    "id": "2026-04-05-7",
-    "title": "Anthropic just blocked OpenClaw. Here’s what you need to do immediately - YouTube",
-    "summary": "Anthropic just blocked OpenClaw. Here’s what you need to do immediately YouTube",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1pVEJfQS1jdVBINWh4REVMOURoajg5Tkp3RWZoVmZjQnYzYkIwRnZaQUZvUUMxdnM1VWg2UFJDOHlfRUhWZjdmUEVfUUp6NUNTS3E2NEh3?oc=5",
-    "date": "2026-04-05",
     "source": "YouTube",
     "channel": "",
     "likes": null
@@ -80,20 +80,20 @@
     "likes": null
   },
   {
-    "id": "2026-04-29-9",
-    "title": "Making $$ with AI Agents - YouTube",
-    "summary": "Making $$ with AI Agents YouTube",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wR3puVV9KZ0piWWhZYUpxYmtLT1NNXy1jT3ROdDB2SVc0cmZGeGNHaUpNRnE5ZGdOSXAzczJFQThhVENleGJFdlBNb2o3dEpxbXVZRE5R?oc=5",
-    "date": "2026-04-29",
+    "id": "2026-04-04-9",
+    "title": "Hermes Use Cases that are actually helpful... - YouTube",
+    "summary": "Hermes Use Cases that are actually helpful... YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5TdFlobU90cTVUQUVyU3NwVXVBVllMNGtFWUZQYjJSczk5LWNWa1o1ZmFDOVdaQXhvYkM2bmVMNkhqMkRFanB5RHRtNUpFejBVSGVNYWdR?oc=5",
+    "date": "2026-04-04",
     "source": "YouTube",
     "channel": "",
     "likes": null
   },
   {
     "id": "2026-04-29-10",
-    "title": "Building Pi, and what makes self-modifying software so fascinating - YouTube",
-    "summary": "Building Pi, and what makes self-modifying software so fascinating YouTube",
-    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBzVU5URFBoZU1ycjRPTDZmR2R6QXViZWpaZkprQVRVQkdVZ1M0RDQtQnlMRHo0T25vMTJEMXZtbm9FekdiMExzTnE1WXVPdUtqTXZxZW5B?oc=5",
+    "title": "Making $$ with AI Agents - YouTube",
+    "summary": "Making $$ with AI Agents YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wR3puVV9KZ0piWWhZYUpxYmtLT1NNXy1jT3ROdDB2SVc0cmZGeGNHaUpNRnE5ZGdOSXAzczJFQThhVENleGJFdlBNb2o3dEpxbXVZRE5R?oc=5",
     "date": "2026-04-29",
     "source": "YouTube",
     "channel": "",
