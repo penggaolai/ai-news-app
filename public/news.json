@@ -1,14 +1,70 @@
 [
   {
-    "id": "2026-05-11-1",
-    "title": "Here’s why AI safety is so difficult - WMNF 88.5 FM",
-    "summary": "Here’s why AI safety is so difficult WMNF 88.5 FM",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBkMmdkMzVBMmhCWERNaUJhcFY2RGZKX196aUxSRllrQlNRT202cTZwUUEzcFhCS2pnVkRZTUFKd0s2Y2xKYnhPWVBJMTdUNnpid1U5dm9ZamV4Z0FGOWZ5UGo0R05OanRaWmtiNEVqUlJKQnBQSVE?oc=5",
-    "date": "2026-05-11",
+    "id": "2026-05-12-1",
+    "title": "Representative From A Chinese Think Tank Approached Anthropic Officials To Give Beijing Access To Its New Artificial Intelligence Model- NYT - TradingView",
+    "summary": "Representative From A Chinese Think Tank Approached Anthropic Officials To Give Beijing Access To Its New Artificial Intelligence Model- NYT TradingView",
+    "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxPTmduT0x2N2llTHRISWg5RG1sVUQ5QXQxclpPUXg0X2d4c1FLSU1ISjRaZEh5NG5WZVc1a2tGN0ViVEQ3Z1FNV1NVVVVMN0hQeHJ4WWt1bDlBZVlTNFBoNkhfU2dNMUFYUkJuXzNxN3ZDQXd5MDRVSDRhWWNFU3g3cm0za0YtUnhHY0VHOThXZjNKQl9HaVFoQ1BEU0E3bDduREhUR0dTT0hJTGNMQ2RFdHZKUEtqQWdDR2I2NDRubmgtYjV5clc0MXYtNEZxeDNVTG01WEQtNlNjWkJDR0JxOFFPV1djakpHNWpKQ0tEcjFVM2IzeUVYZ3lsRmxjZGdIeG05QU5iZUxFYmZJSU1Lajk2TDZRb19QcmNGaHJXam1FcnEwWTFEeXVpZTdld2JtV1RV?oc=5",
+    "date": "2026-05-12",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-05-11-2",
+    "id": "2026-05-12-2",
+    "title": "Commonwealth conference champions AI solutions to combat corruption in Africa - thecommonwealth.org",
+    "summary": "Commonwealth conference champions AI solutions to combat corruption in Africa thecommonwealth.org",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNFhRSmRXYlVyaklFUVc5ZWVISERfUUN0VTl5OFQzS0x6Vmd5QlY2LUxzMjJzcEV5bmYtYXpqNVpvMjZPNjI0cEdDSUNka1puYnVwdUdmYkdJcUZHX1gteEVqZ0lELTB1cHgyZXBDdW93STVfWVlFSnBaNXNpam02a2VQZ1NJQlJHQzNXUG9kcVoyWDZldVhETVdlMDhTM0VRekxuN25oWQ?oc=5",
+    "date": "2026-05-12",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-11-3",
+    "title": "OpenAI just released its answer to Claude Mythos",
+    "summary": "OpenAI is launching Daybreak, an AI initiative focused on detecting and patching vulnerabilities before attackers find them. Daybreak uses the Codex Security AI agent that launched in March to create a threat model base…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai",
+    "date": "2026-05-11",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-11-4",
+    "title": "Here&#8217;s what Mira Murati&#8217;s AI company is up to",
+    "summary": "Thinking Machines, the AI company founded by former OpenAI CTO Mira Murati, announced Monday that it's working on something called \"interaction models.\" The idea behind interaction models, according to Thinking Machines…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/928309/mira-murati-thinking-machines-ai-interaction-model",
+    "date": "2026-05-11",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-11-5",
+    "title": "Linux bitten by second severe vulnerability in as many weeks",
+    "summary": "Production-version patches are coming online and should be installed pronto.",
+    "url": "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/",
+    "date": "2026-05-11",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-05-11-6",
+    "title": "Three things in AI to watch, according to a Nobel-winning economist",
+    "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. A few months before he was awarded the Nobel Prize in economics in 2024, Daron Ac…",
+    "url": "https://www.technologyreview.com/2026/05/11/1137090/three-things-in-ai-to-watch-according-to-a-nobel-winning-economist/",
+    "date": "2026-05-11",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-05-11-7",
+    "title": "How ChatGPT adoption broadened in early 2026",
+    "summary": "ChatGPT adoption surged in Q1 2026, with fastest growth among users over 35 and more balanced gender usage, signaling broader mainstream AI adoption.",
+    "url": "https://openai.com/signals/research/2026q1-update",
+    "date": "2026-05-11",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-11-8",
+    "title": "Fostering breakthrough AI innovation through customer-back engineering",
+    "summary": "Despite years of digitization, organizations capture less than one-third of the value expected from digital investments, according to McKinsey research. That’s because most big companies begin with technological capabil…",
+    "url": "https://www.technologyreview.com/2026/05/11/1136967/fostering-breakthrough-ai-innovation-through-customer-back-engineering/",
+    "date": "2026-05-11",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-05-11-9",
     "title": "OpenAI Campus Network: Student club interest form",
     "summary": "Join the OpenAI Campus Network—connect student clubs worldwide, access AI tools, host events, and build an AI-powered campus community.",
     "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
@@ -16,67 +72,11 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-05-11-3",
-    "title": "How enterprises are scaling AI",
-    "summary": "How enterprises scale AI: from early experiments to compounding impact through trust, governance, workflow design, and quality at scale.",
-    "url": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
-    "date": "2026-05-11",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-05-11-4",
-    "title": "Re-thinking human–machine interaction and the governance of AI in the military domain - Nature",
-    "summary": "Re-thinking human–machine interaction and the governance of AI in the military domain Nature",
-    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE01NUZZb1VpUF9EYVdDd2U1TWxZLTNCdENNS21abFc5Yi01eHhHeXJHS1d0ZTk0dktXLVgzVTlzYzYxcGNRUXgxZnZRVGJ3SnFYVkNKY3RSdkhmeU5JVW93?oc=5",
-    "date": "2026-05-11",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-11-5",
+    "id": "2026-05-11-10",
     "title": "The new AI-powered Google Finance is expanding to Europe.",
     "summary": "This week, the new, AI-powered Google Finance is launching across Europe, with full local language support. This reimagined experience offers a suite of powerful capabil…",
     "url": "https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/",
     "date": "2026-05-11",
     "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-05-07-6",
-    "title": "ChatGPT&#8217;s &#8216;Trusted Contact&#8217; will alert loved ones of safety concerns",
-    "summary": "OpenAI is launching an optional safety feature for ChatGPT that allows adult users to assign an emergency contact for mental health and safety concerns. Friends, family members, or caregivers designated as a \"Trusted Co…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification",
-    "date": "2026-05-07",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-05-08-7",
-    "title": "See what happens when creative legends use AI to make ads for small businesses.",
-    "summary": "Today we're launching The Small Brief, an initiative bringing together three ad industry icons to champion a local businesses they love. Their mission is to build breakt…",
-    "url": "https://blog.google/company-news/inside-google/company-announcements/the-small-brief/",
-    "date": "2026-05-08",
-    "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-05-08-8",
-    "title": "Musk v. Altman week 2: OpenAI fires back, and Shivon Zilis reveals that Musk tried to poach Sam Altman",
-    "summary": "In the second week of the landmark trial between Elon Musk and OpenAI, Musk’s motivations for bringing the suit were under scrutiny. Last week, Musk took the stand, alleging that OpenAI CEO Sam Altman and president Greg…",
-    "url": "https://www.technologyreview.com/2026/05/08/1137008/musk-v-altman-week-2-openai-fires-back-and-shivon-zilis-reveals-that-musk-tried-to-poach-sam-altman/",
-    "date": "2026-05-08",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-05-06-9",
-    "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
-    "summary": "Explore how AlphaEvolve's Gemini-powered algorithms are driving impact across business, infrastructure, and science.",
-    "url": "https://deepmind.google/blog/alphaevolve-impact/",
-    "date": "2026-05-06",
-    "source": "Google DeepMind Blog"
-  },
-  {
-    "id": "2026-05-08-10",
-    "title": "Microsoft was worried OpenAI would run off to Amazon and ‘shit-talk’ Azure",
-    "summary": "OpenAI CEO Sam Altman and Microsoft CTO Kevin Scott. | Image: Getty Images When OpenAI was busy experimenting with AI-powered gaming bots, Microsoft CEO Satya Nadella and OpenAI CEO Sam Altman were in the early days of…",
-    "url": "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure",
-    "date": "2026-05-08",
-    "source": "The Verge AI"
   }
 ]
