@@ -1,38 +1,62 @@
 [
   {
-    "id": "2026-05-13-1",
-    "title": "Data centers are coming for rural America",
-    "summary": "At its peak, the Androscoggin paper mill in Jay, Maine, a rural town about 67 miles northwest of Portland, employed about 1,500 people - until a pulp digester exploded in 2020, forcing the mill to close permanently. In…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/928963/data-center-rural-america-jobs-jay-maine",
+    "id": "2026-05-14-1",
+    "title": "The shock of seeing your body used in deepfake porn",
+    "summary": "When Jennifer got a job doing research for a nonprofit in 2023, she ran her new professional headshot through a facial recognition program. She wanted to see if the tech would pull up the porn videos she’d made more tha…",
+    "url": "https://www.technologyreview.com/2026/05/14/1137161/ai-porn-nonconsensual-deepfakes-takedown-piracy-copyright/",
+    "date": "2026-05-14",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-05-14-2",
+    "title": "Artificial intelligence: a supply-side perspective - CaixaBank Research",
+    "summary": "Artificial intelligence: a supply-side perspective CaixaBank Research",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQdV9YTm9JdURTVEZINGpKaGVjMzJjWWViUW9yZXNQalh1UnFyRGt5UVdkVHM3UndsM0FaX25tVW13M2YzSlVfalhvZ2NnVXNMSzlHak04OGZLaGpTTzFrZXZEcnNGc2pmSng1cWF5NW9LZEticUlfT1NwNzBZUU1icXNnQ2kxamZBY3FHZVdsZlA4eWM0V3REN1M4Q3JlVnVnSXY2MlY5MGlIOThBcDhOU0NhME1Jalh3TFE?oc=5",
+    "date": "2026-05-14",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-14-3",
+    "title": "Why AI-obsessed companies should care about the aging workforce - Fast Company",
+    "summary": "Why AI-obsessed companies should care about the aging workforce Fast Company",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPR2M3cGRTSUpxa0hFTWtLZnBNZWl5Ylo0TDhMZUFTcVlxVVQ5U0VHbVJKd2hnTjAyMDl0b0lvdmstaFd2blZtd1JhbWl1eXBXZ3hmTUlzQ05yVWNuV0hPZWJMMHJCbTdrSkFsUnA0a1BNbHBQdzNnRTlYX2c4QmFUU1Z1UzBMdzVMSVhnSHIxMlVmVWVrbEhhaWI1eWhOYXJzclE?oc=5",
+    "date": "2026-05-14",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-13-4",
+    "title": "Microsoft&#8217;s Edge Copilot update uses AI to pull information from across your tabs",
+    "summary": "Microsoft Edge is adding a new feature that will allow its Copilot AI chatbot to gather information from all of your open tabs. When you start a conversation with Copilot, you can ask the chatbot questions about what's…",
+    "url": "https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs",
     "date": "2026-05-13",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-05-13-2",
-    "title": "AI self-replication hacks 'no longer purely theoretical,' study finds — but experts say it's too soon to panic - Live Science",
-    "summary": "AI self-replication hacks 'no longer purely theoretical,' study finds — but experts say it's too soon to panic Live Science",
-    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQbEx6dG1fa3JOV200QnFMYUNiVG0xbDFMWGgycFBJenhocmhyRzRId3ZaNXh6RVNBN3BlMVF6Y2ZCcE9GaEthZDBhcDhaNEhRZXN6a0p4T2M0Q2FWNzFtQ0FnVzcxdlMxSl9XUFZlVVhPRURxU0tmcXVlN19xZ0s3RngtSERybTZ5MElzaFBNeDlyOTF6MHBDOV9kUERQcFNBeUhTeG1VdlFDRERwUVhGT3BFZDZ4YXFmM3VDZkFNTER5cWYzZWZ4cTRFTmI4czljaE9lWm9NZWtCcFRpS29TemtYMndGN0dIdDc5WUJmVWhKYm93LXlKS0RmMA?oc=5",
+    "id": "2026-05-13-5",
+    "title": "Mark Zuckerberg announces &#8216;completely private&#8217; encrypted Meta AI chat",
+    "summary": "Meta CEO Mark Zuckerberg says its new Incognito Chat is \"the first major AI product where there is no log of your conversations stored on servers.\" Messages in Incognito Chat aren't saved or stored in users' chat histor…",
+    "url": "https://www.theverge.com/tech/929791/meta-ai-incognito-chats",
     "date": "2026-05-13",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-13-3",
-    "title": "Silicon Valley’s A.I. Lobbying Reaches a Fever Pitch - The New York Times",
-    "summary": "Silicon Valley’s A.I. Lobbying Reaches a Fever Pitch The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQnhKQVFoTXViVGpiek5YbHFmbVdWTkNUc21HaEVlbERadUNJd3JPYjRsOXRXbHEwY09yVjdNNnF3aW00WUdXbmNWdU44UTIxMzhVT0NYRV96MUpzaG9yU2VhN1dvVHFVSVRmeDlTNDNUbm90ZlJ6Y09FRmRibDlFY0tYQld5RUpwZDVZaWtPR1Q2UTNj?oc=5",
-    "date": "2026-05-13",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-12-4",
-    "title": "Sam Altman was winning on the stand, but it might not be enough",
-    "summary": "Who, me? | Image: The Verge; Getty Images After two weeks of hearing from assorted witnesses that he was a lying snake, the jury finally heard from the lying snake himself: Sam Altman. At the end of the testimony, his l…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/929129/sam-altman-testimony-elon-musk-openai-trial",
-    "date": "2026-05-12",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-05-12-5",
+    "id": "2026-05-13-6",
+    "title": "AI chatbots are giving out people’s real phone numbers",
+    "summary": "People report that their personal contact info was surfaced by Google AI—and there’s apparently no easy way to prevent it. A Redditor recently wrote that he was “desperate for help”: for about a month, he said, his phon…",
+    "url": "https://www.technologyreview.com/2026/05/13/1137203/ai-chatbots-are-giving-out-peoples-real-phone-numbers/",
+    "date": "2026-05-13",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-05-13-7",
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "summary": "Learn how OpenAI built a secure sandbox for Codex on Windows, enabling safe, efficient coding agents with controlled file access and network restrictions.",
+    "url": "https://openai.com/index/building-codex-windows-sandbox",
+    "date": "2026-05-13",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-12-8",
     "title": "What Parameter Golf taught us about AI-assisted research",
     "summary": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
     "url": "https://openai.com/index/what-parameter-golf-taught-us",
@@ -40,43 +64,19 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-05-12-6",
-    "title": "How finance teams use Codex",
-    "summary": "See how finance teams can use Codex to build MBRs, reporting packs, variance bridges, model checks, and planning scenarios from real work inputs.",
-    "url": "https://openai.com/academy/how-finance-teams-use-codex",
-    "date": "2026-05-12",
-    "source": "OpenAI News"
+    "id": "2026-05-08-9",
+    "title": "See what happens when creative legends use AI to make ads for small businesses.",
+    "summary": "Today we're launching The Small Brief, an initiative bringing together three ad industry icons to champion a local businesses they love. Their mission is to build breakt…",
+    "url": "https://blog.google/company-news/inside-google/company-announcements/the-small-brief/",
+    "date": "2026-05-08",
+    "source": "Google AI Blog"
   },
   {
-    "id": "2026-05-11-7",
-    "title": "Three things in AI to watch, according to a Nobel-winning economist",
-    "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. A few months before he was awarded the Nobel Prize in economics in 2024, Daron Ac…",
-    "url": "https://www.technologyreview.com/2026/05/11/1137090/three-things-in-ai-to-watch-according-to-a-nobel-winning-economist/",
-    "date": "2026-05-11",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-05-11-8",
-    "title": "Fostering breakthrough AI innovation through customer-back engineering",
-    "summary": "Despite years of digitization, organizations capture less than one-third of the value expected from digital investments, according to McKinsey research. That’s because most big companies begin with technological capabil…",
-    "url": "https://www.technologyreview.com/2026/05/11/1136967/fostering-breakthrough-ai-innovation-through-customer-back-engineering/",
-    "date": "2026-05-11",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-05-11-9",
+    "id": "2026-05-11-10",
     "title": "The new AI-powered Google Finance is expanding to Europe.",
     "summary": "This week, the new, AI-powered Google Finance is launching across Europe, with full local language support. This reimagined experience offers a suite of powerful capabil…",
     "url": "https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/",
     "date": "2026-05-11",
     "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-05-11-10",
-    "title": "Linux bitten by second severe vulnerability in as many weeks",
-    "summary": "Production-version patches are coming online and should be installed pronto.",
-    "url": "https://arstechnica.com/security/2026/05/linux-bitten-by-second-severe-vulnerability-in-as-many-weeks/",
-    "date": "2026-05-11",
-    "source": "Ars Technica AI"
   }
 ]
