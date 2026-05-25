@@ -1,22 +1,30 @@
 [
   {
-    "id": "2026-05-24-1",
-    "title": "I’m a Professional Writer Who Uses a Very Controversial Tool. It’s Not As Scary As I Thought. - Slate",
-    "summary": "I’m a Professional Writer Who Uses a Very Controversial Tool. It’s Not As Scary As I Thought. Slate",
-    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPd3BUUGxXQW0yVzE1SGJlTzBWajdoNGRfbzdscTJCTkFhdWZEcDNwN0ZNRHVxSDh3RjhrYUx5eDdaRENNMVp1NVVYZV9adnV5V2xWOEZEWGY1YlpKMUliUWdVRlVtTkRZQnNIR1BZem5NMUN1UlFSMkZsNUY4Tmo1b2FYU1JDdWZpQXdkQXln?oc=5",
-    "date": "2026-05-24",
+    "id": "2026-05-25-1",
+    "title": "Vatican to launch first-ever papal manifesto on artificial intelligence - Türkiye Today",
+    "summary": "Vatican to launch first-ever papal manifesto on artificial intelligence Türkiye Today",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZzY0QzlJdjFSU3lDUkJ5NVNMamlLQnJ6U29KNWVaLUo0QTJyQWJGZkRtUFR5SEhfcmZOZW5GNFJKQVpBSk10TnpnZHZKZnBIOVc3R0E1VVJJWF8tYmFYNHFZdGNHdWl0RFJNZkJTZXhXRjNJTmZSLS1IbzRXaHpHM3Q3ZjJNZHhxMGFTS3ZZUnNlUlpnTmJHTTc5Q08ybC1YWC0tWVBBclVDQl9XMTE0Q3FmT0ZnRGZu?oc=5",
+    "date": "2026-05-25",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-05-24-2",
-    "title": "One Job That Is Growing in the A.I. Era? Cybersecurity Experts. - The New York Times",
-    "summary": "One Job That Is Growing in the A.I. Era? Cybersecurity Experts. The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa0NpOEozbTRIZHBLZXhtUGl0UVNuRVJHUDFjcUNrbWNHOXl5d0szU0JCVTBIYXZUd1NBdnQ2SG9JUloxWk1WM3luZ1VjQ0JTY0pEa1dDaVZHNjZwNVo4RWtRRUllZmY3RFZGYzdwN19zQ1JqNHBiLWlHLW1Nd1BCZlZ0SXpNSUU4am1LQlozMkprMHZCNlNrTWE4UHBVRkF2YlU4dDlMbjFaVG9BSWVZ?oc=5",
-    "date": "2026-05-24",
+    "id": "2026-05-25-2",
+    "title": "Excerpts from Pope Leo XIV's sweeping manifesto about humanity in the AI era - WRAL",
+    "summary": "Excerpts from Pope Leo XIV's sweeping manifesto about humanity in the AI era WRAL",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOdjNIN1lkN3ZIQm5GSW52cEY2MkhHN2htd0pBRlNBMnNLaS11aGpnTlFiT1gyR0Utd0E1Wl92R1QyWnE3Z1o4ZUxELURiUmdfTUxzQ0o4MEtPVENqTTVPLU5NTEFJRDNXTF9mMWJtcEVzSER0VXc5cTBjTlo0WUVfX2k2aGwwNm16T3UwU3hlMWY4QzRmSUxJVmRUaTctOWYwSW5aaDF5bFJqaV9yUEN5Uw?oc=5",
+    "date": "2026-05-25",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-05-23-3",
+    "id": "2026-05-24-3",
+    "title": "Hackers are learning to exploit chatbot &#8216;personalities&#8217;",
+    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on AI mischief, follow Robert Hart. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The St…",
+    "url": "https://www.theverge.com/column/935545/hackers-ai-chatbots",
+    "date": "2026-05-24",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-23-4",
     "title": "Google’s new anything-to-anything AI model is wild",
     "summary": "Just a stuffed deer having the time of his life. | Image: Gemini / The Verge Last year I deepfaked my kid's stuffed animal to make it look like his plush deer was on vacation. It was an experiment to see if I could re-c…",
     "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video",
@@ -24,7 +32,7 @@
     "source": "The Verge AI"
   },
   {
-    "id": "2026-05-20-4",
+    "id": "2026-05-20-5",
     "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
     "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
     "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
@@ -32,7 +40,7 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-05-22-5",
+    "id": "2026-05-22-6",
     "title": "A hacker group is poisoning open source code at an unprecedented scale",
     "summary": "GitHub is just the latest victim of TeamPCP, a gang that has carried out a spree of software supply chain attacks.",
     "url": "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/",
@@ -40,23 +48,7 @@
     "source": "Ars Technica AI"
   },
   {
-    "id": "2026-05-22-6",
-    "title": "Google&#8217;s AI search is so broken it can &#8216;disregard&#8217; what you&#8217;re looking for",
-    "summary": "Google's AI Overviews are running into an interesting problem right now. Earlier on Friday, if you searched for the term \"disregard,\" the AI Overview section would include a response like what you'd see from a more trad…",
-    "url": "https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard",
-    "date": "2026-05-22",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-05-22-7",
-    "title": "Catch up on the Dialogues stage at Google I/O 2026.",
-    "summary": "A recap of the 2026 I/O Dialogues, where leaders discuss the future of AI, quantum computing, robotics and creativity.",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/",
-    "date": "2026-05-22",
-    "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-05-21-8",
+    "id": "2026-05-21-7",
     "title": "We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
     "summary": "Google DeepMind Blog update",
     "url": "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
@@ -64,19 +56,27 @@
     "source": "Google DeepMind Blog"
   },
   {
-    "id": "2026-05-22-9",
-    "title": "Texas AG sues Meta over claims that WhatsApp doesn't provide end-to-end encryption",
-    "summary": "Critics note a lack of factual support in lawsuit filed by US Senate candidate.",
-    "url": "https://arstechnica.com/security/2026/05/texas-ag-sues-meta-over-claims-that-whatsapp-doesnt-provide-end-to-end-encryption/",
+    "id": "2026-05-22-8",
+    "title": "Catch up on the Dialogues stage at Google I/O 2026.",
+    "summary": "A recap of the 2026 I/O Dialogues, where leaders discuss the future of AI, quantum computing, robotics and creativity.",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/",
     "date": "2026-05-22",
-    "source": "Ars Technica AI"
+    "source": "Google AI Blog"
   },
   {
-    "id": "2026-05-22-10",
+    "id": "2026-05-22-9",
     "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
     "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
     "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
     "date": "2026-05-22",
     "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-19-10",
+    "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+    "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
+    "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+    "date": "2026-05-19",
+    "source": "Google AI Blog"
   }
 ]
