@@ -1,82 +1,82 @@
 [
   {
-    "id": "2026-05-26-1",
-    "title": "South Africa targets January 2027 for revised AI policy after earlier withdrawal - Reuters",
-    "summary": "South Africa targets January 2027 for revised AI policy after earlier withdrawal Reuters",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQ1JLdHdHZ1FPc2FHUlZhWUVuOWljWDNsdU1CQndwOG9RcUNrQnNWeUNtZWNWdklqYkJJVnhQSnBOcG1XYjY4U00tYkdDU1FmNXhXeTFvVmpJM0pHYjJTdE9tS2dlRENoUGxWR2JWY2FnX3daWl9USE5GMVNQZ242RDA3NVFCaXQxZGUtRHVNNHNqY0k5ME1QcUJnSFFPMlI5MHRwdGlLWU5WN0gtZUFqS1pmV1BYcmJRTFhnU21mRTBfcVE?oc=5",
-    "date": "2026-05-26",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-26-2",
-    "title": "Uber president says AI spending is getting ‘harder to justify’",
-    "summary": "Uber president Andrew Macdonald (pictured) says its “hard to draw a line” between AI spending and deliverable features. | Photo: Zed Jameson/Bloomberg via Getty Images After reportedly exhausting its annual AI budget ju…",
-    "url": "https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify",
-    "date": "2026-05-26",
+    "id": "2026-05-28-1",
+    "title": "YouTube will let you ask AI to make a custom video feed",
+    "summary": "You can enter your own prompt, or select from the suggested options provided by YouTube. | Image: YouTube YouTube is launching a new AI feature that creates a personalized video feed based on descriptions of what you wa…",
+    "url": "https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability",
+    "date": "2026-05-28",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-05-26-3",
+    "id": "2026-05-28-2",
+    "title": "Harvard's Kempner Institute Bet Big on AI. Now It Has to Prove Itself. - The Harvard Crimson",
+    "summary": "Harvard's Kempner Institute Bet Big on AI. Now It Has to Prove Itself. The Harvard Crimson",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBIOTZWNnJCUlk2R0pEeWl4bDFJNGN6amtoOXdGci16Q0xaVVBuSEFMcTRTV0NZS3B6b2RKckhxUXB2cENQaEM2NlBoSEItSFdjLW1ja2VHZnFkcFczNnJhdGpHMDkxRkJETDlnZHNhd0VpZWdldDV1Rw?oc=5",
+    "date": "2026-05-28",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-28-3",
+    "title": "Online Scams Have Evolved in the A.I. Era. Here’s What to Do. - The New York Times",
+    "summary": "Online Scams Have Evolved in the A.I. Era. Here’s What to Do. The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVjZJdHlCS2xmOWVxV3NtX3drZC1DVEhFNGY2eDJ1ZlJISUYzam5FekUycHQ1Y1BXMlpWb1hKNGdocDZITnRKVjVIeDBsZnVBOE44UUdUc2FNUTI5ZllheDZ4dDd3M2J6bmlqUWM1NHlkQl9kOGxQVFNFR1ppWmY1WVp4LXR4RkhFaEZCYkIyS2V3V2hlMHlGY1dMcjhvR19VSVhldkhGUWxQUWNUNFhwTDI2S0VBcHI1ajdyVQ?oc=5",
+    "date": "2026-05-28",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-27-4",
+    "title": "Websites have a new way to spy on visitors: analyzing their SSD activity",
+    "summary": "Telltale SSD activity can be measured in the browser using simple JavaScript.",
+    "url": "https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/",
+    "date": "2026-05-27",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-05-27-5",
+    "title": "Warp’s big bet on building open source with GPT-5.5",
+    "summary": "Warp uses GPT-5.5 and OpenAI models to coordinate coding agents across local, cloud, and open-source development workflows.",
+    "url": "https://openai.com/index/warp",
+    "date": "2026-05-27",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-27-6",
+    "title": "AI tried to bury this politician — now people have actually heard of him",
+    "summary": "NY-12 congressional candidate Alex Bores speaks during a campaign event. | Bloomberg via Getty Images By the time that the Democratic primary for New York's 12th congressional district wraps up in June, Anthropic and Op…",
+    "url": "https://www.theverge.com/policy/937650/ai-alex-bores-openai-anthropic-ny12",
+    "date": "2026-05-27",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-27-7",
+    "title": "Cisco and OpenAI redefine enterprise engineering with Codex",
+    "summary": "Cisco and OpenAI are redefining enterprise engineering with Codex, helping Cisco scale AI-native development, accelerate AI Defense work, and automate defect remediation.",
+    "url": "https://openai.com/index/cisco",
+    "date": "2026-05-27",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-26-8",
+    "title": "Millions of AI agents imperiled by critical vulnerability in open source package",
+    "summary": "\"BadHost\" was found in Starlette, a package with 325 million weekly downloads.",
+    "url": "https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package/",
+    "date": "2026-05-26",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-05-26-9",
+    "title": "Rethinking organizational design in the age of agentic AI",
+    "summary": "Amid rapidly growing adoption of enterprise-level AI agents, there’s a disconnect emerging between ambition and execution. Although 85% of organizations say they want to be agentic within the next three years, 76% say t…",
+    "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
+    "date": "2026-05-26",
+    "source": "MIT Technology Review AI"
+  },
+  {
+    "id": "2026-05-26-10",
     "title": "It’s time to address the looming crisis in entry-level work.",
     "summary": "Artificial intelligence has not so far produced a clean story of mass unemployment. Aggregate employment in developed countries remains broadly stable, and recent assessments have found limited evidence that AI has shif…",
     "url": "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/",
     "date": "2026-05-26",
     "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-05-26-4",
-    "title": "A reality check on the AI jobs hysteria",
-    "summary": "Haven’t you heard? White-collar jobs are going away, decimated by AI. Waves of layoffs in the tech sector (most recently at Coinbase and Meta and Cisco) are said to presage what will soon come for all of us knowledge wo…",
-    "url": "https://www.technologyreview.com/2026/05/26/1137855/a-reality-check-on-the-ai-jobs-hysteria/",
-    "date": "2026-05-26",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-05-26-5",
-    "title": "Random People Armed with AI and No Lawyer Are Reportedly Filling Judicial Dockets with Lawsuits - Gizmodo",
-    "summary": "Random People Armed with AI and No Lawyer Are Reportedly Filling Judicial Dockets with Lawsuits Gizmodo",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRmkwS21EMzlWMVFiazFBMU5wQVN1cTM0VnVxUjV0WkdwNmNwVnhSRHBNRy1ndnFTTEt1V1pWOThfUDRoUW5UVXhnSTFaN1hkcllyOHBNa0VMQVJHSGY1azhQMlY1WHUzWkFPb2VMODVoaGI4ZVhKb29UbE1VTDNRTHJvdDF5NVFxd3F5QlhRc0hvVHZZR0FwdFpETVZiaHh0d3JkUU9POEVzSHFsNzFvUnhZcENONW1ST3I2Vkk5NWtMc1pK?oc=5",
-    "date": "2026-05-26",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-25-6",
-    "title": "Pope Leo calls for being ‘profoundly human’ in the age of AI",
-    "summary": "Pope Leo XIV attends the presentation of his first Encyclical Letter \"Magnifica humanitas\" on May 25, 2026 in Vatican City, Vatican. | Getty Images Pope Leo XIV warned of the risks of AI and unconstrained technological…",
-    "url": "https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare",
-    "date": "2026-05-25",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-05-25-7",
-    "title": "US's big bet on quantum computing may not be entirely legal",
-    "summary": "Deal also launched the first quantum foundry company, but is there a need for it?",
-    "url": "https://arstechnica.com/tech-policy/2026/05/uss-big-bet-on-quantum-computing-may-not-be-entirely-legal/",
-    "date": "2026-05-25",
-    "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-05-20-8",
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
-    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
-    "date": "2026-05-20",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-05-25-9",
-    "title": "OpenAI, Grupo Folha and Grupo UOL announce strategic content partnership",
-    "summary": "OpenAI partners with Grupo Folha and Grupo UOL to bring trusted Brazilian journalism to ChatGPT, expanding access to news with attribution and transparency.",
-    "url": "https://openai.com/index/grupo-folha-grupo-uol-partnership",
-    "date": "2026-05-25",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-05-22-10",
-    "title": "A hacker group is poisoning open source code at an unprecedented scale",
-    "summary": "GitHub is just the latest victim of TeamPCP, a gang that has carried out a spree of software supply chain attacks.",
-    "url": "https://arstechnica.com/information-technology/2026/05/a-hacker-group-is-poisoning-open-source-code-at-an-unprecedented-scale/",
-    "date": "2026-05-22",
-    "source": "Ars Technica AI"
   }
 ]
