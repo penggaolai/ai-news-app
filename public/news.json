@@ -1,38 +1,62 @@
 [
   {
-    "id": "2026-05-28-1",
-    "title": "YouTube will let you ask AI to make a custom video feed",
-    "summary": "You can enter your own prompt, or select from the suggested options provided by YouTube. | Image: YouTube YouTube is launching a new AI feature that creates a personalized video feed based on descriptions of what you wa…",
-    "url": "https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability",
+    "id": "2026-05-29-1",
+    "title": "Adobe’s conversational AI agent is a mediocre design intern",
+    "summary": "It explained the process of how it made these edits beautifully, i’m just not terribly impressed by the results. | Images by Jess Weatherbed / The Verge AI image tools rarely make me feel like I'm part of the creative p…",
+    "url": "https://www.theverge.com/tech/939686/adobes-conversational-ai-agent-is-a-mediocre-design-intern",
+    "date": "2026-05-29",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-29-2",
+    "title": "Artificial intelligence inherits human bias, reinforcing gender stereotypes - ynetnews",
+    "summary": "Artificial intelligence inherits human bias, reinforcing gender stereotypes ynetnews",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwdVg0dmZILUVwb3l5aDFDUFQzVi1LTUVaZms4a1FtRUduQ214QWV3RlZxb3FIQ3diblR0OHlhUjZkUi1UUGJPdVZEaFA1WHRmSEw1a2g3OG5Ic1hGbDd0bVp4RUtPYWJfUjR0MQ?oc=5",
+    "date": "2026-05-29",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-29-3",
+    "title": "A.I. Boom Upends San Francisco Housing Market - The New York Times",
+    "summary": "A.I. Boom Upends San Francisco Housing Market The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUnh4YjBzc2Z2ZFZiMjdpY3hTYWtaOWNubkVCcUFJbDJQck91NUlHRWxQN1FaUTBQTkwyNGJaaWFrY1lxb1FtdnBfZ05VN2V2ZmhuZGl3ZGNnY0FfT2h0MHc5NzMzSkdoZ3NLRjRFY2RSdkY3dGtNMjRyckhueGlsNkotZXh2dTdrYXc?oc=5",
+    "date": "2026-05-29",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-05-28-4",
+    "title": "Claude’s new model is more ‘honest’ when it messes up",
+    "summary": "Anthropic is releasing Claude Opus 4.8 on Thursday, and the company is touting the model's \"honesty.\" According to Anthropic, it trains \"all [its] models to be honest - for instance, to avoid making claims that they can…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/939094/anthropic-claude-4-8-opus-honesty-effort",
     "date": "2026-05-28",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-05-28-2",
-    "title": "Harvard's Kempner Institute Bet Big on AI. Now It Has to Prove Itself. - The Harvard Crimson",
-    "summary": "Harvard's Kempner Institute Bet Big on AI. Now It Has to Prove Itself. The Harvard Crimson",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBIOTZWNnJCUlk2R0pEeWl4bDFJNGN6amtoOXdGci16Q0xaVVBuSEFMcTRTV0NZS3B6b2RKckhxUXB2cENQaEM2NlBoSEItSFdjLW1ja2VHZnFkcFczNnJhdGpHMDkxRkJETDlnZHNhd0VpZWdldDV1Rw?oc=5",
+    "id": "2026-05-28-5",
+    "title": "Fed up with vibe coders, dev sneaks data-nuking prompt injection into their code",
+    "summary": "Undisclosed addition in jqwik instructed AI coding agents to delete app output.",
+    "url": "https://arstechnica.com/security/2026/05/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-their-code/",
     "date": "2026-05-28",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-28-3",
-    "title": "Online Scams Have Evolved in the A.I. Era. Here’s What to Do. - The New York Times",
-    "summary": "Online Scams Have Evolved in the A.I. Era. Here’s What to Do. The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVjZJdHlCS2xmOWVxV3NtX3drZC1DVEhFNGY2eDJ1ZlJISUYzam5FekUycHQ1Y1BXMlpWb1hKNGdocDZITnRKVjVIeDBsZnVBOE44UUdUc2FNUTI5ZllheDZ4dDd3M2J6bmlqUWM1NHlkQl9kOGxQVFNFR1ppWmY1WVp4LXR4RkhFaEZCYkIyS2V3V2hlMHlGY1dMcjhvR19VSVhldkhGUWxQUWNUNFhwTDI2S0VBcHI1ajdyVQ?oc=5",
-    "date": "2026-05-28",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-05-27-4",
-    "title": "Websites have a new way to spy on visitors: analyzing their SSD activity",
-    "summary": "Telltale SSD activity can be measured in the browser using simple JavaScript.",
-    "url": "https://arstechnica.com/security/2026/05/websites-have-a-new-way-to-spy-on-visitors-analyzing-their-ssd-activity/",
-    "date": "2026-05-27",
     "source": "Ars Technica AI"
   },
   {
-    "id": "2026-05-27-5",
+    "id": "2026-05-28-6",
+    "title": "Catch up on 12 major I/O 2026 moments",
+    "summary": "Here are 12 of the biggest Google I/O 2026 keynote moments, including news about Gemini Omni, Gemini 3.5 Flash and more.",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/",
+    "date": "2026-05-28",
+    "source": "Google AI Blog"
+  },
+  {
+    "id": "2026-05-28-7",
+    "title": "How Endava builds an agentic organization with Codex",
+    "summary": "Learn how Endava uses Codex to build an agentic organization, accelerating software delivery and reducing requirements analysis from weeks to hours.",
+    "url": "https://openai.com/index/endava",
+    "date": "2026-05-28",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-27-8",
     "title": "Warp’s big bet on building open source with GPT-5.5",
     "summary": "Warp uses GPT-5.5 and OpenAI models to coordinate coding agents across local, cloud, and open-source development workflows.",
     "url": "https://openai.com/index/warp",
@@ -40,43 +64,19 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-05-27-6",
-    "title": "AI tried to bury this politician — now people have actually heard of him",
-    "summary": "NY-12 congressional candidate Alex Bores speaks during a campaign event. | Bloomberg via Getty Images By the time that the Democratic primary for New York's 12th congressional district wraps up in June, Anthropic and Op…",
-    "url": "https://www.theverge.com/policy/937650/ai-alex-bores-openai-anthropic-ny12",
-    "date": "2026-05-27",
-    "source": "The Verge AI"
+    "id": "2026-05-28-9",
+    "title": "The AI Hype Index: AI gets booed in graduation season",
+    "summary": "It is one thing to say AI will change the world. It is another to expect the class of 2026 to applaud it. In fact, when former Google CEO Eric Schmidt told University of Arizona graduates that their task is to help shap…",
+    "url": "https://www.technologyreview.com/2026/05/28/1138053/the-ai-hype-index-ai-gets-booed-in-graduation-season/",
+    "date": "2026-05-28",
+    "source": "MIT Technology Review AI"
   },
   {
-    "id": "2026-05-27-7",
-    "title": "Cisco and OpenAI redefine enterprise engineering with Codex",
-    "summary": "Cisco and OpenAI are redefining enterprise engineering with Codex, helping Cisco scale AI-native development, accelerate AI Defense work, and automate defect remediation.",
-    "url": "https://openai.com/index/cisco",
-    "date": "2026-05-27",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-05-26-8",
+    "id": "2026-05-26-10",
     "title": "Millions of AI agents imperiled by critical vulnerability in open source package",
     "summary": "\"BadHost\" was found in Starlette, a package with 325 million weekly downloads.",
     "url": "https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package/",
     "date": "2026-05-26",
     "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-05-26-9",
-    "title": "Rethinking organizational design in the age of agentic AI",
-    "summary": "Amid rapidly growing adoption of enterprise-level AI agents, there’s a disconnect emerging between ambition and execution. Although 85% of organizations say they want to be agentic within the next three years, 76% say t…",
-    "url": "https://www.technologyreview.com/2026/05/26/1137584/rethinking-organizational-design-in-the-age-of-agentic-ai/",
-    "date": "2026-05-26",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-05-26-10",
-    "title": "It’s time to address the looming crisis in entry-level work.",
-    "summary": "Artificial intelligence has not so far produced a clean story of mass unemployment. Aggregate employment in developed countries remains broadly stable, and recent assessments have found limited evidence that AI has shif…",
-    "url": "https://www.technologyreview.com/2026/05/26/1137865/its-time-to-address-the-looming-crisis-in-entry-level-work/",
-    "date": "2026-05-26",
-    "source": "MIT Technology Review AI"
   }
 ]
