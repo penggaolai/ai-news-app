@@ -1,22 +1,46 @@
 [
   {
-    "id": "2026-05-30-1",
-    "title": "As students protest artificial intelligence, Pitt professor cautions: ‘We cannot delay the AI adoption’ - Pittsburgh Post-Gazette",
-    "summary": "As students protest artificial intelligence, Pitt professor cautions: ‘We cannot delay the AI adoption’ Pittsburgh Post-Gazette",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQdzhNdFpsc1FiSUtXR3dmTXBtZnJGTG1BTEdyM21RMjZyS0t2aDEzWGI2NGlaWHZmRUFBREdKU0l3NFZjUnJ2Wl9jcXN5MHBRX0pVUnBkSy1zanFkYl9IN1M1QWtYZ0dMckI5U0VzUk04QmxwLWItMVZCQnhRaUhEWVpHakxKeEx0RWxGSUVCTXpqR3N1SnhUUVg1cExRUTJsNU5laWpLQkVGb3pEWFJ3el9mVHhBeW9YTEJNWnFyVUhDX2hLMzg5b0RkT2FlWFhs?oc=5",
-    "date": "2026-05-30",
+    "id": "2026-05-31-1",
+    "title": "Cheers, jeers, and laughs: The speeches about AI that drew strong responses from 2026 grads - Business Insider",
+    "summary": "Cheers, jeers, and laughs: The speeches about AI that drew strong responses from 2026 grads Business Insider",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNEJ2WDZXcHgwS29tWmlfek1JbXJ3RWw1U0kzcTN5NFZWZHUzQnJHNDVoVHEwZm5lVnIyNi15N1JlYmQ2UkdKLUk2RC11UnJGd3hES3dDTURwdFQwdlJMcDJMV3pRb3k1TmRVUTJnVVpZcGc2M1hDa2FMMnNHME1xMXJLVGtCZGg5UlBJdXQ0eEhxbzNhY2ZHSQ?oc=5",
+    "date": "2026-05-31",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-05-30-2",
-    "title": "Artificial Intelligence, a blessing or a scourge? - The Portugal News",
-    "summary": "Artificial Intelligence, a blessing or a scourge? The Portugal News",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTWJCQzd4Q1JwN1J6Zjh0OVFZajFuQ2gzcDl6TU54WHgxalNsV1NDXzlSSzduX0xNLXdrOTdvUnNRemFKMndFaW9kaUlxaU5ZVjFyX29sRy1SZlozcU9jRmpqeThmQXdGeEZfeEdCSVJwTjFFYUw0T2NUYk1HcTRnM2NQNmtCcDFoOERNZklwRkRyeFVUMjB4U1lFYTBUNzNFaTg0U2F3?oc=5",
-    "date": "2026-05-30",
+    "id": "2026-05-31-2",
+    "title": "I Profile Celebrities for a Living. Nothing Prepared Me for Tilly Norwood. - The New York Times",
+    "summary": "I Profile Celebrities for a Living. Nothing Prepared Me for Tilly Norwood. The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5wY3ZQLUFsajEySUd3WklSbjFTeEE0eXk2akdhVG92WG9wbFdfbTE4UWpLQ1lYZG9pSTZzQUR1MVdIUlh6QTY2U3R6SDJnZl9QdTRQbFNJTm9GdXhObmpGU2tGUU1NQjZLYjZhdkZHejZXbDZUYUdUeTV6MGNMQQ?oc=5",
+    "date": "2026-05-31",
     "source": "Google News (AI)"
   },
   {
-    "id": "2026-05-29-3",
+    "id": "2026-05-30-3",
+    "title": "AI grifters are creating fake Black people to sell Shein junk",
+    "summary": "TikTok sellers that appear to be AI generated, in tears. | The Verge Aliyah, a light-skinned Black woman dressed in country-western gear, is struggling to sell metal buckles she handmade on TikTok. In a video for the so…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/938844/ai-tiktok-shop-blackface-shein-dropshipping",
+    "date": "2026-05-30",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-30-4",
+    "title": "How one founder’s bet on ‘the old school web’ is paying off",
+    "summary": "A good time with old maps. | Image: Past Maps Craig Campbell walked away from the river of investor money flowing into AI to create, of all things, a website. Sure, Campbell probably could have started an AI company. He…",
+    "url": "https://www.theverge.com/tech/938245/past-maps-website-google-zero-ai",
+    "date": "2026-05-30",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-05-27-5",
+    "title": "Warp’s big bet on building open source with GPT-5.5",
+    "summary": "Warp uses GPT-5.5 and OpenAI models to coordinate coding agents across local, cloud, and open-source development workflows.",
+    "url": "https://openai.com/index/warp",
+    "date": "2026-05-27",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-05-29-6",
     "title": "Take our I/O 2026 quiz, vibe coded in Google AI Studio.",
     "summary": "We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.",
     "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/",
@@ -24,7 +48,15 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-05-29-4",
+    "id": "2026-05-26-7",
+    "title": "Millions of AI agents imperiled by critical vulnerability in open source package",
+    "summary": "\"BadHost\" was found in Starlette, a package with 325 million weekly downloads.",
+    "url": "https://arstechnica.com/information-technology/2026/05/millions-of-ai-agents-imperiled-by-critical-vulnerability-in-open-source-package/",
+    "date": "2026-05-26",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-05-29-8",
     "title": "9 demos of Gemini Omni and Gemini 3.5 in action",
     "summary": "Watch 9 videos showing the capabilities of Gemini Omni and Gemini 3.5, announced at Google I/O 2026.",
     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
@@ -32,44 +64,12 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-05-29-5",
-    "title": "Tech companies desperately want to film you doing chores",
-    "summary": "This week, an AI training startup called Shift said it would clean New Yorkers' homes for free. It has plans to expand into other cities as well, including London, and looking around my flat, I get the appeal. But there…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/940007/ai-companies-will-pay-for-robot-training-data",
-    "date": "2026-05-29",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-05-29-6",
-    "title": "Botnet of more than 17 million devices dismantled",
-    "summary": "The botnet was reportedly tied to a Russia-based residential proxy network.",
-    "url": "https://arstechnica.com/security/2026/05/botnet-of-more-than-17-million-devices-dismantled/",
-    "date": "2026-05-29",
-    "source": "Ars Technica AI"
-  },
-  {
-    "id": "2026-05-29-7",
+    "id": "2026-05-29-9",
     "title": "How Braintrust turns customer requests into code with Codex",
     "summary": "How Braintrust engineers use Codex with GPT-5.5 to run experiments and code faster.",
     "url": "https://openai.com/index/braintrust",
     "date": "2026-05-29",
     "source": "OpenAI News"
-  },
-  {
-    "id": "2026-05-29-8",
-    "title": "Boston Children’s uses AI to unlock new diagnoses",
-    "summary": "Boston Children’s Hospital uses OpenAI technology to improve patient care, reduce operational burden, and help diagnose more than 40 rare disease cases.",
-    "url": "https://openai.com/index/boston-childrens-hospital",
-    "date": "2026-05-29",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-05-29-9",
-    "title": "This AI startup will clean your home for free to train future robots",
-    "summary": "AI training startup Shift wants to clean your home for free. The catch - because, despite what its website says, there's always a catch - is that it will record cleaners as they scrub, vacuum, dust, tidy, and wash, and…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning",
-    "date": "2026-05-29",
-    "source": "The Verge AI"
   },
   {
     "id": "2026-05-29-10",
