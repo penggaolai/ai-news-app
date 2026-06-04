@@ -1,54 +1,70 @@
 [
   {
-    "id": "2026-06-03-1",
-    "title": "Google must let publishers opt out of AI Search features, rules UK",
-    "summary": "Online publishers are getting more control over whether their websites appear in Google's AI Search features, thanks to a UK regulatory ruling. The new conduct rule imposed by the Competition and Markets Authority (CMA)…",
-    "url": "https://www.theverge.com/tech/942302/google-search-ai-overviews-uk-cma-publisher-opt-out",
+    "id": "2026-06-04-1",
+    "title": "How Endava is redesigning software delivery around AI agents",
+    "summary": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
+    "url": "https://openai.com/index/endava-frontiers",
+    "date": "2026-06-04",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-06-04-2",
+    "title": "Marquis Who's Who Honors Shankar Ratneshwaran for Expertise in Artificial Intelligence and Cloud Technologies - 24-7 Press Release Newswire",
+    "summary": "Marquis Who's Who Honors Shankar Ratneshwaran for Expertise in Artificial Intelligence and Cloud Technologies 24-7 Press Release Newswire",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPOGZxUk5lSVFCU2VNVzZ0OGRHNkNkSFpMMmZoWlMyM2JSN1JtNFZ2bFowU0RuWnRyWkxFOXh6QVJleHBZRG5jdk8wS3lUUG9YcWtzYnpMRGlfSnA3enhuQjZZWHZMdkVzTUVvQ3lvYlBNLUFYeGdfN3Z4Ni1MR1pzVlJkbG1tSEtwWnUxSDI5Q1Y5Q1FNdS1XcWNBY1kyWXJBSzhCTkhBTkFfOWJSLUlOU2U2ZnI0aHg2SmtpTW53UkxIZ0pQVnBBQkVhV3NDM1pWN0dxd1F6aWZ1ZEFUMWlmWTNWVmdKRTdVUGxPQ20wUk9EUXNV?oc=5",
+    "date": "2026-06-04",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-06-04-3",
+    "title": "Amazon develops a warehouse robot workers can speak to",
+    "summary": "The design hasn’t changed much from the original Proteus, which was announced in 2022. | Image: Amazon Amazon has announced a new version of its fully autonomous warehouse robot, Proteus, that will can interact using la…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/942884/amazon-next-generation-warehouse-robot-proteus",
+    "date": "2026-06-04",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-06-04-4",
+    "title": "Artificial intelligence: key updates and developments (21 May – 3 Jun) - Lexology",
+    "summary": "Artificial intelligence: key updates and developments (21 May – 3 Jun) Lexology",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPN19fRWYwUmFaNWduZExqQUl4d3hYSnVSeDRrSkRNZU1rZkxMcUh5aXJINWFoclp1STh3SDRic1hvOE52dmhmV1U5cnlvcnh0elBiY0hza0l0M0ZpZ0llenJFSjFQeDhQaFg3QkREZlFEaHVnTUtlbEZkUkVZVC01ZzRicndkQThCQ0tReFVnMEhJbFZ2a3JrMjhCMGF4T1dadWF1Vg?oc=5",
+    "date": "2026-06-04",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-06-03-5",
+    "title": "OpenAI public policy agenda",
+    "summary": "OpenAI outlines its public policy agenda for AI, including safety, youth protection, workforce transition, and global standards to ensure AI benefits society.",
+    "url": "https://openai.com/index/public-policy-agenda",
+    "date": "2026-06-03",
+    "source": "OpenAI News"
+  },
+  {
+    "id": "2026-06-03-6",
+    "title": "Can't make sense of Dashlane's vault theft notification? You're not alone.",
+    "summary": "Security advisory leaves out key details. Dashlane maintains complete silence.",
+    "url": "https://arstechnica.com/security/2026/06/dashlane-issues-opaque-advisory-warning-20-encrypted-vaults-were-stolen/",
+    "date": "2026-06-03",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-06-03-7",
+    "title": "As AI gets better, it reveals an empty promise",
+    "summary": "This week we've got tandem hands-ons with Google's new Gemini AI agent - Spark - from my colleagues David Pierce and Jay Peters. Their takeaways are similar: It's so effective that it's scary. Spark knew that David's do…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/942629/as-ai-gets-better-it-reveals-an-empty-promise",
     "date": "2026-06-03",
     "source": "The Verge AI"
   },
   {
-    "id": "2026-06-03-2",
-    "title": "AI has a water problem. Google thinks it has a fix",
-    "summary": "In the face of widespread backlash to the AI data center buildout throughout the US, Google is touting its efforts to minimize the environmental impact by actually increasing water for local communities. The company lai…",
-    "url": "https://www.theverge.com/policy/942296/google-water-commitments-data-centers",
+    "id": "2026-06-03-8",
+    "title": "5 ways Google Search can level up your thrift and vintage shopping",
+    "summary": "Uncover second-hand scores with AI tools in Google Search and Shopping.",
+    "url": "https://blog.google/products-and-platforms/products/search/thrifting-tips/",
     "date": "2026-06-03",
-    "source": "The Verge AI"
+    "source": "Google AI Blog"
   },
   {
-    "id": "2026-06-03-3",
-    "title": "‘Backrooms’ Offers An Interesting Horror Critique Of Artificial Intelligence - Mountain Times",
-    "summary": "‘Backrooms’ Offers An Interesting Horror Critique Of Artificial Intelligence Mountain Times",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOS1Y1T25oc3ZkQk91UElXcU9GS0RuLTE4SDRQajNzNjVKb2gxVUpBTDdCNm1SdThQU2tDQ2xmaW9obzFiZmRra1Z2QXlFWlNQU1dQX21KbTFYVGhndWJ3V1FOb002Rk1jYzhWS2E2QmNOVWJscGg1bkdFTm9NOGQxY3VQTTJQc084c3RNaENwTTdtSzdHNGppX3BTQzNBOHJuZjg2cEh2bXlqd2lhVU9kMnhpZw?oc=5",
-    "date": "2026-06-03",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-06-03-4",
-    "title": "Walmart’s AI workflows meet the realities of the balance sheet - AI News",
-    "summary": "Walmart’s AI workflows meet the realities of the balance sheet AI News",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZ1VwLXNIeG5UMThqTWZyNUZCRDBuUkJ4TXhBaGRtdjBPWGg4S3pST2tZZ3hZXzdsaEJhX1dfM2tpNEFuU3VBZ20ycm9NNGhNQkZOaHJYenlHSkl2QkxCd3NjOE9XX2RQa2pndnZyNGVBVkIxSjZxcjdldWV3b1JZV3B4MDBrckFHN2VsdEVhUjNlOWpFTF90YUJXTVZSQll3SzF4TGlIZzAzcnNhY1NaekN4ekwzZXgtaW16NFlJMHpyQQ?oc=5",
-    "date": "2026-06-03",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-06-02-5",
-    "title": "Advancing youth safety and opportunity through global leadership",
-    "summary": "OpenAI calls for global action on youth AI safety, proposing an international institute to strengthen safeguards, standards, and opportunities for young people.",
-    "url": "https://openai.com/index/advancing-youth-safety-and-opportunity-through-global-leadership",
-    "date": "2026-06-02",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-06-02-6",
-    "title": "Travelers deploys AI-powered claims countrywide with OpenAI",
-    "summary": "Travelers built an AI-powered Claim Assistant with OpenAI to guide customers through filing claims, provide 24/7 support, and scale operations during peak demand.",
-    "url": "https://openai.com/index/travelers",
-    "date": "2026-06-02",
-    "source": "OpenAI News"
-  },
-  {
-    "id": "2026-06-02-7",
+    "id": "2026-06-02-9",
     "title": "Rehumanizing global health care with agentic AI",
     "summary": "The global health care sector is under increasing strain. Decades of chronic underinvestment and constraints in recruitment have coincided with a surge in demand for services for aging populations. Gaps in provision are…",
     "url": "https://www.technologyreview.com/2026/06/02/1137827/rehumanizing-global-health-care-with-agentic-ai/",
@@ -56,27 +72,11 @@
     "source": "MIT Technology Review AI"
   },
   {
-    "id": "2026-06-02-8",
-    "title": "How small businesses can leverage AI",
-    "summary": "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox,sign up here. From accounting to design to market research a…",
-    "url": "https://www.technologyreview.com/2026/06/02/1138227/how-small-businesses-can-leverage-ai/",
-    "date": "2026-06-02",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-06-01-9",
+    "id": "2026-06-01-10",
     "title": "How we used Gemini to build Google I/O 2026",
     "summary": "Learn how Googlers used AI to produce Google I/O 2026.",
     "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
     "date": "2026-06-01",
     "source": "Google AI Blog"
-  },
-  {
-    "id": "2026-06-01-10",
-    "title": "Dozens of Red Hat packages backdoored through its official NPM channel",
-    "summary": "Anyone who has downloaded affected Red Hat packages should investigate immediately.",
-    "url": "https://arstechnica.com/security/2026/06/dozens-of-red-hat-packages-backdoored-through-its-offical-npm-channel/",
-    "date": "2026-06-01",
-    "source": "Ars Technica AI"
   }
 ]
