@@ -1,6 +1,46 @@
 [
   {
-    "id": "2026-06-04-1",
+    "id": "2026-06-05-1",
+    "title": "What to Expect From Apple’s AI, Siri and iOS 27 Launch at WWDC 2026 - Bloomberg.com",
+    "summary": "What to Expect From Apple’s AI, Siri and iOS 27 Launch at WWDC 2026 Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxORnREMlc5ZFVvUHhYQkQ0NFprRGFUUjdpS2o2eVlkNmFGYkdfUlMwVDFRZUpZR1RINk9qclI3QlBScHQtdjdXOG5pNWFERW9qRWF2RFJsTVY1LWVkU0libDc2RzdfeW81NXRER1RwamNOVEVIa2UxeExkNi1aQTRBbTZNdmZCeEdhRzZLODdfbW5RZVVVeGRnbkdENGoxTF9JQkhfeWo4bmRaeW9rMk9nYUFOZjRyaDRtTzdlQ0RtZVd5TGFX?oc=5",
+    "date": "2026-06-05",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-06-05-2",
+    "title": "Opinion | Why Those Commencement Speakers Deserved Those Boos - The New York Times",
+    "summary": "Opinion | Why Those Commencement Speakers Deserved Those Boos The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTjM2WTQ1S1VlMFdkTHFwV3lKNkdUelRWcldGZHdvWG9qQXJIX0puaGcwS3AySmdqWi1aRm9PRFVDM1FSc2p4WktZS1NNY0paM19TQ0RQR2ZZOF9ycDlCaE0xendfeEVMSXFVRVZOSy1GMEhiY1Q1VF9GMEN4eXJKbG1aNFJFcTlSZ0d5TksyOHFZd0xvS3c?oc=5",
+    "date": "2026-06-05",
+    "source": "Google News (AI)"
+  },
+  {
+    "id": "2026-06-04-3",
+    "title": "Dashlane explains how attackers managed to download encrypted password vaults",
+    "summary": "By targeting large numbers of users, attackers increased their chances of success.",
+    "url": "https://arstechnica.com/security/2026/06/dashlane-explains-how-attackers-managed-to-download-encrypted-password-vaults/",
+    "date": "2026-06-04",
+    "source": "Ars Technica AI"
+  },
+  {
+    "id": "2026-06-04-4",
+    "title": "Kevin O’Leary agrees to downsize massive Utah data center",
+    "summary": "Kevin O'Leary agreed to halve the size of his planned 40,000-acre data center in Utah amid mounting pressure from residents and activists, as reported earlier by local affiliate ABC4. The Shark Tank star sent a letter t…",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/943234/kevin-oleary-agrees-to-downsize-massive-utah-data-center",
+    "date": "2026-06-04",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-06-04-5",
+    "title": "TSMC struggles to keep up with AI demand: &#8216;We can only support so much&#8217;",
+    "summary": "Taiwan Semiconductor Manufacturing Co. - the world's biggest semiconductor-maker - is struggling to meet demands from American customers even with its factory buildout in the US, according to reports from Reuters and Bl…",
+    "url": "https://www.theverge.com/tech/943066/tsmc-ai-demand-struggles",
+    "date": "2026-06-04",
+    "source": "The Verge AI"
+  },
+  {
+    "id": "2026-06-04-6",
     "title": "How Endava is redesigning software delivery around AI agents",
     "summary": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
     "url": "https://openai.com/index/endava-frontiers",
@@ -8,55 +48,23 @@
     "source": "OpenAI News"
   },
   {
-    "id": "2026-06-04-2",
-    "title": "Marquis Who's Who Honors Shankar Ratneshwaran for Expertise in Artificial Intelligence and Cloud Technologies - 24-7 Press Release Newswire",
-    "summary": "Marquis Who's Who Honors Shankar Ratneshwaran for Expertise in Artificial Intelligence and Cloud Technologies 24-7 Press Release Newswire",
-    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPOGZxUk5lSVFCU2VNVzZ0OGRHNkNkSFpMMmZoWlMyM2JSN1JtNFZ2bFowU0RuWnRyWkxFOXh6QVJleHBZRG5jdk8wS3lUUG9YcWtzYnpMRGlfSnA3enhuQjZZWHZMdkVzTUVvQ3lvYlBNLUFYeGdfN3Z4Ni1MR1pzVlJkbG1tSEtwWnUxSDI5Q1Y5Q1FNdS1XcWNBY1kyWXJBSzhCTkhBTkFfOWJSLUlOU2U2ZnI0aHg2SmtpTW53UkxIZ0pQVnBBQkVhV3NDM1pWN0dxd1F6aWZ1ZEFUMWlmWTNWVmdKRTdVUGxPQ20wUk9EUXNV?oc=5",
+    "id": "2026-06-04-7",
+    "title": "Dreaming: Better memory for a more helpful ChatGPT",
+    "summary": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+    "url": "https://openai.com/index/chatgpt-memory-dreaming",
     "date": "2026-06-04",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-06-04-3",
-    "title": "Amazon develops a warehouse robot workers can speak to",
-    "summary": "The design hasn’t changed much from the original Proteus, which was announced in 2022. | Image: Amazon Amazon has announced a new version of its fully autonomous warehouse robot, Proteus, that will can interact using la…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/942884/amazon-next-generation-warehouse-robot-proteus",
-    "date": "2026-06-04",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-06-04-4",
-    "title": "Artificial intelligence: key updates and developments (21 May – 3 Jun) - Lexology",
-    "summary": "Artificial intelligence: key updates and developments (21 May – 3 Jun) Lexology",
-    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPN19fRWYwUmFaNWduZExqQUl4d3hYSnVSeDRrSkRNZU1rZkxMcUh5aXJINWFoclp1STh3SDRic1hvOE52dmhmV1U5cnlvcnh0elBiY0hza0l0M0ZpZ0llenJFSjFQeDhQaFg3QkREZlFEaHVnTUtlbEZkUkVZVC01ZzRicndkQThCQ0tReFVnMEhJbFZ2a3JrMjhCMGF4T1dadWF1Vg?oc=5",
-    "date": "2026-06-04",
-    "source": "Google News (AI)"
-  },
-  {
-    "id": "2026-06-03-5",
-    "title": "OpenAI public policy agenda",
-    "summary": "OpenAI outlines its public policy agenda for AI, including safety, youth protection, workforce transition, and global standards to ensure AI benefits society.",
-    "url": "https://openai.com/index/public-policy-agenda",
-    "date": "2026-06-03",
     "source": "OpenAI News"
   },
   {
-    "id": "2026-06-03-6",
-    "title": "Can't make sense of Dashlane's vault theft notification? You're not alone.",
-    "summary": "Security advisory leaves out key details. Dashlane maintains complete silence.",
-    "url": "https://arstechnica.com/security/2026/06/dashlane-issues-opaque-advisory-warning-20-encrypted-vaults-were-stolen/",
-    "date": "2026-06-03",
-    "source": "Ars Technica AI"
+    "id": "2026-06-04-8",
+    "title": "How courts are coping with a flood of AI-generated lawsuits",
+    "summary": "Most days in her chambers, Judge Maritza Braswell, a federal magistrate judge in Colorado, sifts through stacks of documents written by people without a lawyer. Many of them can’t afford to hire a lawyer, and others hav…",
+    "url": "https://www.technologyreview.com/2026/06/04/1138391/courts-coping-ai-lawsuits/",
+    "date": "2026-06-04",
+    "source": "MIT Technology Review AI"
   },
   {
-    "id": "2026-06-03-7",
-    "title": "As AI gets better, it reveals an empty promise",
-    "summary": "This week we've got tandem hands-ons with Google's new Gemini AI agent - Spark - from my colleagues David Pierce and Jay Peters. Their takeaways are similar: It's so effective that it's scary. Spark knew that David's do…",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/942629/as-ai-gets-better-it-reveals-an-empty-promise",
-    "date": "2026-06-03",
-    "source": "The Verge AI"
-  },
-  {
-    "id": "2026-06-03-8",
+    "id": "2026-06-03-9",
     "title": "5 ways Google Search can level up your thrift and vintage shopping",
     "summary": "Uncover second-hand scores with AI tools in Google Search and Shopping.",
     "url": "https://blog.google/products-and-platforms/products/search/thrifting-tips/",
@@ -64,19 +72,11 @@
     "source": "Google AI Blog"
   },
   {
-    "id": "2026-06-02-9",
-    "title": "Rehumanizing global health care with agentic AI",
-    "summary": "The global health care sector is under increasing strain. Decades of chronic underinvestment and constraints in recruitment have coincided with a surge in demand for services for aging populations. Gaps in provision are…",
-    "url": "https://www.technologyreview.com/2026/06/02/1137827/rehumanizing-global-health-care-with-agentic-ai/",
-    "date": "2026-06-02",
-    "source": "MIT Technology Review AI"
-  },
-  {
-    "id": "2026-06-01-10",
-    "title": "How we used Gemini to build Google I/O 2026",
-    "summary": "Learn how Googlers used AI to produce Google I/O 2026.",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
-    "date": "2026-06-01",
-    "source": "Google AI Blog"
+    "id": "2026-06-03-10",
+    "title": "Can't make sense of Dashlane's vault theft notification? You're not alone.",
+    "summary": "Security advisory leaves out key details. Dashlane maintains complete silence.",
+    "url": "https://arstechnica.com/security/2026/06/dashlane-issues-opaque-advisory-warning-20-encrypted-vaults-were-stolen/",
+    "date": "2026-06-03",
+    "source": "Ars Technica AI"
   }
 ]
